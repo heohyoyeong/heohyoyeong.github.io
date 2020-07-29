@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/author/heohyoyeong/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-07-29T15:53:47+09:00</updated>
+  <updated>2020-07-29T15:59:44+09:00</updated>
   <id>http://localhost:4000/author/heohyoyeong/feed.xml</id>
 
   
@@ -50,7 +50,7 @@
 &lt;br /&gt; 파이썬의 기본 문자열에 대한 함수나 문법에 대하여 포스팅할 계획입니다.&lt;br /&gt;
 &lt;br /&gt;
     &lt;ol&gt;    
-        &lt;li&gt;&lt;h3&gt;문자 확장열&lt;/h3&gt;&lt;div&gt;문자 확장열이란 문자 내부에 담기힘든 것들을 &quot;/&quot; 뒤에 특별한 기호를 작성하여 표기합니다.&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+        &lt;li&gt;&lt;h5&gt;문자 확장열&lt;/h5&gt;&lt;div&gt;문자 확장열이란 문자 내부에 담기힘든 것들을 &quot;/&quot; 뒤에 특별한 기호를 작성하여 표기합니다.&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
             &lt;ul&gt;
                 &lt;li&gt;\n는 개행으로 엔터를 의미합니다. &lt;br /&gt; 
                 예를들어  &lt;br /&gt;&quot;안녕\n하세요.&quot;는 &lt;br /&gt;안녕&lt;br /&gt;하세요 라고 출력됩니다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
@@ -64,7 +64,7 @@
                 예를들어  &lt;br /&gt;&quot;안녕\하세요.&quot;라고 쓰는 경우 특수문자인(\) 뒤에 문자가 없어 오류가 발생합니다.&lt;br /&gt;하지만 &quot;안녕\\하세요&quot;로 작성한다면 안녕\하세요라고 출력됩니다..&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
             &lt;/ul&gt;
         &lt;/li&gt;
-        &lt;li&gt;&lt;h3&gt;문자열 메서드&lt;/h3&gt;&lt;div&gt;문자열은 수치열에 비하여 복잡하기 때문에 다양한 함수를 사용하여 관리합니다.&lt;br /&gt;기본적으로 함수앞에 is가 붙으면 대답은 bool형식으로 출력됩니다.&lt;br /&gt;하지만 이 포스트에서는 이러한 함수는 작성하지 않겠습니다.&lt;br /&gt;&lt;br /&gt; &lt;/div&gt;
+        &lt;li&gt;&lt;h5&gt;문자열 메서드&lt;/h5&gt;&lt;div&gt;문자열은 수치열에 비하여 복잡하기 때문에 다양한 함수를 사용하여 관리합니다.&lt;br /&gt;기본적으로 함수앞에 is가 붙으면 대답은 bool형식으로 출력됩니다.&lt;br /&gt;하지만 이 포스트에서는 이러한 함수는 작성하지 않겠습니다.&lt;br /&gt;&lt;br /&gt; &lt;/div&gt;
                     &lt;ul&gt;
                         &lt;li&gt; .lower() .upper() &lt;br /&gt;
                          lower는 문자열을 소문자로 upper는 문자열을 대문자로 변환해줍니다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
@@ -85,7 +85,7 @@
                         ljust는 폭 a에서 문자를 왼쪽에 배치, rjust는 폭 a에서 문자를 오른쪽에 배치해준다. &lt;br /&gt;만약 문자열이 a보다 길다면 a의 크기를 무시하고 전부 입력한다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;             
              &lt;/ul&gt;                                          
         &lt;/li&gt;
-        &lt;li&gt;&lt;h3&gt;문자열 포멧팅&lt;/h3&gt;&lt;div&gt;포멧팅은 문자열에 다른 정보를 넣어주는 행위입니다.&lt;br /&gt;기본적으로는 (&quot;나는 {}살, 키는 {}cm 이름은{}입니다.&quot;.format(age,height,name))이러한 형식으로 사용됩니다.&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+        &lt;li&gt;&lt;h5&gt;문자열 포멧팅&lt;/h5&gt;&lt;div&gt;포멧팅은 문자열에 다른 정보를 넣어주는 행위입니다.&lt;br /&gt;기본적으로는 (&quot;나는 {}살, 키는 {}cm 이름은{}입니다.&quot;.format(age,height,name))이러한 형식으로 사용됩니다.&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
             &lt;ul&gt;
                 &lt;li&gt; 공백 입력&lt;br /&gt;
                 만약 포맷팅의 결과값에 공백을 입력하고 싶다면 (&quot;나는 {0:10d}살, 키는 {1:5f}cm 이름은{2:5s}입니다.&quot;.format(age,height,name))처럼 사용하면된다.&lt;br /&gt;
@@ -101,8 +101,8 @@
         &lt;/li&gt;        
     &lt;/ol&gt;
 &lt;/div&gt;
-&lt;h3&gt; 이번 포스트에서는 문자열에 들어가거나 사용되는 함수에 대하여 작성해보았다. 문자열의 경우 문자 표현 뿐만 아니라 제어를 위하여 list의 융합을 위해 사용되기도한다.
-&lt;/h3&gt;</content>
+&lt;h4&gt; 이번 포스트에서는 문자열에 들어가거나 사용되는 함수에 대하여 작성해보았다. 문자열의 경우 문자 표현 뿐만 아니라 제어를 위하여 list의 융합을 위해 사용되기도한다.
+&lt;/h4&gt;</content>
 
       
       
