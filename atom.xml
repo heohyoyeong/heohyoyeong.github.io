@@ -8,6 +8,73 @@
     
       
       <item>
+        <title>Python Django - Django 투표 프로젝트 제작</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 제작&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6&gt;
+이전 포스트에서 제작하였던 polls 폴더에 존재하였던 manage.py를 수정합니다.&lt;br /&gt;&lt;br /&gt;
+수정을 수행할 때 파이썬은 객체지향이기 때문에 class를 사용합니다.&lt;br /&gt;&lt;br /&gt;
+또한 질문과 보기를 따로 나타내야하기때문에 2개의 class를 제작할것입니다.&lt;/h6&gt;
+
+</description>
+        
+        <pubDate>Fri, 31 Jul 2020 02:40:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/python-Django-2</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Python Django - Django 시작</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 제작&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Fri, 31 Jul 2020 01:40:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/python-Django-1</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-1</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Python 강좌(2) - Python 제어문</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 제작&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Fri, 31 Jul 2020 01:40:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/python-control-statement</link>
+        <guid isPermaLink="true">http://localhost:4000/python-control-statement</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Vehicle 강좌(1) - vehicle 기본</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
@@ -26,31 +93,14 @@
     
       
       <item>
-        <title>Python 강좌(2) - Python 제어문</title>
-        
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        
-        <pubDate>Fri, 24 Jul 2020 01:40:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/python-control-statement</link>
-        <guid isPermaLink="true">http://localhost:4000/python-control-statement</guid>
-      </item>
-      
-    
-      
-      <item>
         <title>Python 강좌(1) - Python 문자열</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
