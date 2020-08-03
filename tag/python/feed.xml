@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/tag/python/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-07-31T17:28:30+09:00</updated>
+  <updated>2020-08-03T18:04:20+09:00</updated>
   <id>http://localhost:4000/tag/python/feed.xml</id>
 
   
@@ -32,8 +32,217 @@
 
   
     <entry>
-      <title type="html">Python Django - Django 투표 프로젝트 제작</title>
-      <link href="http://localhost:4000/python-Django-2" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 제작" />
+      <title type="html">Python Django - Django 투표 프로젝트 투표 목록 제작</title>
+      <link href="http://localhost:4000/python-Django-3" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 목록 제작" />
+      <published>2020-08-03T02:40:00+09:00</published>
+      <updated>2020-08-03T02:40:00+09:00</updated>
+      <id>http://localhost:4000/python-Django-3</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-3">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;
+&lt;h3&gt;프로젝트의 url수정&lt;/h3&gt;
+&lt;li&gt;mysite의 url을 수정해볼것입니다.&lt;/li&gt;
+&lt;li&gt;아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-mysiteurl.PNG&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;기본으로 존재하던 admin에 관련된 path는 그대로 두겠습니다. &lt;/li&gt;
+&lt;li&gt;새롭게 추가될 application을 반영하기 위하여 poll의 url을 path에 추가해야합니다.&lt;/li&gt;
+&lt;li&gt;물론 여기서 직접 입력해도 되지만 추후 정리를 위하여 include함수를 사용하여 polls.url을 원격으로 지정해주겠습니다.&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;h3&gt;index를 위한 url제작&lt;/h3&gt;
+&lt;li&gt;이제 polls의 index의 url을 제작해볼것입니다.&lt;/li&gt;
+&lt;li&gt;아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-pollsurl1.PNG&quot; /&gt;&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;h3&gt;index를 위한 views를 제작&lt;/h3&gt;
+&lt;li&gt;이제 polls의 index의 views를 제작해볼것입니다.&lt;/li&gt;
+&lt;li&gt;아래의 그림과 같이 mysite의 views.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-viewsindex.PNG&quot; /&gt;&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;h3&gt;index.html 제작&lt;/h3&gt;
+&lt;li&gt;이전에 제작하였던 models.py에서 Question class는 question_text를 return합니다.&lt;/li&gt;
+&lt;li&gt;우리는 question_text을 html에 띄워 선택할수있는 html을 제작할것입니다.&lt;/li&gt;
+&lt;li&gt;앞의 view.py에서 정의한 index함수의 context의 내부에 &quot;latest_question_list&quot;를 활용해야합니다.&lt;img src=&quot;assets/built/images/django-templatesindex.PNG&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;위의 그림과 같이 index.html를 설정하였습니다. &lt;/li&gt;
+&lt;li&gt;위의 결과를 통해 서버를 가동후 &quot;http://127.0.0.1:8000/polls/&quot;에 들어가면 아래와 같이 나온다.&lt;img src=&quot;assets/built/images/django-templatesindexff.PNG&quot; /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>HeoHyoYeong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="python" />
+      
+
+      
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 프로젝트의 url수정 mysite의 url을 수정해볼것입니다. 아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다. 기본으로 존재하던 admin에 관련된 path는 그대로 두겠습니다. 새롭게 추가될 application을 반영하기 위하여 poll의 url을 path에 추가해야합니다. 물론 여기서 직접 입력해도 되지만 추후 정리를 위하여 include함수를 사용하여 polls.url을 원격으로 지정해주겠습니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Python Django - Django 투표 프로젝트 투표 보기 제작</title>
+      <link href="http://localhost:4000/python-Django-4" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 보기 제작" />
+      <published>2020-08-03T02:40:00+09:00</published>
+      <updated>2020-08-03T02:40:00+09:00</updated>
+      <id>http://localhost:4000/python-Django-4</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-4">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div&gt;
+&lt;h3&gt;index를 위한 url제작&lt;/h3&gt;
+&lt;li&gt;이제 polls의 index의 url을 제작해볼것입니다.&lt;/li&gt;
+&lt;li&gt;아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-pollsurl2.PNG&quot; /&gt;&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;h3&gt;detail를 위한 views를 제작&lt;/h3&gt;
+&lt;li&gt;이제 polls의 detail의 views를 제작해볼것입니다.&lt;/li&gt;
+&lt;li&gt;아래의 그림과 같이 mysite의 views.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-templatesdetail.PNG&quot; /&gt;&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;h3&gt;detail.html 제작&lt;/h3&gt;
+&lt;li&gt;detail.html은 index.html에서 띄운 질문을 선택하면 질문에 대한 답변을 &lt;br /&gt;투표할 수 있는 page가 나오도록 해야합니다.&lt;/li&gt;
+&lt;li&gt;우리는 question_text을 html에 띄워 선택할수있는 html을 제작할것입니다.&lt;/li&gt;
+&lt;li&gt;form tag를 활용하여 아래의 for문의 결과 값을 post형식으로 서버에 전송합니다.&lt;/li&gt;
+&lt;li&gt;url 'polls:vote'는 http~8000/polls/vote/라는 의미입니다.&lt;br /&gt;
+또한 question.id가 붙은 이유는 나중에 나올 view.vote의 int:bbb에 적용하기 위해서이다.&lt;/li&gt;
+&lt;img src=&quot;assets/built/images/django-templatesdetail.PNG&quot; /&gt;
+&lt;li&gt;위의 그림과 같이 detail.html를 설정하였습니다. &lt;/li&gt;
+&lt;li&gt;위의 결과를 통해 서버를 가동후 &quot;http://127.0.0.1:8000/polls/&quot;에 들어가 질문을 선택하면 아래와 같이 나온다.&lt;img src=&quot;assets/built/images/django-templatesdetailff.PNG&quot; /&gt;&lt;/li&gt;
+&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>HeoHyoYeong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="python" />
+      
+
+      
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Python Django - Django 투표 프로젝트 투표 결과 제작</title>
+      <link href="http://localhost:4000/python-Django-5" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 결과 제작" />
+      <published>2020-08-02T02:40:00+09:00</published>
+      <updated>2020-08-02T02:40:00+09:00</updated>
+      <id>http://localhost:4000/python-Django-5</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-5">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;이 포스트가 투표 프로젝트의 마지막 포스트입니다.&lt;/h3&gt;
+
+&lt;div&gt;
+&lt;h3&gt;result를 위한 url제작&lt;/h3&gt;
+&lt;li&gt;이제 polls의 result의 url을 제작해볼것입니다.&lt;/li&gt;
+&lt;li&gt;아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-pollsurl3.PNG&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;앞의 detail의 templates의 form에서 정의하였던 question.id가 int:bbb에 들어간다.&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;h3&gt;result를 위한 views를 제작&lt;/h3&gt;
+&lt;li&gt;이제 polls의 detail의 views를 제작해볼것입니다.&lt;/li&gt;
+&lt;li&gt;아래의 그림과 같이 mysite의 views.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-viewsresult.PNG&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;먼저 앞의 index에서 선택하였던 투표 목록을 dic형식으로 가져올것이다.&lt;/li&gt;
+&lt;li&gt;그후 선택한 투표 보기의 pk를 추출하여 vote에 저장해줄것이다.&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;h3&gt;result.html 제작&lt;/h3&gt;
+&lt;li&gt;result.html은 index.html에서 띄운 질문을 선택한후 질문에 대한 답변을 &lt;br /&gt;detail.html에서 투표하면 그 결과를 수집하고 보여줄수있는 page가 나오도록 해야합니다.&lt;/li&gt;
+&lt;li&gt;그후 choice.choice_text를 통해 detail.html에서 선택한 보기를 보여주고&lt;br /&gt;
+마지막으로 choice.vote를 통해 지금까지 투표했던 결과를 보여줄것입니다..&lt;/li&gt;
+&lt;img src=&quot;assets/built/images/django-templatesresult.PNG&quot; /&gt;
+&lt;li&gt;위의 그림과 같이 detail.html를 설정하였습니다. &lt;/li&gt;
+&lt;li&gt;위의 결과를 통해 서버를 가동후 &quot;http://127.0.0.1:8000/polls/&quot;에 들어가 질문을 선택하고 보기를 선택하면 아래와 같이 나옵니다.&lt;img src=&quot;assets/built/images/django-templatesresultff.PNG&quot; /&gt;&lt;/li&gt;
+&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>HeoHyoYeong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="python" />
+      
+
+      
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Python Django - Django 투표 프로젝트 model 제작</title>
+      <link href="http://localhost:4000/python-Django-2" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 model 제작" />
       <published>2020-07-31T02:40:00+09:00</published>
       <updated>2020-07-31T02:40:00+09:00</updated>
       <id>http://localhost:4000/python-Django-2</id>
@@ -42,7 +251,10 @@
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h6&gt;
 이전 포스트에서 제작하였던 polls 폴더에 존재하였던 manage.py를 수정합니다.&lt;br /&gt;&lt;br /&gt;
@@ -63,12 +275,13 @@
  가장 좋아하는 연예인은?과 같은 질문들은 송지효, 전소민과 같은 것들이 들어갈 수 있는 class입니다.&lt;img src=&quot;assets/built/images/django-choiceclass.PNG&quot; /&gt;&lt;/li&gt;
 &lt;li&gt;위의 그림과 같이 Choice class를 제작합니다. &lt;br /&gt;&lt;/li&gt;
 &lt;/div&gt;
-&lt;h4&gt;class가 완성되었다면 admin.py를 수정하여 관리할 수 있게 합니다.&lt;/h4&gt;
+&lt;h4&gt; class가 완성되었다면 admin.py를 수정하여 관리할 수 있게 합니다.&lt;br /&gt;&lt;br /&gt;&lt;/h4&gt;
 &lt;div&gt;
 &lt;h3&gt;admin.py 수정&lt;/h3&gt;
 &lt;li&gt;아래의 그림과 같이 admin.py를 수정합니다.&lt;img src=&quot;assets/built/images/django-adminchange.PNG&quot; /&gt;&lt;/li&gt;
-&lt;li&gt;그후 C:\Djangotest2/MyFirstWebPoll에서 python manㅋage.py makemigrations와 &lt;br /&gt;
-python manage.py migrate를 통해 databas를 변경해줍니다.&lt;/li&gt;
+&lt;li&gt;데이터베이스에 테이블을 만들려면 SQL구문이 필요합니다.&lt;/li&gt;
+&lt;li&gt;이를 위해 C:\Djangotest2/MyFirstWebPoll에서 python manage.py makemigrations와 &lt;br /&gt;
+python manage.py migrate를 통해 database를 변경해줍니다.&lt;/li&gt;
 &lt;li&gt;마지막으로 이전에 확인하였던 admin 싸이트를 확인해보면 아래와 같이 변경된것을 확인할수있습니다.&lt;img src=&quot;assets/built/images/django-adminclassadd.PNG&quot; /&gt;&lt;/li&gt;
 &lt;/div&gt;</content>
 
@@ -91,7 +304,7 @@ python manage.py migrate를 통해 databas를 변경해줍니다.&lt;/li&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 제작 이전 포스트에서 제작하였던 polls 폴더에 존재하였던 manage.py를 수정합니다. 수정을 수행할 때 파이썬은 객체지향이기 때문에 class를 사용합니다. 또한 질문과 보기를 따로 나타내야하기때문에 2개의 class를 제작할것입니다.</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 이전 포스트에서 제작하였던 polls 폴더에 존재하였던 manage.py를 수정합니다. 수정을 수행할 때 파이썬은 객체지향이기 때문에 class를 사용합니다. 또한 질문과 보기를 따로 나타내야하기때문에 2개의 class를 제작할것입니다.</summary>
       
 
       
@@ -109,7 +322,10 @@ python manage.py migrate를 통해 databas를 변경해줍니다.&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;이글은 파이썬 제어문에 관한 내용입니다!&lt;/p&gt;</content>
@@ -133,7 +349,7 @@ python manage.py migrate를 통해 databas를 변경해줍니다.&lt;/li&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 제작</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작</summary>
       
 
       
@@ -151,7 +367,10 @@ python manage.py migrate를 통해 databas를 변경해줍니다.&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Django는 파이썬으로 만들어진 오픈소스 웹 어플리케이션을 만들 쉽게 작성할 수 있도록 도와주는 Framework입니다.&lt;/p&gt;
@@ -182,7 +401,7 @@ python manage.py migrate를 통해 databas를 변경해줍니다.&lt;/li&gt;
 &lt;img src=&quot;assets/built/images/django-application.PNG&quot; /&gt;&lt;/li&gt;
 
 &lt;li&gt;파이참에서 settings.py의 INSTALLED_APPS에 위에서 설치한 polls을 추가해주어야한다.&lt;br /&gt; 만약 추가하지않으면 프로젝트가 어플리케이션을 인식하지못한다.  &lt;img src=&quot;assets/built/images/django-settingapp.PNG&quot; /&gt;&lt;/li&gt;
-&lt;li&gt;C:/Djangotest2/MyFirstWebPoll에서 python manage.py migrate를 수행하면 db.sqlite3가 생성된다. &lt;img src=&quot;assets/built/images/django-migrate.PNGG&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;C:/Djangotest2/MyFirstWebPoll에서 python manage.py migrate를 수행하면 db.sqlite3가 생성된다. &lt;img src=&quot;assets/built/images/django-migrate.PNG&quot; /&gt;&lt;/li&gt;
 &lt;li&gt;C:/Djangotest2/MyFirstWebPoll에서 python manage.py runserver를 수행하면 서버가 정상적으로 작동하는 것을 확인할수있다. &lt;img src=&quot;assets/built/images/django-serverrun.PNG&quot; /&gt;&lt;/li&gt;
 &lt;li&gt;C:/Djangotest2/MyFirstWebPoll에서 python manage.py createsuperuser를 수행하면 아이디와 비밀번호를 생성한후 &lt;br /&gt;
 http://localhost:8000/admin에 들어가면 관리자 모드를 확인할수있다 &lt;img src=&quot;assets/built/images/django-admin.PNG&quot; /&gt;&lt;/li&gt;
@@ -207,7 +426,7 @@ http://localhost:8000/admin에 들어가면 관리자 모드를 확인할수있�
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 제작</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작</summary>
       
 
       
@@ -225,7 +444,10 @@ http://localhost:8000/admin에 들어가면 관리자 모드를 확인할수있�
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 style=&quot;color: goldenrod&quot;&gt;&lt;u&gt;파이썬의 문자열에 관련된 포스트입니다.&lt;/u&gt;&lt;/h1&gt;
@@ -308,7 +530,7 @@ http://localhost:8000/admin에 들어가면 관리자 모드를 확인할수있�
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 제작</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작</summary>
       
 
       
