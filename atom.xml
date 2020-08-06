@@ -8,6 +8,30 @@
     
       
       <item>
+        <title>Python Django - Django 투표 프로젝트 투표 결과 제작</title>
+        
+          <description>&lt;h1 id=&quot;python-강좌는-여러-절로-구성되어-있습니다-&quot;&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/h1&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 04 Aug 2020 02:40:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/python-Django-5</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-5</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Python Django - Django 투표 프로젝트 투표 보기 제작</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
@@ -55,34 +79,10 @@
 
 </description>
         
-        <pubDate>Mon, 03 Aug 2020 02:40:00 +0900</pubDate>
+        <pubDate>Sun, 02 Aug 2020 02:40:00 +0900</pubDate>
         <link>
         http://localhost:4000/python-Django-3</link>
         <guid isPermaLink="true">http://localhost:4000/python-Django-3</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Python Django - Django 투표 프로젝트 투표 결과 제작</title>
-        
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        
-        <pubDate>Sun, 02 Aug 2020 02:40:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/python-Django-5</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-5</guid>
       </item>
       
     
