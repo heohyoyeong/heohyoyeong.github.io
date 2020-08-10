@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/tag/python/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-08-06T17:22:18+09:00</updated>
+  <updated>2020-08-10T09:09:31+09:00</updated>
   <id>http://localhost:4000/tag/python/feed.xml</id>
 
   
@@ -32,48 +32,99 @@
 
   
     <entry>
-      <title type="html">Python Django - Django 투표 프로젝트 투표 결과 제작</title>
-      <link href="http://localhost:4000/python-Django-5" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 결과 제작" />
-      <published>2020-08-04T02:40:00+09:00</published>
-      <updated>2020-08-04T02:40:00+09:00</updated>
-      <id>http://localhost:4000/python-Django-5</id>
-      <content type="html" xml:base="http://localhost:4000/python-Django-5">&lt;h1 id=&quot;python-강좌는-여러-절로-구성되어-있습니다-&quot;&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/h1&gt;
+      <title type="html">Python Django - Django 블로그 프로젝트 model 제작</title>
+      <link href="http://localhost:4000/python-Django-blog-1" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 model 제작" />
+      <published>2020-08-06T02:40:00+09:00</published>
+      <updated>2020-08-06T02:40:00+09:00</updated>
+      <id>http://localhost:4000/python-Django-blog-1</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-blog-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;이번-포스트에서는-회원가입을-하고-로그인을-하여-글을-남기고-댓글을-작성하는-블로그를-제작하여-보겠습니다&quot;&gt;이번 포스트에서는 회원가입을 하고 로그인을 하여 글을 남기고 댓글을 작성하는 블로그를 제작하여 보겠습니다.&lt;/h3&gt;
+&lt;h6 id=&quot;이전의-django-시작-포스트에서-설명하였던-방식을-그대로-사용하여-서버를&quot;&gt;이전의 Django 시작 포스트에서 설명하였던 방식을 그대로 사용하여 서버를&lt;/h6&gt;
+&lt;h6 id=&quot;구현시킨-상태로-시작하겠습니다&quot;&gt;구현시킨 상태로 시작하겠습니다.&lt;/h6&gt;
+&lt;h6 id=&quot;서버가-정상적으로-구동되는것을-확인하였다면-가장먼저-모델을-제작해아합니다&quot;&gt;서버가 정상적으로 구동되는것을 확인하였다면 가장먼저 모델을 제작해아합니다.&lt;/h6&gt;
+&lt;h6 id=&quot;블로그를-제작하기-위해서-총-3개의-모델이-필요합니다&quot;&gt;블로그를 제작하기 위해서 총 3개의 모델이 필요합니다.&lt;/h6&gt;
+&lt;h6 id=&quot;로그인-메인글-댓글-이렇게-3개의-모델을-제작할-것입니다&quot;&gt;로그인, 메인글, 댓글 이렇게 3개의 모델을 제작할 것입니다.&lt;/h6&gt;
+
+&lt;h3 id=&quot;user-class-제작&quot;&gt;User class 제작&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;가장 먼저 회원가입과 로그인을 할 수 있게 해주는 User 모델을 제작할것입니다.&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;이 포스트가 투표 프로젝트의 마지막 포스트입니다.&lt;/h3&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;models&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#장고에서 제공하는 models.Model를 상속받아야한다.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;models&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CharField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max_length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;verbose_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'사용자명'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;models&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CharField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max_length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;verbose_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'비밀번호'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;registered_dttm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;models&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DateTimeField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;auto_now_add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;verbose_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'등록시간'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;div&gt;
-&lt;h3&gt;result를 위한 url제작&lt;/h3&gt;
-&lt;li&gt;이제 polls의 result의 url을 제작해볼것입니다.&lt;/li&gt;
-&lt;li&gt;아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-pollsurl3.PNG&quot; /&gt;&lt;/li&gt;
-&lt;li&gt;앞의 detail의 templates의 form에서 정의하였던 question.id가 int:bbb에 들어간다.&lt;/li&gt;
-&lt;/div&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__str__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 이 함수 추가&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# User object 대신 나타낼 문자&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;#저장되는 시점의 시간을 자동으로 삽입해준다.&lt;/span&gt;
 
-&lt;div&gt;
-&lt;h3&gt;result를 위한 views를 제작&lt;/h3&gt;
-&lt;li&gt;이제 polls의 detail의 views를 제작해볼것입니다.&lt;/li&gt;
-&lt;li&gt;아래의 그림과 같이 mysite의 views.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-viewsresult.PNG&quot; /&gt;&lt;/li&gt;
-&lt;li&gt;먼저 앞의 index에서 선택하였던 투표 목록을 dic형식으로 가져올것이다.&lt;/li&gt;
-&lt;li&gt;그후 선택한 투표 보기의 pk를 추출하여 vote에 저장해줄것이다.&lt;/li&gt;
-&lt;/div&gt;
 
-&lt;div&gt;
-&lt;h3&gt;result.html 제작&lt;/h3&gt;
-&lt;li&gt;result.html은 index.html에서 띄운 질문을 선택한후 질문에 대한 답변을 &lt;br /&gt;detail.html에서 투표하면 그 결과를 수집하고 보여줄수있는 page가 나오도록 해야합니다.&lt;/li&gt;
-&lt;li&gt;그후 choice.choice_text를 통해 detail.html에서 선택한 보기를 보여주고&lt;br /&gt;
-마지막으로 choice.vote를 통해 지금까지 투표했던 결과를 보여줄것입니다..&lt;/li&gt;
-&lt;img src=&quot;assets/built/images/django-templatesresult.PNG&quot; /&gt;
-&lt;li&gt;위의 그림과 같이 detail.html를 설정하였습니다. &lt;/li&gt;
-&lt;li&gt;위의 결과를 통해 서버를 가동후 &quot;http://127.0.0.1:8000/polls/&quot;에 들어가 질문을 선택하고 보기를 선택하면 아래와 같이 나옵니다.&lt;img src=&quot;assets/built/images/django-templatesresultff.PNG&quot; /&gt;&lt;/li&gt;
-&lt;/div&gt;</content>
+    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Meta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#메타 클래스를 이용하여 테이블명 지정&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;db_table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'test_user'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;위와 같이 Question class를 제작합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;choice-class-제작&quot;&gt;Choice class 제작&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;투표의 내용을 작성할 class를 제작합니다.&lt;/li&gt;
+  &lt;li&gt;예를 들어. 가장 좋아하는 숫자는? 라면 1,2,3,4가 들어갈 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;가장 좋아하는 연예인은?과 같은 질문들은 송지효, 전소민과 같은 것들이 들어갈 수 있는 class입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Choice(models.Model):
+    question=models.ForeignKey(Question,on_delete=models.CASCADE)
+    # question의 primary key를 가져오기때뭉네 foreignkey로 지정하고 question을 받는다.
+    # on_delete의 경우 만약 question의 id가 삭제되면 그 id와 관련된 값들을 삭제 해버린다!
+    # question_id는 foreignkey이기 때문에 자동으로 _id가 추가되어 question이라고만 작성한다.
+    choice_text=models.CharField(max_length=200)
+    votes = models.IntegerField(default=0)
+    #integerfield의 default를 0으로 하면 초기값이 0으로 설정
+
+    def __str__(self):
+        return self.choice_text
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;class가 완성되었다면 admin.py를 수정하여 관리할 수 있게 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;adminpy-수정&quot;&gt;admin.py 수정&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;아래와 같이 admin.py를 수정합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.contrib&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#models.py에서 작성한 Question과 Choice를 불러온다!&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;polls.models&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Question&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;polls.models&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Choice&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#괄호안에는 내가 등록할 클래스가 나와야 한다.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Question&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Choice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;데이터베이스에 테이블을 만들려면 SQL구문이 필요합니다.&lt;/li&gt;
+  &lt;li&gt;이를 위해 C:\Djangotest2/MyFirstWebPoll에서 python manage.py makemigrations과 python manage.py migrate를 수행합니다.&lt;/li&gt;
+  &lt;li&gt;마지막으로 이전에 확인하였던 admin 싸이트를 확인해보면 아래와 같이 변경된것을 확인할수있습니다.
+&lt;img src=&quot;assets/built/images/django-adminclassadd.PNG&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
 
       
       
@@ -94,7 +145,129 @@
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 이번 포스트에서는 회원가입을 하고 로그인을 하여 글을 남기고 댓글을 작성하는 블로그를 제작하여 보겠습니다. 이전의 Django 시작 포스트에서 설명하였던 방식을 그대로 사용하여 서버를 구현시킨 상태로 시작하겠습니다. 서버가 정상적으로 구동되는것을 확인하였다면 가장먼저 모델을 제작해아합니다. 블로그를 제작하기 위해서 총 3개의 모델이 필요합니다. 로그인, 메인글, 댓글 이렇게 3개의 모델을 제작할 것입니다. User class 제작 가장 먼저 회원가입과 로그인을 할 수 있게 해주는 User 모델을 제작할것입니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Python Django - Django 투표 프로젝트 투표 결과 제작</title>
+      <link href="http://localhost:4000/python-Django-poll-4" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 결과 제작" />
+      <published>2020-08-04T02:40:00+09:00</published>
+      <updated>2020-08-04T02:40:00+09:00</updated>
+      <id>http://localhost:4000/python-Django-poll-4</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-poll-4">&lt;h1 id=&quot;python-강좌는-여러-절로-구성되어-있습니다-&quot;&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/h1&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;이-포스트가-투표-프로젝트의-마지막-포스트입니다&quot;&gt;이 포스트가 투표 프로젝트의 마지막 포스트입니다.&lt;/h2&gt;
+
+&lt;h3 id=&quot;result를-위한-url제작&quot;&gt;result를 위한 url제작&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;이제 polls의 result의 url을 제작해볼것입니다.&lt;/li&gt;
+  &lt;li&gt;아래와 같이 mysite의 url.py파일을 수정해줄것입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&amp;lt;int:bbb&amp;gt;/vote/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'vote'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# &amp;lt;int:bbb&amp;gt;/vote/는 현재 폴더 polls/뒤에 bbb라는 숫자 변수가 붙고 vote를 붙여라라는 의미&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# 여기까지가 http://localhost:8000/polls/a/vote/ 이것까지 가능합니다&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;앞의 detail의 templates의 form에서 정의하였던 question.id가 int:bbb에 들어간다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;result를-위한-views를-제작&quot;&gt;result를 위한 views를 제작&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;이제 polls의 detail의 views를 제작해볼것입니다.&lt;/li&gt;
+  &lt;li&gt;아래와 같이 mysite의 views.py파일을 수정해줄것입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;vote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bbb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# URL로 넘어온 데이터(bbb)는 Question객체의 id가 넘어왔다,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;question&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_object_or_404&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Question&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bbb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;question_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'question'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;question&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# 일단은 질문 객체가 넘어왔다.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;selected_choice&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;question&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;choice_set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;choice&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# request header 안에 form에서 선택한 데이터가 포함되서 전달되고 이것을 추출하기 위해서&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# request.POST[&quot;choice&quot;]가 사용되는데 이것은 서버로 post형식으로 전송된 정보들중 choice의 primarykey를 보내라!&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;selected_choice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;votes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;selected_choice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;# result.html에서 현재 투표항목에 대한 각 항목들의 투표현황을 출력!!&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'result.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;question_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;먼저 앞의 index에서 선택하였던 투표 목록을 dic형식으로 가져올것이다.&lt;/li&gt;
+  &lt;li&gt;그후 선택한 투표 보기의 pk를 추출하여 vote에 저장해줄것이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;resulthtml-제작&quot;&gt;result.html 제작&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;result.html은 index.html에서 띄운 질문을 선택한후 질문에 대한 답변을 detail.html에서 투표하면 그 결과를 수집하고 보여줄수있는 page가 나오도록 해야합니다.&lt;/li&gt;
+  &lt;li&gt;그후 choice.choice_text를 통해 detail.html에서 선택한 보기를 보여주고 마지막으로 choice.vote를 통해 지금까지 투표했던 결과를 보여줄것입니다..&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;{{question.question_text}}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+        {% for choice in question.choice_set.all %}
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;label&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;보기 :{{choice.choice_text}}&lt;span class=&quot;ni&quot;&gt;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&lt;/span&gt;득표수 :&lt;span class=&quot;nt&quot;&gt;&amp;lt;u&amp;gt;&lt;/span&gt;{{choice.votes}}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/u&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&lt;/span&gt;
+        {% endfor %}
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;위와 같이 detail.html를 설정하였습니다.&lt;/li&gt;
+  &lt;li&gt;위의 결과를 통해 서버를 가동후 “http://127.0.0.1:8000/polls/”에 들어가 질문을 선택하고 보기를 선택하면 아래와 같이 나옵니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/built/images/django-templatesresultff.PNG&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>HeoHyoYeong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="python" />
+      
+
+      
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작</summary>
       
 
       
@@ -103,44 +276,102 @@
   
     <entry>
       <title type="html">Python Django - Django 투표 프로젝트 투표 보기 제작</title>
-      <link href="http://localhost:4000/python-Django-4" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 보기 제작" />
+      <link href="http://localhost:4000/python-Django-poll-3" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 보기 제작" />
       <published>2020-08-03T02:40:00+09:00</published>
       <updated>2020-08-03T02:40:00+09:00</updated>
-      <id>http://localhost:4000/python-Django-4</id>
-      <content type="html" xml:base="http://localhost:4000/python-Django-4">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/python-Django-poll-3</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-poll-3">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div&gt;
-&lt;h3&gt;index를 위한 url제작&lt;/h3&gt;
-&lt;li&gt;이제 polls의 index의 url을 제작해볼것입니다.&lt;/li&gt;
-&lt;li&gt;아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-pollsurl2.PNG&quot; /&gt;&lt;/li&gt;
-&lt;/div&gt;
+&lt;h3 id=&quot;index를-위한-url제작&quot;&gt;index를 위한 url제작&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;이제 polls의 detial의 url을 제작해볼것입니다.&lt;/li&gt;
+  &lt;li&gt;아래와 같이 mysite의 url.py파일을 수정해줄것입니다.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;div&gt;
-&lt;h3&gt;detail를 위한 views를 제작&lt;/h3&gt;
-&lt;li&gt;이제 polls의 detail의 views를 제작해볼것입니다.&lt;/li&gt;
-&lt;li&gt;아래의 그림과 같이 mysite의 views.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-templatesdetail.PNG&quot; /&gt;&lt;/li&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&amp;lt;int:aaa&amp;gt;/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;detail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'detail'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# view.detail는  view의 detail를 찾아서 호출하라는 의미이다.&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# &amp;lt;int:aaa&amp;gt;는 현재 폴더 polls/뒤에 aaa라는 숫자 변수가 붙을것이라는 의미&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# path를 연결함으로써 http://localhost:8000/polls/a 여기까지 실행이 가능하게됩니다.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div&gt;
-&lt;h3&gt;detail.html 제작&lt;/h3&gt;
-&lt;li&gt;detail.html은 index.html에서 띄운 질문을 선택하면 질문에 대한 답변을 &lt;br /&gt;투표할 수 있는 page가 나오도록 해야합니다.&lt;/li&gt;
-&lt;li&gt;우리는 question_text을 html에 띄워 선택할수있는 html을 제작할것입니다.&lt;/li&gt;
-&lt;li&gt;form tag를 활용하여 아래의 for문의 결과 값을 post형식으로 서버에 전송합니다.&lt;/li&gt;
-&lt;li&gt;url 'polls:vote'는 http~8000/polls/vote/라는 의미입니다.&lt;br /&gt;
-또한 question.id가 붙은 이유는 나중에 나올 view.vote의 int:bbb에 적용하기 위해서이다.&lt;/li&gt;
-&lt;img src=&quot;assets/built/images/django-templatesdetail.PNG&quot; /&gt;
-&lt;li&gt;위의 그림과 같이 detail.html를 설정하였습니다. &lt;/li&gt;
-&lt;li&gt;위의 결과를 통해 서버를 가동후 &quot;http://127.0.0.1:8000/polls/&quot;에 들어가 질문을 선택하면 아래와 같이 나온다.&lt;img src=&quot;assets/built/images/django-templatesdetailff.PNG&quot; /&gt;&lt;/li&gt;
-&lt;/div&gt;</content>
+&lt;h3 id=&quot;detail를-위한-views를-제작&quot;&gt;detail를 위한 views를 제작&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;이제 polls의 detail의 views를 제작해볼것입니다.&lt;/li&gt;
+  &lt;li&gt;아래와 같이 mysite의 views.py파일을 수정해줄것입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;detail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aaa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_object_or_404&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Question&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aaa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# 로직처리를 한후 html을 가져다 렌더링 할것이다.&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# get_object_or_404라는 함수는 object를 가져와! 아니면 에러를 줘!라는 함수이다&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# get_object_or_404를 사용하기 위해서는 위에 import 해줘야한다.&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# object는 Question에서 primary key가 aaa인것을 가져와!&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# index에서는 모든 question 객체를 다 구해서 리스트로 만들었는데&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# 이번에는 특정 question 객체 1개만 구해하기 때문에 pk를 사용하여 tmp에 저장하였다.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;question&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# 딕셔너리로 형태로 html로 전달해야한다.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'detail.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# render는 내가 얻은 결과와 HTML을 가지고 그림을 그리는 것&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;detailhtml-제작&quot;&gt;detail.html 제작&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;detail.html은 index.html에서 띄운 질문을 선택하면 질문에 대한 답변을 
+&lt;br /&gt; 투표할 수 있는 page가 나오도록 해야합니다.&lt;/li&gt;
+  &lt;li&gt;우리는 question_text을 html에 띄워 선택할수있는 html을 제작할것입니다.&lt;/li&gt;
+  &lt;li&gt;form tag를 활용하여 아래의 for문의 결과 값을 post형식으로 서버에 전송합니다.&lt;/li&gt;
+  &lt;li&gt;url ‘polls:vote’는 http~8000/polls/vote/라는 의미입니다.
+&lt;br /&gt; 또한 question.id가 붙은 이유는 나중에 나올 view.vote의 int:bbb에 적용하기 위해서입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;               
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;{{question.question_text}}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;form&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;action=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'{\% url &quot;polls:vote&quot; question.id %}'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;POST&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 서버에게 정보를 전달해준다. 방식은 post으로한다. --&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- action은 app의 이름이 polls인 url에서 이름이 vote인것을 찾아서 쓸것이다.--&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- question.id가 들어간 이유는 vote의 url의 &amp;lt;int:bbb&amp;gt;에 mapping됨--&amp;gt;&lt;/span&gt;
+            {\% csrf_token %} &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 해킹 방지용 기능 추가 --&amp;gt;&lt;/span&gt;
+        {% for choice in question.choice_set.all %}  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- question객체에 연결된 choice 객체의 집합을 for문으로 반복 출력 --&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;radio&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;choice&quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;choice{{forloop.counter}}&quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{choice.id}}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- forloop를 돌면서 발생하는 순서가 들어감 --&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;label&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;for=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;choice{{forloop.counter}}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+                {{choice.choice_text}} &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- choice의 목록을 써주겠다. --&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&lt;/span&gt;
+        {% endfor %}
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;submit&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;투표&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;위와 같이 detail.html를 설정하였습니다.&lt;/li&gt;
+  &lt;li&gt;위의 결과를 통해 서버를 가동후 “http://127.0.0.1:8000/polls/”에 들어가 질문을 선택하면 아래와 같이 나온다.
+&lt;img src=&quot;assets/built/images/django-templatesdetailff.PNG&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
 
       
       
@@ -161,7 +392,7 @@
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작</summary>
       
 
       
@@ -170,49 +401,129 @@
   
     <entry>
       <title type="html">Python Django - Django 투표 프로젝트 투표 목록 제작</title>
-      <link href="http://localhost:4000/python-Django-3" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 목록 제작" />
+      <link href="http://localhost:4000/python-Django-poll-2" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 목록 제작" />
       <published>2020-08-02T02:40:00+09:00</published>
       <updated>2020-08-02T02:40:00+09:00</updated>
-      <id>http://localhost:4000/python-Django-3</id>
-      <content type="html" xml:base="http://localhost:4000/python-Django-3">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/python-Django-poll-2</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-poll-2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div&gt;
-&lt;h3&gt;프로젝트의 url수정&lt;/h3&gt;
-&lt;li&gt;mysite의 url을 수정해볼것입니다.&lt;/li&gt;
-&lt;li&gt;아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-mysiteurl.PNG&quot; /&gt;&lt;/li&gt;
-&lt;li&gt;기본으로 존재하던 admin에 관련된 path는 그대로 두겠습니다. &lt;/li&gt;
-&lt;li&gt;새롭게 추가될 application을 반영하기 위하여 poll의 url을 path에 추가해야합니다.&lt;/li&gt;
-&lt;li&gt;물론 여기서 직접 입력해도 되지만 추후 정리를 위하여 include함수를 사용하여 polls.url을 원격으로 지정해주겠습니다.&lt;/li&gt;
-&lt;/div&gt;
 
-&lt;div&gt;
-&lt;h3&gt;index를 위한 url제작&lt;/h3&gt;
-&lt;li&gt;이제 polls의 index의 url을 제작해볼것입니다.&lt;/li&gt;
-&lt;li&gt;아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-pollsurl1.PNG&quot; /&gt;&lt;/li&gt;
-&lt;/div&gt;
+&lt;p&gt;###프로젝트의 url수정&amp;lt;/h3&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;mysite의 url을 수정해볼것입니다.&lt;/li&gt;
+  &lt;li&gt;아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;div&gt;
-&lt;h3&gt;index를 위한 views를 제작&lt;/h3&gt;
-&lt;li&gt;이제 polls의 index의 views를 제작해볼것입니다.&lt;/li&gt;
-&lt;li&gt;아래의 그림과 같이 mysite의 views.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-viewsindex.PNG&quot; /&gt;&lt;/li&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.contrib&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.urls&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#include 함수를 추가&lt;/span&gt;
 
-&lt;div&gt;
-&lt;h3&gt;index.html 제작&lt;/h3&gt;
-&lt;li&gt;이전에 제작하였던 models.py에서 Question class는 question_text를 return합니다.&lt;/li&gt;
-&lt;li&gt;우리는 question_text을 html에 띄워 선택할수있는 html을 제작할것입니다.&lt;/li&gt;
-&lt;li&gt;앞의 view.py에서 정의한 index함수의 context의 내부에 &quot;latest_question_list&quot;를 활용해야합니다.&lt;img src=&quot;assets/built/images/django-templatesindex.PNG&quot; /&gt;&lt;/li&gt;
-&lt;li&gt;위의 그림과 같이 index.html를 설정하였습니다. &lt;/li&gt;
-&lt;li&gt;위의 결과를 통해 서버를 가동후 &quot;http://127.0.0.1:8000/polls/&quot;에 들어가면 아래와 같이 나온다.&lt;img src=&quot;assets/built/images/django-templatesindexff.PNG&quot; /&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/div&gt;</content>
+&lt;span class=&quot;n&quot;&gt;urlpatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'admin/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'polls/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'polls.urls'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# view의 함수를 명칭 혹은 계층구조로 만들수있다.&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# 하지만 view의 함수를 직접 넣는것보다 계층구조로 만드는 것이 좋다.&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# include함수를 사용하여 polls의 urls을 path로 잡아줄것입니다.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기본으로 존재하던 admin에 관련된 path는 그대로 두겠습니다.&lt;/li&gt;
+  &lt;li&gt;새롭게 추가될 application을 반영하기 위하여 poll의 url을 path에 추가해야합니다.&lt;/li&gt;
+  &lt;li&gt;물론 여기서 직접 입력해도 되지만 추후 정리를 위하여 include함수를 사용하여 polls.url을 원격으로 지정해주겠습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;index를-위한-url제작&quot;&gt;index를 위한 url제작&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;이제 polls의 index의 url을 제작해볼것입니다.&lt;/li&gt;
+  &lt;li&gt;아래와 같이 mysite의 url.py파일을 수정해줄것입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.urls&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;app_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'polls'&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#이건 polls의 url mapping이다 라는 지칭&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;urlpatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'index'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# path의 첫번째 칸의 ''의 의미는 http://localhost:8000/polls/ 현재 위치라는 의미이다.&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# view.index는  view의 index를 찾아서 호출하라는 의미이다.&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# path를 연결함으로써 http://localhost:8000/polls/ 여기까지 실행이 가능하게됩니다.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;index를-위한-views를-제작&quot;&gt;index를 위한 views를 제작&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;이제 polls의 index의 views를 제작해볼것입니다.&lt;/li&gt;
+  &lt;li&gt;아래와 같이 mysite의 views.py파일을 수정해줄것입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.shortcuts&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_object_or_404&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;polls.models&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Question&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;# view의 function이 하는 일은 request를 받아서 결과 template.html을 이용해서&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 결과 파일을 만들어 내는 일을 한다.&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# view가 가지는 함수의 첫번째 인자는 무조건 request이다.&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# database에서 투표질문의 목록을 가져올것이다.&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# 원래는 문자열로 표현되야 하는데.. orm을 사용하다보니 각 레코드가 question 클래스의 객체로 표현&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Question클르스의 객체로 표현.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;my_list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Question&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;objects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order_by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'pub_date'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# my_list는 question의 객체를 다가져와!&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# order_by('pub_date')는 순서는 pub_date순서로 가져와!&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# 만약 -pub_date라면 pub_date의 역순으로 가져와! 라는 의미이다.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'question_list'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# 딕셔너리로 형태로 html로 전달해야한다.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'index.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;indexhtml-제작&quot;&gt;index.html 제작&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;이전에 제작하였던 models.py에서 Question class는 question_text를 return합니다.&lt;/li&gt;
+  &lt;li&gt;우리는 question_text을 html에 띄워 선택할수있는 html을 제작할것입니다.&lt;/li&gt;
+  &lt;li&gt;앞의 view.py에서 정의한 index함수의 context의 내부에 “latest_question_list”를 활용해야합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;투표 목록&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;투표 목록이 나와야한다.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- index 함수 (view.py안에 있는)에서 질문의 목록을 줘야지 그것을 출력할수있다. --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Question class(model.py안에 있는)의 객체 3마리가 생성되서 3개를 한번에 받기 위하여 리스트 안에 넣어서 전달받을것이다.--&amp;gt;&lt;/span&gt;
+    {% if question_list %} &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 만약 view의 index함수에 latest_question_list가 있다면 --&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+        {% for question in question_list %}
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/polls/{{question.id}}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 아래의 출력되는 하이퍼텍스트로 제작된 question_text를 누르면  --&amp;gt;&lt;/span&gt;
+                {{ question.question_text }}      &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- polls의 question의 id로 이동한다.--&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+        {% endfor %}                               &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- endfor는 여기서 for 구문을 끝낸다 라는 의미--&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+    {% else %}
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;출력할 투표목록이 존재하지 않습니다.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+    {% endif %}                                     &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- endif는 여기서 if 구문을 끝낸다 라는 의미--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;위와 같이 index.html를 설정하였습니다.&lt;/li&gt;
+  &lt;li&gt;위의 결과를 통해 서버를 가동후 “http://127.0.0.1:8000/polls/”에 들어가면 아래와 같이 나온다.
+&lt;img src=&quot;assets/built/images/django-templatesindexff.PNG&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
 
       
       
@@ -233,7 +544,7 @@
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 프로젝트의 url수정 mysite의 url을 수정해볼것입니다. 아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다. 기본으로 존재하던 admin에 관련된 path는 그대로 두겠습니다. 새롭게 추가될 application을 반영하기 위하여 poll의 url을 path에 추가해야합니다. 물론 여기서 직접 입력해도 되지만 추후 정리를 위하여 include함수를 사용하여 polls.url을 원격으로 지정해주겠습니다.</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작</summary>
       
 
       
@@ -242,49 +553,96 @@
   
     <entry>
       <title type="html">Python Django - Django 투표 프로젝트 model 제작</title>
-      <link href="http://localhost:4000/python-Django-2" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 model 제작" />
+      <link href="http://localhost:4000/python-Django-poll-1" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 model 제작" />
       <published>2020-07-31T02:40:00+09:00</published>
       <updated>2020-07-31T02:40:00+09:00</updated>
-      <id>http://localhost:4000/python-Django-2</id>
-      <content type="html" xml:base="http://localhost:4000/python-Django-2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/python-Django-poll-1</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-poll-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h6&gt;
-이전 포스트에서 제작하였던 polls 폴더에 존재하였던 manage.py를 수정합니다.&lt;br /&gt;&lt;br /&gt;
-수정을 수행할 때 파이썬은 객체지향이기 때문에 class를 사용합니다.&lt;br /&gt;&lt;br /&gt;
-또한 질문과 보기를 따로 나타내야하기때문에 2개의 class를 제작할것입니다.&lt;/h6&gt;
 
-&lt;div&gt;
-&lt;h3&gt;Question class 제작&lt;/h3&gt;
-&lt;li&gt;투표의 질문을 작성할 class를 제작합니다.&lt;/li&gt;
-&lt;li&gt;예를 들어. 가장 좋아하는 숫자는? 가장 좋아하는 연예인은?과 같은 질문들이 들어갈 수 있는 class입니다.&lt;img src=&quot;assets/built/images/django-questionclass.PNG&quot; /&gt;&lt;/li&gt;
-&lt;li&gt;위의 그림과 같이 Question class를 제작합니다. &lt;/li&gt;
-&lt;/div&gt;
+&lt;h6 id=&quot;이전-포스트에서-제작하였던-polls-폴더에-존재하였던-managepy를-수정합니다&quot;&gt;이전 포스트에서 제작하였던 polls 폴더에 존재하였던 manage.py를 수정합니다.&lt;/h6&gt;
+&lt;h6 id=&quot;수정을-수행할-때-파이썬은-객체지향이기-때문에-class를-사용합니다&quot;&gt;수정을 수행할 때 파이썬은 객체지향이기 때문에 class를 사용합니다.&lt;/h6&gt;
+&lt;h6 id=&quot;또한-질문과-보기를-따로-나타내야하기때문에-2개의-class를-제작할것입니다&quot;&gt;또한 질문과 보기를 따로 나타내야하기때문에 2개의 class를 제작할것입니다.&lt;/h6&gt;
 
-&lt;div&gt;
-&lt;h3&gt;Choice class 제작&lt;/h3&gt;
-&lt;li&gt;투표의 내용을 작성할 class를 제작합니다.&lt;/li&gt;
-&lt;li&gt;예를 들어. 가장 좋아하는 숫자는? 라면 1,2,3,4가 들어갈 수 있습니다. &lt;br /&gt;
- 가장 좋아하는 연예인은?과 같은 질문들은 송지효, 전소민과 같은 것들이 들어갈 수 있는 class입니다.&lt;img src=&quot;assets/built/images/django-choiceclass.PNG&quot; /&gt;&lt;/li&gt;
-&lt;li&gt;위의 그림과 같이 Choice class를 제작합니다. &lt;br /&gt;&lt;/li&gt;
-&lt;/div&gt;
-&lt;h4&gt; class가 완성되었다면 admin.py를 수정하여 관리할 수 있게 합니다.&lt;br /&gt;&lt;br /&gt;&lt;/h4&gt;
-&lt;div&gt;
+&lt;h3 id=&quot;question-class-제작&quot;&gt;Question class 제작&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;투표의 질문을 작성할 class를 제작합니다.&lt;/li&gt;
+  &lt;li&gt;예를 들어. 가장 좋아하는 숫자는? 가장 좋아하는 연예인은?과 같은 질문들이 들어갈 수 있는 class입니다.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3&gt;admin.py 수정&lt;/h3&gt;
-&lt;li&gt;아래의 그림과 같이 admin.py를 수정합니다.&lt;img src=&quot;assets/built/images/django-adminchange.PNG&quot; /&gt;&lt;/li&gt;
-&lt;li&gt;데이터베이스에 테이블을 만들려면 SQL구문이 필요합니다.&lt;/li&gt;
-&lt;li&gt;이를 위해 C:\Djangotest2/MyFirstWebPoll에서 python manage.py makemigrations와 &lt;br /&gt;
-python manage.py migrate를 통해 database를 변경해줍니다.&lt;/li&gt;
-&lt;li&gt;마지막으로 이전에 확인하였던 admin 싸이트를 확인해보면 아래와 같이 변경된것을 확인할수있습니다.&lt;img src=&quot;assets/built/images/django-adminclassadd.PNG&quot; /&gt;&lt;/li&gt;
-&lt;/div&gt;</content>
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Question&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;models&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;question_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;models&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CharField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max_length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#charfield는 문자열을 지칭 max_length는 200글자까지만 들어간다!&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;pub_date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;models&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DateTimeField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;date published&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;#DatetimeField는 날짜가 들어감 &quot;date published&quot; 설명(이건 안들어가도됨)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Intgerfield는 정수열이 들어감&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# table의 id column은 default로 지정된다.&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# id가 primary key, Not Null, unique&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# id는 autoincrement 특성을 가지는 정수형으로 지정.&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# 자동을 생성해주기 떄문에 class정의에서는 나오지 않는다!&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# def __repr__(self):  # repr은 객체를 임의로 특정 문자열로 표현하고 싶을떄 사용&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__str__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# str은 연산을 위하여 문자열로 바꾸고 싶을때&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;question_text&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;위와 같이 Question class를 제작합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;choice-class-제작&quot;&gt;Choice class 제작&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;투표의 내용을 작성할 class를 제작합니다.&lt;/li&gt;
+  &lt;li&gt;예를 들어. 가장 좋아하는 숫자는? 라면 1,2,3,4가 들어갈 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;가장 좋아하는 연예인은?과 같은 질문들은 송지효, 전소민과 같은 것들이 들어갈 수 있는 class입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Choice(models.Model):
+    question=models.ForeignKey(Question,on_delete=models.CASCADE)
+    # question의 primary key를 가져오기때뭉네 foreignkey로 지정하고 question을 받는다.
+    # on_delete의 경우 만약 question의 id가 삭제되면 그 id와 관련된 값들을 삭제 해버린다!
+    # question_id는 foreignkey이기 때문에 자동으로 _id가 추가되어 question이라고만 작성한다.
+    choice_text=models.CharField(max_length=200)
+    votes = models.IntegerField(default=0)
+    #integerfield의 default를 0으로 하면 초기값이 0으로 설정
+
+    def __str__(self):
+        return self.choice_text
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;class가 완성되었다면 admin.py를 수정하여 관리할 수 있게 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;adminpy-수정&quot;&gt;admin.py 수정&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;아래와 같이 admin.py를 수정합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.contrib&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#models.py에서 작성한 Question과 Choice를 불러온다!&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;polls.models&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Question&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;polls.models&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Choice&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#괄호안에는 내가 등록할 클래스가 나와야 한다.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Question&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Choice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;데이터베이스에 테이블을 만들려면 SQL구문이 필요합니다.&lt;/li&gt;
+  &lt;li&gt;이를 위해 C:\Djangotest2/MyFirstWebPoll에서 python manage.py makemigrations과 python manage.py migrate를 수행합니다.&lt;/li&gt;
+  &lt;li&gt;마지막으로 이전에 확인하였던 admin 싸이트를 확인해보면 아래와 같이 변경된것을 확인할수있습니다.
+&lt;img src=&quot;assets/built/images/django-adminclassadd.PNG&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
 
       
       
@@ -305,7 +663,7 @@ python manage.py migrate를 통해 database를 변경해줍니다.&lt;/li&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 이전 포스트에서 제작하였던 polls 폴더에 존재하였던 manage.py를 수정합니다. 수정을 수행할 때 파이썬은 객체지향이기 때문에 class를 사용합니다. 또한 질문과 보기를 따로 나타내야하기때문에 2개의 class를 제작할것입니다.</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작</summary>
       
 
       
@@ -322,14 +680,21 @@ python manage.py migrate를 통해 database를 변경해줍니다.&lt;/li&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;이글은 파이썬 제어문에 관한 내용입니다!&lt;/p&gt;</content>
+&lt;p&gt;이글은 파이썬 제어문에 관한 내용입니다!&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;syntaxHighlight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Hello World'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
 
       
       
@@ -350,7 +715,7 @@ python manage.py migrate를 통해 database를 변경해줍니다.&lt;/li&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작</summary>
       
 
       
@@ -359,19 +724,20 @@ python manage.py migrate를 통해 database를 변경해줍니다.&lt;/li&gt;
   
     <entry>
       <title type="html">Python Django - Django 시작</title>
-      <link href="http://localhost:4000/python-Django-1" rel="alternate" type="text/html" title="Python Django - Django 시작" />
+      <link href="http://localhost:4000/python-Django" rel="alternate" type="text/html" title="Python Django - Django 시작" />
       <published>2020-07-31T01:40:00+09:00</published>
       <updated>2020-07-31T01:40:00+09:00</updated>
-      <id>http://localhost:4000/python-Django-1</id>
-      <content type="html" xml:base="http://localhost:4000/python-Django-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/python-Django</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Django는 파이썬으로 만들어진 오픈소스 웹 어플리케이션을 만들 쉽게 작성할 수 있도록 도와주는 Framework입니다.&lt;/p&gt;
@@ -427,7 +793,7 @@ http://localhost:8000/admin에 들어가면 관리자 모드를 확인할수있�
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작</summary>
       
 
       
@@ -444,11 +810,12 @@ http://localhost:8000/admin에 들어가면 관리자 모드를 확인할수있�
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 style=&quot;color: goldenrod&quot;&gt;&lt;u&gt;파이썬의 문자열에 관련된 포스트입니다.&lt;/u&gt;&lt;/h1&gt;
@@ -531,7 +898,7 @@ http://localhost:8000/admin에 들어가면 관리자 모드를 확인할수있�
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작</summary>
       
 
       

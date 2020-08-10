@@ -8,25 +8,63 @@
     
       
       <item>
+        <title>Python Django - Django 블로그 프로젝트 model 제작</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;이번-포스트에서는-회원가입을-하고-로그인을-하여-글을-남기고-댓글을-작성하는-블로그를-제작하여-보겠습니다&quot;&gt;이번 포스트에서는 회원가입을 하고 로그인을 하여 글을 남기고 댓글을 작성하는 블로그를 제작하여 보겠습니다.&lt;/h3&gt;
+&lt;h6 id=&quot;이전의-django-시작-포스트에서-설명하였던-방식을-그대로-사용하여-서버를&quot;&gt;이전의 Django 시작 포스트에서 설명하였던 방식을 그대로 사용하여 서버를&lt;/h6&gt;
+&lt;h6 id=&quot;구현시킨-상태로-시작하겠습니다&quot;&gt;구현시킨 상태로 시작하겠습니다.&lt;/h6&gt;
+&lt;h6 id=&quot;서버가-정상적으로-구동되는것을-확인하였다면-가장먼저-모델을-제작해아합니다&quot;&gt;서버가 정상적으로 구동되는것을 확인하였다면 가장먼저 모델을 제작해아합니다.&lt;/h6&gt;
+&lt;h6 id=&quot;블로그를-제작하기-위해서-총-3개의-모델이-필요합니다&quot;&gt;블로그를 제작하기 위해서 총 3개의 모델이 필요합니다.&lt;/h6&gt;
+&lt;h6 id=&quot;로그인-메인글-댓글-이렇게-3개의-모델을-제작할-것입니다&quot;&gt;로그인, 메인글, 댓글 이렇게 3개의 모델을 제작할 것입니다.&lt;/h6&gt;
+
+&lt;h3 id=&quot;user-class-제작&quot;&gt;User class 제작&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;가장 먼저 회원가입과 로그인을 할 수 있게 해주는 User 모델을 제작할것입니다.&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Thu, 06 Aug 2020 02:40:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/python-Django-blog-1</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-blog-1</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Python Django - Django 투표 프로젝트 투표 결과 제작</title>
         
           <description>&lt;h1 id=&quot;python-강좌는-여러-절로-구성되어-있습니다-&quot;&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/h1&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
         
         <pubDate>Tue, 04 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-5</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-5</guid>
+        http://localhost:4000/python-Django-poll-4</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-4</guid>
       </item>
       
     
@@ -38,19 +76,20 @@
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
         
         <pubDate>Mon, 03 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-4</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-4</guid>
+        http://localhost:4000/python-Django-poll-3</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-3</guid>
       </item>
       
     
@@ -62,27 +101,20 @@
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div&gt;
-&lt;h3&gt;프로젝트의 url수정&lt;/h3&gt;
-&lt;li&gt;mysite의 url을 수정해볼것입니다.&lt;/li&gt;
-&lt;li&gt;아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다.&lt;img src=&quot;assets/built/images/django-mysiteurl.PNG&quot; /&gt;&lt;/li&gt;
-&lt;li&gt;기본으로 존재하던 admin에 관련된 path는 그대로 두겠습니다. &lt;/li&gt;
-&lt;li&gt;새롭게 추가될 application을 반영하기 위하여 poll의 url을 path에 추가해야합니다.&lt;/li&gt;
-&lt;li&gt;물론 여기서 직접 입력해도 되지만 추후 정리를 위하여 include함수를 사용하여 polls.url을 원격으로 지정해주겠습니다.&lt;/li&gt;
-&lt;/div&gt;
 
 </description>
         
         <pubDate>Sun, 02 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-3</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-3</guid>
+        http://localhost:4000/python-Django-poll-2</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-2</guid>
       </item>
       
     
@@ -94,23 +126,20 @@
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h6&gt;
-이전 포스트에서 제작하였던 polls 폴더에 존재하였던 manage.py를 수정합니다.&lt;br /&gt;&lt;br /&gt;
-수정을 수행할 때 파이썬은 객체지향이기 때문에 class를 사용합니다.&lt;br /&gt;&lt;br /&gt;
-또한 질문과 보기를 따로 나타내야하기때문에 2개의 class를 제작할것입니다.&lt;/h6&gt;
 
 </description>
         
         <pubDate>Fri, 31 Jul 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-2</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-2</guid>
+        http://localhost:4000/python-Django-poll-1</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-1</guid>
       </item>
       
     
@@ -122,19 +151,20 @@
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
         
         <pubDate>Fri, 31 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-1</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-1</guid>
+        http://localhost:4000/python-Django</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django</guid>
       </item>
       
     
@@ -146,11 +176,12 @@
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -188,11 +219,12 @@
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-1&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-2&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-Django-5&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>

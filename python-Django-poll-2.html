@@ -19,8 +19,16 @@
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
 
-    <!-- custom.cs -->
+    <!-- custom.css -->
     <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 웹폰트 추가 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+    <!-- syntax.css 추가 -->
+    <link rel="stylesheet" href="/assets/built/syntax.css">
+
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
@@ -39,7 +47,7 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="AI와 자동차의 만남" />
     <link rel="shortcut icon" href="http://localhost:4000/assets/built/images/background-fronted.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/python-Django-3" />
+    <link rel="canonical" href="http://localhost:4000/python-Django-poll-2" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
@@ -47,7 +55,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Python Django - Django 투표 프로젝트 투표 목록 제작" />
     <meta property="og:description" content="Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django -" />
-    <meta property="og:url" content="http://localhost:4000/python-Django-3" />
+    <meta property="og:url" content="http://localhost:4000/python-Django-poll-2" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/django.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
@@ -77,7 +85,7 @@
         "name": "AI with vehicle",
         "logo": "http://localhost:4000/"
     },
-    "url": "http://localhost:4000/python-Django-3",
+    "url": "http://localhost:4000/python-Django-poll-2",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:4000/assets/built/images/django.png",
@@ -86,7 +94,7 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/python-Django-3"
+        "@id": "http://localhost:4000/python-Django-poll-2"
     },
     "description": "Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django -"
 }
@@ -187,41 +195,122 @@ into the {body} of the default.hbs template -->
 <ul class="table-of-contents-list">
     <li><a href="./python-basic">Python 강좌(1) - Python 문자열</a></li>
     <li><a href="./python-control-statement">Python 강좌(2) - Python 제어문</a></li>
-    <li><a href="./python-control-Django-1">Python Django - Django 시작</a></li>
-    <li><a href="./python-control-Django-2">Python Django - Django 투표 프로젝트 model 제작</a></li>
-    <li><a href="./python-control-Django-3">Python Django - Django 투표 프로젝트 투표 목록 제작</a></li>
-    <li><a href="./python-control-Django-4">Python Django - Django 투표 프로젝트 투표 보기 제작</a></li>
-    <li><a href="./python-control-Django-5">Python Django - Django 투표 프로젝트 투표 결과 제작</a></li>
+    <li><a href="./python-Django">Python Django - Django 시작</a></li>
+    <li><a href="./python-Django-poll-1">Python Django - Django 투표 프로젝트 model 제작</a></li>
+    <li><a href="./python-Django-poll-2">Python Django - Django 투표 프로젝트 투표 목록 제작</a></li>
+    <li><a href="./python-Django-poll-3">Python Django - Django 투표 프로젝트 투표 보기 제작</a></li>
+    <li><a href="./python-Django-poll-4">Python Django - Django 투표 프로젝트 투표 결과 제작</a></li>
+    <li><a href="./python-Django-blog-1">Python Django - Django 블로그 프로젝트 model 제작</a></li>
 </ul>
-<div>
-<h3>프로젝트의 url수정</h3>
-<li>mysite의 url을 수정해볼것입니다.</li>
-<li>아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다.<img src="assets/built/images/django-mysiteurl.PNG" /></li>
-<li>기본으로 존재하던 admin에 관련된 path는 그대로 두겠습니다. </li>
-<li>새롭게 추가될 application을 반영하기 위하여 poll의 url을 path에 추가해야합니다.</li>
-<li>물론 여기서 직접 입력해도 되지만 추후 정리를 위하여 include함수를 사용하여 polls.url을 원격으로 지정해주겠습니다.</li>
-</div>
 
-<div>
-<h3>index를 위한 url제작</h3>
-<li>이제 polls의 index의 url을 제작해볼것입니다.</li>
-<li>아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다.<img src="assets/built/images/django-pollsurl1.PNG" /></li>
-</div>
+<p>###프로젝트의 url수정&lt;/h3&gt;</p>
+<ul>
+  <li>mysite의 url을 수정해볼것입니다.</li>
+  <li>아래의 그림과 같이 mysite의 url.py파일을 수정해줄것입니다.</li>
+</ul>
 
-<div>
-<h3>index를 위한 views를 제작</h3>
-<li>이제 polls의 index의 views를 제작해볼것입니다.</li>
-<li>아래의 그림과 같이 mysite의 views.py파일을 수정해줄것입니다.<img src="assets/built/images/django-viewsindex.PNG" /></li>
-</div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span> <span class="c">#include 함수를 추가</span>
 
-<div>
-<h3>index.html 제작</h3>
-<li>이전에 제작하였던 models.py에서 Question class는 question_text를 return합니다.</li>
-<li>우리는 question_text을 html에 띄워 선택할수있는 html을 제작할것입니다.</li>
-<li>앞의 view.py에서 정의한 index함수의 context의 내부에 "latest_question_list"를 활용해야합니다.<img src="assets/built/images/django-templatesindex.PNG" /></li>
-<li>위의 그림과 같이 index.html를 설정하였습니다. </li>
-<li>위의 결과를 통해 서버를 가동후 "http://127.0.0.1:8000/polls/"에 들어가면 아래와 같이 나온다.<img src="assets/built/images/django-templatesindexff.PNG" /><br /></li>
-</div>
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s">'admin/'</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s">'polls/'</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s">'polls.urls'</span><span class="p">))</span>
+    <span class="c"># view의 함수를 명칭 혹은 계층구조로 만들수있다.</span>
+    <span class="c"># 하지만 view의 함수를 직접 넣는것보다 계층구조로 만드는 것이 좋다.</span>
+    <span class="c"># include함수를 사용하여 polls의 urls을 path로 잡아줄것입니다.</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>기본으로 존재하던 admin에 관련된 path는 그대로 두겠습니다.</li>
+  <li>새롭게 추가될 application을 반영하기 위하여 poll의 url을 path에 추가해야합니다.</li>
+  <li>물론 여기서 직접 입력해도 되지만 추후 정리를 위하여 include함수를 사용하여 polls.url을 원격으로 지정해주겠습니다.</li>
+</ul>
+
+<h3 id="index를-위한-url제작">index를 위한 url제작</h3>
+<ul>
+  <li>이제 polls의 index의 url을 제작해볼것입니다.</li>
+  <li>아래와 같이 mysite의 url.py파일을 수정해줄것입니다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
+<span class="n">app_name</span> <span class="o">=</span> <span class="s">'polls'</span> <span class="c">#이건 polls의 url mapping이다 라는 지칭</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s">''</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'index'</span><span class="p">),</span>
+    <span class="c"># path의 첫번째 칸의 ''의 의미는 http://localhost:8000/polls/ 현재 위치라는 의미이다.</span>
+    <span class="c"># view.index는  view의 index를 찾아서 호출하라는 의미이다.</span>
+    <span class="c"># path를 연결함으로써 http://localhost:8000/polls/ 여기까지 실행이 가능하게됩니다.</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<h3 id="index를-위한-views를-제작">index를 위한 views를 제작</h3>
+<ul>
+  <li>이제 polls의 index의 views를 제작해볼것입니다.</li>
+  <li>아래와 같이 mysite의 views.py파일을 수정해줄것입니다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">get_object_or_404</span>
+<span class="kn">from</span> <span class="nn">polls.models</span> <span class="kn">import</span> <span class="n">Question</span>
+
+
+<span class="c"># view의 function이 하는 일은 request를 받아서 결과 template.html을 이용해서</span>
+<span class="c"># 결과 파일을 만들어 내는 일을 한다.</span>
+
+<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span> <span class="c"># view가 가지는 함수의 첫번째 인자는 무조건 request이다.</span>
+    <span class="c"># database에서 투표질문의 목록을 가져올것이다.</span>
+    <span class="c"># 원래는 문자열로 표현되야 하는데.. orm을 사용하다보니 각 레코드가 question 클래스의 객체로 표현</span>
+    <span class="c"># Question클르스의 객체로 표현.</span>
+    <span class="n">my_list</span><span class="o">=</span><span class="n">Question</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="nb">all</span><span class="p">()</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s">'pub_date'</span><span class="p">)</span>
+    <span class="c"># my_list는 question의 객체를 다가져와!</span>
+    <span class="c"># order_by('pub_date')는 순서는 pub_date순서로 가져와!</span>
+    <span class="c"># 만약 -pub_date라면 pub_date의 역순으로 가져와! 라는 의미이다.</span>
+    <span class="n">context</span><span class="o">=</span> <span class="p">{</span><span class="s">'question_list'</span><span class="p">:</span><span class="n">my_list</span><span class="p">}</span>
+    <span class="c"># 딕셔너리로 형태로 html로 전달해야한다.</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">'index.html'</span><span class="p">,</span><span class="n">context</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="indexhtml-제작">index.html 제작</h3>
+<ul>
+  <li>이전에 제작하였던 models.py에서 Question class는 question_text를 return합니다.</li>
+  <li>우리는 question_text을 html에 띄워 선택할수있는 html을 제작할것입니다.</li>
+  <li>앞의 view.py에서 정의한 index함수의 context의 내부에 “latest_question_list”를 활용해야합니다.</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>투표 목록<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>투표 목록이 나와야한다.<span class="nt">&lt;/h1&gt;</span>
+    <span class="c">&lt;!-- index 함수 (view.py안에 있는)에서 질문의 목록을 줘야지 그것을 출력할수있다. --&gt;</span>
+    <span class="c">&lt;!-- Question class(model.py안에 있는)의 객체 3마리가 생성되서 3개를 한번에 받기 위하여 리스트 안에 넣어서 전달받을것이다.--&gt;</span>
+    {% if question_list %} <span class="c">&lt;!-- 만약 view의 index함수에 latest_question_list가 있다면 --&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+        {% for question in question_list %}
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/polls/{{question.id}}"</span><span class="nt">&gt;</span> <span class="c">&lt;!-- 아래의 출력되는 하이퍼텍스트로 제작된 question_text를 누르면  --&gt;</span>
+                {{ question.question_text }}      <span class="c">&lt;!-- polls의 question의 id로 이동한다.--&gt;</span>
+            <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        {% endfor %}                               <span class="c">&lt;!-- endfor는 여기서 for 구문을 끝낸다 라는 의미--&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    {% else %}
+        <span class="nt">&lt;p&gt;</span>출력할 투표목록이 존재하지 않습니다.<span class="nt">&lt;/p&gt;</span>
+    {% endif %}                                     <span class="c">&lt;!-- endif는 여기서 if 구문을 끝낸다 라는 의미--&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>위와 같이 index.html를 설정하였습니다.</li>
+  <li>위의 결과를 통해 서버를 가동후 “http://127.0.0.1:8000/polls/”에 들어가면 아래와 같이 나온다.
+<img src="assets/built/images/django-templatesindexff.PNG" /></li>
+</ul>
+
 
                 </div>
             </section>
@@ -277,8 +366,8 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'http://localhost:4000/python-Django-3';
-                            this.page.identifier = '/python-Django-3';
+                            this.page.url = 'http://localhost:4000/python-Django-poll-2';
+                            this.page.identifier = '/python-Django-poll-2';
                             this.page.title = 'Python Django - Django 투표 프로젝트 투표 목록 제작';
                         };
                         (function() {
@@ -326,7 +415,7 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/python-Django-5">Python Django - Django 투표 프로젝트 투표 결과 제작</a></li>
+                                            <li><a href="/python-Django-blog-1">Python Django - Django 블로그 프로젝트 model 제작</a></li>
                                         
                                     
                                   
@@ -335,7 +424,16 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/python-Django-4">Python Django - Django 투표 프로젝트 투표 보기 제작</a></li>
+                                            <li><a href="/python-Django-poll-4">Python Django - Django 투표 프로젝트 투표 결과 제작</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/python-Django-poll-3">Python Django - Django 투표 프로젝트 투표 보기 제작</a></li>
                                         
                                     
                                   
@@ -347,8 +445,6 @@ into the {body} of the default.hbs template -->
                                   
                                     
                                         
-                                        
-                                            <li><a href="/python-Django-2">Python Django - Django 투표 프로젝트 model 제작</a></li>
                                         
                                     
                                   
@@ -383,7 +479,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/python/">
                                 
-                                    See all 6 posts  →
+                                    See all 7 posts  →
                                 
                             </a>
                         </footer>
@@ -397,12 +493,12 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/python-Django-4">
+            <a class="post-card-image-link" href="/python-Django-poll-3">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/django.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/python-Django-4">
+            <a class="post-card-content-link" href="/python-Django-poll-3">
                 <header class="post-card-header">
                     
                         
@@ -449,12 +545,12 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/python-Django-2">
+            <a class="post-card-image-link" href="/python-Django-poll-1">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/django.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/python-Django-2">
+            <a class="post-card-content-link" href="/python-Django-poll-1">
                 <header class="post-card-header">
                     
                         
@@ -514,12 +610,12 @@ into the {body} of the default.hbs template -->
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Python+Django+-+Django+%ED%88%AC%ED%91%9C+%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8+%ED%88%AC%ED%91%9C+%EB%AA%A9%EB%A1%9D+%EC%A0%9C%EC%9E%91&amp;url=https://heohyoyeong.github.io/python-Django-3"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Python+Django+-+Django+%ED%88%AC%ED%91%9C+%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8+%ED%88%AC%ED%91%9C+%EB%AA%A9%EB%A1%9D+%EC%A0%9C%EC%9E%91&amp;url=https://heohyoyeong.github.io/python-Django-poll-2"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://heohyoyeong.github.io/python-Django-3"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://heohyoyeong.github.io/python-Django-poll-2"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
