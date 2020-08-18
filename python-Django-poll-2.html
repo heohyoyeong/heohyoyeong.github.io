@@ -201,6 +201,7 @@ into the {body} of the default.hbs template -->
     <li><a href="./python-Django-poll-3">Python Django - Django 투표 프로젝트 투표 보기 제작</a></li>
     <li><a href="./python-Django-poll-4">Python Django - Django 투표 프로젝트 투표 결과 제작</a></li>
     <li><a href="./python-Django-blog-1">Python Django - Django 블로그 프로젝트 model 제작</a></li>
+    <li><a href="./python-Django-blog-2">Python Django - Django 블로그 프로젝트 로그인 제작</a></li>
 </ul>
 
 <p>###프로젝트의 url수정&lt;/h3&gt;</p>
@@ -233,7 +234,8 @@ into the {body} of the default.hbs template -->
   <li>아래와 같이 mysite의 url.py파일을 수정해줄것입니다.</li>
 </ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
 <span class="n">app_name</span> <span class="o">=</span> <span class="s">'polls'</span> <span class="c">#이건 polls의 url mapping이다 라는 지칭</span>
 
@@ -278,8 +280,7 @@ into the {body} of the default.hbs template -->
   <li>앞의 view.py에서 정의한 index함수의 context의 내부에 “latest_question_list”를 활용해야합니다.</li>
 </ul>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;head&gt;</span>
     <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
@@ -289,20 +290,11 @@ into the {body} of the default.hbs template -->
     <span class="nt">&lt;h1&gt;</span>투표 목록이 나와야한다.<span class="nt">&lt;/h1&gt;</span>
     <span class="c">&lt;!-- index 함수 (view.py안에 있는)에서 질문의 목록을 줘야지 그것을 출력할수있다. --&gt;</span>
     <span class="c">&lt;!-- Question class(model.py안에 있는)의 객체 3마리가 생성되서 3개를 한번에 받기 위하여 리스트 안에 넣어서 전달받을것이다.--&gt;</span>
-    {% if question_list %} <span class="c">&lt;!-- 만약 view의 index함수에 latest_question_list가 있다면 --&gt;</span>
-        <span class="nt">&lt;ul&gt;</span>
-        {% for question in question_list %}
-            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/polls/{{question.id}}"</span><span class="nt">&gt;</span> <span class="c">&lt;!-- 아래의 출력되는 하이퍼텍스트로 제작된 question_text를 누르면  --&gt;</span>
-                {{ question.question_text }}      <span class="c">&lt;!-- polls의 question의 id로 이동한다.--&gt;</span>
-            <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        {% endfor %}                               <span class="c">&lt;!-- endfor는 여기서 for 구문을 끝낸다 라는 의미--&gt;</span>
-        <span class="nt">&lt;/ul&gt;</span>
-    {% else %}
+    
         <span class="nt">&lt;p&gt;</span>출력할 투표목록이 존재하지 않습니다.<span class="nt">&lt;/p&gt;</span>
-    {% endif %}                                     <span class="c">&lt;!-- endif는 여기서 if 구문을 끝낸다 라는 의미--&gt;</span>
+                                         <span class="c">&lt;!-- endif는 여기서 if 구문을 끝낸다 라는 의미--&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-
 </code></pre></div></div>
 
 <ul>
@@ -415,6 +407,15 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
+                                            <li><a href="/python-Django-blog-2">Python Django - Django 블로그 프로젝트 로그인 제작</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
                                             <li><a href="/python-Django-blog-1">Python Django - Django 블로그 프로젝트 model 제작</a></li>
                                         
                                     
@@ -432,8 +433,6 @@ into the {body} of the default.hbs template -->
                                   
                                     
                                         
-                                        
-                                            <li><a href="/python-Django-poll-3">Python Django - Django 투표 프로젝트 투표 보기 제작</a></li>
                                         
                                     
                                   
@@ -479,7 +478,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/python/">
                                 
-                                    See all 7 posts  →
+                                    See all 8 posts  →
                                 
                             </a>
                         </footer>
