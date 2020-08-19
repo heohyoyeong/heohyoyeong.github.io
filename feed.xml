@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-18T10:10:02+09:00</updated><id>http://localhost:4000/</id><title type="html">AI with vehicle</title><subtitle>AI와 자동차의 만남</subtitle><entry><title type="html">Python Django - Django 블로그 프로젝트 로그인 제작</title><link href="http://localhost:4000/python-Django-blog-2" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 로그인 제작" /><published>2020-08-17T02:40:00+09:00</published><updated>2020-08-17T02:40:00+09:00</updated><id>http://localhost:4000/python-Django-blog-2</id><content type="html" xml:base="http://localhost:4000/python-Django-blog-2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-19T17:41:24+09:00</updated><id>http://localhost:4000/</id><title type="html">AI with vehicle</title><subtitle>AI와 자동차의 만남</subtitle><entry><title type="html">Python Django - Django 블로그 프로젝트 게시판 제작</title><link href="http://localhost:4000/python-Django-blog-3" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 게시판  제작" /><published>2020-08-19T02:40:00+09:00</published><updated>2020-08-19T02:40:00+09:00</updated><id>http://localhost:4000/python-Django-blog-3</id><content type="html" xml:base="http://localhost:4000/python-Django-blog-3">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -9,6 +9,270 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;이번-포스트에서는-로그인후-게시판을-구현해보려고합니다&quot;&gt;이번 포스트에서는 로그인후 게시판을 구현해보려고합니다.&lt;/h3&gt;
+&lt;h6 id=&quot;이전-포스트에서-로그인을-성공하면-listhtml로-이동하도록하였습니다&quot;&gt;이전 포스트에서 로그인을 성공하면 list.html로 이동하도록하였습니다.&lt;/h6&gt;
+&lt;h6 id=&quot;이번-포스트에서는-bootstrap을-자동으로-적용하기-위하여-basehtml을-작성하고&quot;&gt;이번 포스트에서는 bootstrap을 자동으로 적용하기 위하여 base.html을 작성하고&lt;/h6&gt;
+&lt;h6 id=&quot;이후-부터는-basehtml을-가져와-사용하겠습니다&quot;&gt;이후 부터는 base.html을 가져와 사용하겠습니다.&lt;/h6&gt;
+&lt;h6 id=&quot;따라서-basehtml부터-작성하도록-하겠습니다&quot;&gt;따라서 base.html부터 작성하도록 하겠습니다.&lt;/h6&gt;
+
+&lt;h3 id=&quot;basehtml-작성&quot;&gt;base.html 작성&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;base html은 이전의 index.html과 같이 project폴더의 templates에 저장해줄것입니다.&lt;/li&gt;
+  &lt;li&gt;아래와 같이 작성해줍니다.&lt;/li&gt;
+  &lt;li&gt;코드를 보시면 head부분에 css형식으로 bootstrap을 가져옵니다.&lt;/li&gt;
+  &lt;li&gt;그후 block container을 작성하여 이후에 base.html을 불러와 사용할것입니다.&lt;/li&gt;
+  &lt;li&gt;이러한 방식을 통해 컨테이너 내부에 작성할 수 있게됩니다.
+```html&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css&quot; integrity=&quot;sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX&quot; crossorigin=&quot;anonymous&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    {% block container %}
+    {% endblock %}
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;p&gt;]&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+### list.html 제작
+- base.html을 작성하였다면 list.html을 작성해주도록하겠습니다.
+- 아래와 같이 작성해주면됩니다.
+- 코드를보시면 extends 'base.html'가 base.html을 불러줍니다.
+- 그후 block container를 사용하여 컨터이너를 불러주고 내부에 html을 작성하게됩니다.
+- 의 경우 이전 포스트의 views의 login 함수에서 세션에서 저장한후 다시 response_data라는 dic에 저장하여 list.html에 출력합니다.
+- 출력결과값은 로그인한 사용자의 아이디가 출력됩니다.
+- 아래 내용부분의 경우 게시판의 모든 포스트가 출력됩니다. 하지만 현재는 작성한 포스타가 없기때문에 나오지않을겁니다.
+- list.html을 작성하였다면 이제 새글을 작성하는 기능을 추가해봅시다.
+
+```html
+
+
+{% extends 'base.html' %}
+{% block container %}
+
+&amp;lt;script src=&quot;/static/js/post.js&quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;!-- java스크립트 소환!--&amp;gt;
+&amp;lt;div class=&quot;container&quot;&amp;gt;
+&amp;lt;h1&amp;gt;Bulletin Board System(BBS)&amp;lt;/h1&amp;gt;
+    &amp;lt;tr&amp;gt;
+        &amp;lt;td&amp;gt;
+       &amp;lt;a href=&quot;{% url 'posts:create' %}&quot; class=&quot;btn btn-primary&quot;&amp;gt;새글작성&amp;lt;/a&amp;gt;
+        &amp;lt;/td&amp;gt;
+        &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+        &amp;lt;td&amp;gt;
+            &amp;lt;h4&amp;gt;  사용자: {{users}}&amp;lt;/h4&amp;gt;
+        &amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+    &amp;lt;div class=&quot;m-1&quot;&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;table class=&quot;table table-hover&quot;&amp;gt;
+
+        &amp;lt;thead class=&quot;thead-dark&quot;&amp;gt; &amp;lt;!-- 제목 --&amp;gt;
+            &amp;lt;tr&amp;gt;
+                &amp;lt;th scope=&quot;col&quot;&amp;gt;#&amp;lt;/th&amp;gt;
+                &amp;lt;th scope=&quot;col&quot;&amp;gt;작성자&amp;lt;/th&amp;gt;
+                &amp;lt;th scope=&quot;col&quot;&amp;gt;내용&amp;lt;/th&amp;gt;
+                &amp;lt;th scope=&quot;col&quot;&amp;gt;댓글작성&amp;lt;/th&amp;gt;
+                &amp;lt;th scope=&quot;col&quot;&amp;gt;수정&amp;lt;/th&amp;gt;
+                &amp;lt;th scope=&quot;col&quot;&amp;gt;삭제&amp;lt;/th&amp;gt;
+            &amp;lt;/tr&amp;gt;
+        &amp;lt;/thead&amp;gt;
+
+        &amp;lt;tbody&amp;gt; &amp;lt;!-- 내용 --&amp;gt;
+        {% for post in posts %}
+            &amp;lt;tr&amp;gt;
+                &amp;lt;th scope=&quot;row&quot;&amp;gt;{{ post.id }}&amp;lt;/th&amp;gt;
+                &amp;lt;td&amp;gt;{{ post.author }}&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;{{ post.contents }}&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;
+                    &amp;lt;a href=&quot;{% url 'posts:datt' post.id %}&quot; class=&quot;btn btn-success&quot;&amp;gt;댓글작성&amp;lt;/a&amp;gt;
+                &amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;
+                    &amp;lt;a href=&quot;{% url 'posts:update' post.id %}&quot; class=&quot;btn btn-warning&quot;&amp;gt;수정&amp;lt;/a&amp;gt;
+                &amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;
+                    &amp;lt;a href=&quot;{% url 'posts:delete' post.id %}&quot; class=&quot;btn btn-danger&quot;&amp;gt;삭제&amp;lt;/a&amp;gt;
+                &amp;lt;/td&amp;gt;
+            &amp;lt;/tr&amp;gt;
+        {% endfor %}
+        &amp;lt;/tbody&amp;gt;
+
+    &amp;lt;/table&amp;gt;
+&amp;lt;/div&amp;gt;
+{% endblock %}
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;application의-url-추가&quot;&gt;application의 url 추가&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;이제 application의 url을 추가해주도록하겠습니다.&lt;/li&gt;
+  &lt;li&gt;list는 첫화면으로 돌아올경우의 url입니다.&lt;/li&gt;
+  &lt;li&gt;create의 경우 새글 작성 기능의 url입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;urlpatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'list/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;list&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'create/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p_create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;create&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'register/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'register'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'login/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;login&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;login&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;url을 작성하였다면 views를 수정해줄 차례입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;새글-작성-제작&quot;&gt;새글 작성 제작&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;가장먼저 application의 안에 form.py를 생성해줍니다.&lt;/li&gt;
+  &lt;li&gt;그후 아래와 같이 postform을 작성해줍니다.&lt;/li&gt;
+  &lt;li&gt;Form 함수는 모델을 변수로서 받음후 그 변수의 변수들 중 빈칸으로 생성해줄 것들을 정해주어야합니다.&lt;/li&gt;
+  &lt;li&gt;빈칸으로 생성할 함수의 경우 fiedls에 작성해줍니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;postfrom-작성&quot;&gt;postfrom 작성&lt;/h3&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;forms&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;posts.models&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Datt&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PostForm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ModelForm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#이렇게 반드시해야한다.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Meta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;fields&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'author'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'contents'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#실제 입력할 것이 무엇인가.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;def-p_create-작성&quot;&gt;def p_create 작성&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;아래와 같이 p_create 함수를 작성합니다.&lt;/li&gt;
+  &lt;li&gt;함수를 보시면 가장먼저 get방식으로 p_create함수가 호출되면 앞에서 작성한 postform이 빈칸으로 호출됩니다. 그 후 create.html을 호출하게됩니다.&lt;/li&gt;
+  &lt;li&gt;create.html를 아래와 같이 작성합니다.&lt;/li&gt;
+  &lt;li&gt;create.html에서 작성자와 글내용을 작성하였다면 등록버튼으로 summit하여 post형식으로 제출하는것을 알수있습니다.&lt;/li&gt;
+  &lt;li&gt;따라서 p_create 함수에서 request가 post형식일 경우에 작성한 작성자와 글내용이 유효하다면 저장하도록하였습니다.&lt;/li&gt;
+  &lt;li&gt;마지막으로 저장이 완료되었다면 redirect로 list.html로 복귀하도록 설정하였습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;p_create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# POST 방식으로 호출될때 =&amp;gt;form action method=&quot;post&quot;인 방식&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'POST'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;post_form&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PostForm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# POST방식으로 전송된것을 싹다 사용해서 객체로 만들어라!&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;PostForm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Meta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fields&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'author'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post_form&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_valid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 제대로 된 값을 입력하였다면&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;post_form&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;redirect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;posts:list&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#다시 돌아간다!&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;# GET 방식으로 호출될때 =&amp;gt; form action을 사용하지않는 거의 모든 방식&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;post_form&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PostForm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#PostForm의 인자가 ()처럼 비어있기 때문에 비어있는 형태로 출력된다.&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'create.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'post_form'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post_form&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;createhtml&quot;&gt;create.html&lt;/h3&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+{% extends 'base.html' %}
+{% load bootstrap4 %} &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- bootstrap을 추가해야한다. --&amp;gt;&lt;/span&gt;
+{% block container %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;새글작성&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;form&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+       {% csrf_token %}
+        &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- {{ post_form }} 이렇게쓰면 불러오기는 하지만 안이쁘다 --&amp;gt;&lt;/span&gt;
+        {% bootstrap_form post_form %} &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- bootstrap을 적용하기 위하여 이렇게 써야한다. --&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;submit&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn btn-primary&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;등록&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+{% endblock %}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;삭제-기능-추가&quot;&gt;삭제 기능 추가&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;글을 작성하는 기능을 추가하였습니다. 이제는 작성한 글을 버튼하나로 지울수있는 기능을 추가해보도록합시다.&lt;/li&gt;
+  &lt;li&gt;앞에서 작성한 list.html 을 보면 url ‘posts:delete’ post.id으로 delete의 url이 되어있는것을 확인할 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;이러한 url의 결과는 posts/{post.id}/delete/ 가 됩니다.&lt;/li&gt;
+  &lt;li&gt;따라서 아래와 같이 url을 추가해줍니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;delete-url-추가&quot;&gt;delete url 추가&lt;/h3&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;urlpatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&amp;lt;int:post_id&amp;gt;/delete/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p_delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;delete&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;def-p_delete-제작&quot;&gt;def p_delete 제작&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;아래와 같이 p_delete 함수를 작성합니다.&lt;/li&gt;
+  &lt;li&gt;p_delete함수는 매우 간단합니다. 먼저 포스트들 중 앞에서 받은 post_id가 pk인것을 찾아줍니다.&lt;/li&gt;
+  &lt;li&gt;그리고 찾은것을 삭제해주고 다시 list.html로 돌아갑니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;p_delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;objects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;redirect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'posts:list'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;수정-기능-추가&quot;&gt;수정 기능 추가&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;글을 삭제하는 기능을 추가하였습니다. 이제는 작성한 글을 수정할 수 있는 기능을 추가해보도록합시다.&lt;/li&gt;
+  &lt;li&gt;앞에서 작성한 list.html 을 보면 url ‘posts:update’ post.id으로 update의 url이 되어있는것을 확인할 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;이러한 url의 결과는 posts/{post.id}/update/ 가 됩니다.&lt;/li&gt;
+  &lt;li&gt;따라서 아래와 같이 url을 추가해줍니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;delete-url-추가-1&quot;&gt;delete url 추가&lt;/h3&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;urlpatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&amp;lt;int:post_id&amp;gt;/update/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p_update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;update&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;def-p_update-제작&quot;&gt;def p_update 제작&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;아래와 같이 p_update 함수를 작성합니다.&lt;/li&gt;
+  &lt;li&gt;p_update 함수는 앞에서 제작하였던 p_create와 매우 유사합니다.&lt;/li&gt;
+  &lt;li&gt;다른점은 p_create의 경우 처음 get방식으로 왔을 때 빈 postform을 호출하지만 p_update의 경우 post_id를 설정하여 기존의 포스트를 지정하여 호출하는 것입니다.&lt;/li&gt;
+  &lt;li&gt;그리고 찾은것을 수정해주고 저장해줍니다.&lt;/li&gt;
+  &lt;li&gt;저장하였다면 list.html로 돌아갑니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;p_update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_object_or_404&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'POST'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;post_form&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PostForm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post_form&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_valid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;post_form&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;redirect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;posts:list&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;post_form&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PostForm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'create.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'post_form'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post_form&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;이번 포스트에서는 게시판을 제작하였습니다. 
+&lt;img src=&quot;assets/built/images/blog 1st.PNG&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;사진에서는 댓글기능이 존재하지만 이것은 다음 포스트에 추가하겠습니다.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작 Python Django - Django 블로그 프로젝트 게시판 제작 이번 포스트에서는 로그인후 게시판을 구현해보려고합니다. 이전 포스트에서 로그인을 성공하면 list.html로 이동하도록하였습니다. 이번 포스트에서는 bootstrap을 자동으로 적용하기 위하여 base.html을 작성하고 이후 부터는 base.html을 가져와 사용하겠습니다. 따라서 base.html부터 작성하도록 하겠습니다.</summary></entry><entry><title type="html">Python Django - Django 블로그 프로젝트 로그인 제작</title><link href="http://localhost:4000/python-Django-blog-2" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 로그인 제작" /><published>2020-08-17T02:40:00+09:00</published><updated>2020-08-17T02:40:00+09:00</updated><id>http://localhost:4000/python-Django-blog-2</id><content type="html" xml:base="http://localhost:4000/python-Django-blog-2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;이번-포스트에서는-작성한-user-model을-사용하여-회원가입과-로그인을-구현해보려고합니다&quot;&gt;이번 포스트에서는 작성한 User model을 사용하여 회원가입과 로그인을 구현해보려고합니다.&lt;/h3&gt;
 &lt;h6 id=&quot;가장먼저-초기화면의-url부터-수정하여-초기화면에서-로그인과-회원가입을-할수있게-하려고합니다&quot;&gt;가장먼저 초기화면의 url부터 수정하여 초기화면에서 로그인과 회원가입을 할수있게 하려고합니다.&lt;/h6&gt;
@@ -52,8 +316,7 @@
   &lt;li&gt;아래의 html은 bootstrap의 예제를 수정해준 것입니다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -237,6 +500,7 @@
   &lt;li&gt;작성한 코드를 보면 로그인버튼으로 작성한 아이디와 비밀번호를 summit하여 post형식으로 제출하는것을 알수있습니다.&lt;/li&gt;
   &lt;li&gt;따라서 login 함수에서 post형식으로 오면 기입한 아이디와 비밀번호가 admin에 저장이 되어있는지 확인합니다.&lt;/li&gt;
   &lt;li&gt;확인 결과 저장되어있는 정보와 입력한 정보가 일치하면 세션에 유저의 아이디를 저장하고 게시판 시작화면인 list.html로 이동합니다.&lt;/li&gt;
+  &lt;li&gt;또한 username을 세션에 저장하여 이후의 views에서도 사용할수있게 해주었습니다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;def-login&quot;&gt;def login&lt;/h3&gt;
@@ -261,7 +525,7 @@
             &lt;span class=&quot;c&quot;&gt;#db에서 꺼내는 명령. Post로 받아온 username으로 , db의 username을 꺼내온다.&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;check_password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;login_password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myuser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
                 &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'users'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myuser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;
-
+                &lt;span class=&quot;n&quot;&gt;response_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'users'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myuser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;
                 &lt;span class=&quot;c&quot;&gt;#세션도 딕셔너리 변수 사용과 똑같이 사용하면 된다.&lt;/span&gt;
                 &lt;span class=&quot;c&quot;&gt;#세션 user라는 key에 방금 로그인한 id를 저장한것.&lt;/span&gt;
                 &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'list.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -276,9 +540,10 @@
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
         &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css&quot;&lt;/span&gt;
-         &lt;span class=&quot;na&quot;&gt;integrity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh&quot;&lt;/span&gt; 
-         &lt;span class=&quot;na&quot;&gt;crossorigin=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;anonymous&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; 
+        &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;integrity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh&quot;&lt;/span&gt; 
+        &lt;span class=&quot;na&quot;&gt;crossorigin=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;anonymous&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
@@ -316,7 +581,7 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작 이번 포스트에서는 작성한 User model을 사용하여 회원가입과 로그인을 구현해보려고합니다. 가장먼저 초기화면의 url부터 수정하여 초기화면에서 로그인과 회원가입을 할수있게 하려고합니다. 초기화면을 수정해주기 위하여 가장먼저 project의 settings.py 부터 수정해주겠습니다.</summary></entry><entry><title type="html">Python Django - Django 블로그 프로젝트 model 제작</title><link href="http://localhost:4000/python-Django-blog-1" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 model 제작" /><published>2020-08-17T02:40:00+09:00</published><updated>2020-08-17T02:40:00+09:00</updated><id>http://localhost:4000/python-Django-blog-1</id><content type="html" xml:base="http://localhost:4000/python-Django-blog-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작 Python Django - Django 블로그 프로젝트 게시판 제작 이번 포스트에서는 작성한 User model을 사용하여 회원가입과 로그인을 구현해보려고합니다. 가장먼저 초기화면의 url부터 수정하여 초기화면에서 로그인과 회원가입을 할수있게 하려고합니다. 초기화면을 수정해주기 위하여 가장먼저 project의 settings.py 부터 수정해주겠습니다.</summary></entry><entry><title type="html">Python Django - Django 블로그 프로젝트 model 제작</title><link href="http://localhost:4000/python-Django-blog-1" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 model 제작" /><published>2020-08-17T02:40:00+09:00</published><updated>2020-08-17T02:40:00+09:00</updated><id>http://localhost:4000/python-Django-blog-1</id><content type="html" xml:base="http://localhost:4000/python-Django-blog-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -327,6 +592,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;이번-포스트에서는-회원가입을-하고-로그인을-하여-글을-남기고-댓글을-작성하는-블로그를-제작하여-보겠습니다&quot;&gt;이번 포스트에서는 회원가입을 하고 로그인을 하여 글을 남기고 댓글을 작성하는 블로그를 제작하여 보겠습니다.&lt;/h3&gt;
 &lt;h6 id=&quot;이전의-django-시작-포스트에서-설명하였던-방식을-그대로-사용하여-서버를&quot;&gt;이전의 Django 시작 포스트에서 설명하였던 방식을 그대로 사용하여 서버를&lt;/h6&gt;
@@ -415,7 +681,7 @@
   &lt;li&gt;데이터베이스에 테이블을 만들려면 SQL구문이 필요합니다.&lt;/li&gt;
   &lt;li&gt;이를 위해 C:\Djangotest2/MyFirstWebPoll에서 python manage.py makemigrations과 python manage.py migrate를 수행합니다.&lt;/li&gt;
   &lt;li&gt;이것으로 포스트를 작성하기 위한 기본준비가 완료되었습니다. 다음 포스트에서는 본격적으로 HTML을 작성해보겠습니다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작 이번 포스트에서는 회원가입을 하고 로그인을 하여 글을 남기고 댓글을 작성하는 블로그를 제작하여 보겠습니다. 이전의 Django 시작 포스트에서 설명하였던 방식을 그대로 사용하여 서버를 구현시킨 상태로 시작하겠습니다. 서버가 정상적으로 구동되는것을 확인하였다면 가장먼저 모델을 제작해아합니다. 블로그를 제작하기 위해서 총 3개의 모델이 필요합니다. 로그인, 메인글, 댓글 이렇게 3개의 모델을 제작할 것입니다. User class 제작 가장 먼저 회원가입과 로그인을 할 수 있게 해주는 User 모델을 제작할것입니다. 아이디와 패스워드를 CharField로 받아 글자를 입력해줄 수 있게 해줍니다. 아래와 같이 User Class를 제작해줍니다.</summary></entry><entry><title type="html">Python Django - Django 투표 프로젝트 투표 결과 제작</title><link href="http://localhost:4000/python-Django-poll-4" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 결과 제작" /><published>2020-08-04T02:40:00+09:00</published><updated>2020-08-04T02:40:00+09:00</updated><id>http://localhost:4000/python-Django-poll-4</id><content type="html" xml:base="http://localhost:4000/python-Django-poll-4">&lt;h1 id=&quot;python-강좌는-여러-절로-구성되어-있습니다-&quot;&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작 Python Django - Django 블로그 프로젝트 게시판 제작 이번 포스트에서는 회원가입을 하고 로그인을 하여 글을 남기고 댓글을 작성하는 블로그를 제작하여 보겠습니다. 이전의 Django 시작 포스트에서 설명하였던 방식을 그대로 사용하여 서버를 구현시킨 상태로 시작하겠습니다. 서버가 정상적으로 구동되는것을 확인하였다면 가장먼저 모델을 제작해아합니다. 블로그를 제작하기 위해서 총 3개의 모델이 필요합니다. 로그인, 메인글, 댓글 이렇게 3개의 모델을 제작할 것입니다. User class 제작 가장 먼저 회원가입과 로그인을 할 수 있게 해주는 User 모델을 제작할것입니다. 아이디와 패스워드를 CharField로 받아 글자를 입력해줄 수 있게 해줍니다. 아래와 같이 User Class를 제작해줍니다.</summary></entry><entry><title type="html">Python Django - Django 투표 프로젝트 투표 결과 제작</title><link href="http://localhost:4000/python-Django-poll-4" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 결과 제작" /><published>2020-08-04T02:40:00+09:00</published><updated>2020-08-04T02:40:00+09:00</updated><id>http://localhost:4000/python-Django-poll-4</id><content type="html" xml:base="http://localhost:4000/python-Django-poll-4">&lt;h1 id=&quot;python-강좌는-여러-절로-구성되어-있습니다-&quot;&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/h1&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -426,6 +692,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;이-포스트가-투표-프로젝트의-마지막-포스트입니다&quot;&gt;이 포스트가 투표 프로젝트의 마지막 포스트입니다.&lt;/h2&gt;
@@ -496,7 +763,7 @@
   &lt;li&gt;위의 결과를 통해 서버를 가동후 “http://127.0.0.1:8000/polls/”에 들어가 질문을 선택하고 보기를 선택하면 아래와 같이 나옵니다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/built/images/django-templatesresultff.PNG&quot; /&gt;&lt;/p&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작</summary></entry><entry><title type="html">Python Django - Django 투표 프로젝트 투표 보기 제작</title><link href="http://localhost:4000/python-Django-poll-3" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 보기 제작" /><published>2020-08-03T02:40:00+09:00</published><updated>2020-08-03T02:40:00+09:00</updated><id>http://localhost:4000/python-Django-poll-3</id><content type="html" xml:base="http://localhost:4000/python-Django-poll-3">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/built/images/django-templatesresultff.PNG&quot; /&gt;&lt;/p&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작 Python Django - Django 블로그 프로젝트 게시판 제작</summary></entry><entry><title type="html">Python Django - Django 투표 프로젝트 투표 보기 제작</title><link href="http://localhost:4000/python-Django-poll-3" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 보기 제작" /><published>2020-08-03T02:40:00+09:00</published><updated>2020-08-03T02:40:00+09:00</updated><id>http://localhost:4000/python-Django-poll-3</id><content type="html" xml:base="http://localhost:4000/python-Django-poll-3">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -507,6 +774,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;index를-위한-url제작&quot;&gt;index를 위한 url제작&lt;/h3&gt;
@@ -577,7 +845,7 @@
   &lt;li&gt;위와 같이 detail.html를 설정하였습니다.&lt;/li&gt;
   &lt;li&gt;위의 결과를 통해 서버를 가동후 “http://127.0.0.1:8000/polls/”에 들어가 질문을 선택하면 아래와 같이 나온다.
 &lt;img src=&quot;assets/built/images/django-templatesdetailff.PNG&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작</summary></entry><entry><title type="html">Python Django - Django 투표 프로젝트 투표 목록 제작</title><link href="http://localhost:4000/python-Django-poll-2" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 목록 제작" /><published>2020-08-02T02:40:00+09:00</published><updated>2020-08-02T02:40:00+09:00</updated><id>http://localhost:4000/python-Django-poll-2</id><content type="html" xml:base="http://localhost:4000/python-Django-poll-2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작 Python Django - Django 블로그 프로젝트 게시판 제작</summary></entry><entry><title type="html">Python Django - Django 투표 프로젝트 투표 목록 제작</title><link href="http://localhost:4000/python-Django-poll-2" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 목록 제작" /><published>2020-08-02T02:40:00+09:00</published><updated>2020-08-02T02:40:00+09:00</updated><id>http://localhost:4000/python-Django-poll-2</id><content type="html" xml:base="http://localhost:4000/python-Django-poll-2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -588,6 +856,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;###프로젝트의 url수정&amp;lt;/h3&amp;gt;&lt;/p&gt;
@@ -620,8 +889,7 @@
   &lt;li&gt;아래와 같이 mysite의 url.py파일을 수정해줄것입니다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.urls&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.urls&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;app_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'polls'&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#이건 polls의 url mapping이다 라는 지칭&lt;/span&gt;
 
@@ -687,7 +955,7 @@
   &lt;li&gt;위와 같이 index.html를 설정하였습니다.&lt;/li&gt;
   &lt;li&gt;위의 결과를 통해 서버를 가동후 “http://127.0.0.1:8000/polls/”에 들어가면 아래와 같이 나온다.
 &lt;img src=&quot;assets/built/images/django-templatesindexff.PNG&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작</summary></entry><entry><title type="html">Python Django - Django 투표 프로젝트 model 제작</title><link href="http://localhost:4000/python-Django-poll-1" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 model 제작" /><published>2020-07-31T02:40:00+09:00</published><updated>2020-07-31T02:40:00+09:00</updated><id>http://localhost:4000/python-Django-poll-1</id><content type="html" xml:base="http://localhost:4000/python-Django-poll-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작 Python Django - Django 블로그 프로젝트 게시판 제작</summary></entry><entry><title type="html">Python Django - Django 투표 프로젝트 model 제작</title><link href="http://localhost:4000/python-Django-poll-1" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 model 제작" /><published>2020-07-31T02:40:00+09:00</published><updated>2020-07-31T02:40:00+09:00</updated><id>http://localhost:4000/python-Django-poll-1</id><content type="html" xml:base="http://localhost:4000/python-Django-poll-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -698,6 +966,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h6 id=&quot;이전-포스트에서-제작하였던-polls-폴더에-존재하였던-managepy를-수정합니다&quot;&gt;이전 포스트에서 제작하였던 polls 폴더에 존재하였던 manage.py를 수정합니다.&lt;/h6&gt;
@@ -773,7 +1042,7 @@
   &lt;li&gt;이를 위해 C:\Djangotest2/MyFirstWebPoll에서 python manage.py makemigrations과 python manage.py migrate를 수행합니다.&lt;/li&gt;
   &lt;li&gt;마지막으로 이전에 확인하였던 admin 싸이트를 확인해보면 아래와 같이 변경된것을 확인할수있습니다.
 &lt;img src=&quot;assets/built/images/django-adminclassadd.PNG&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작</summary></entry><entry><title type="html">Python Django - Django 시작</title><link href="http://localhost:4000/python-Django" rel="alternate" type="text/html" title="Python Django - Django 시작" /><published>2020-07-31T01:40:00+09:00</published><updated>2020-07-31T01:40:00+09:00</updated><id>http://localhost:4000/python-Django</id><content type="html" xml:base="http://localhost:4000/python-Django">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작 Python Django - Django 블로그 프로젝트 게시판 제작</summary></entry><entry><title type="html">Python Django - Django 시작</title><link href="http://localhost:4000/python-Django" rel="alternate" type="text/html" title="Python Django - Django 시작" /><published>2020-07-31T01:40:00+09:00</published><updated>2020-07-31T01:40:00+09:00</updated><id>http://localhost:4000/python-Django</id><content type="html" xml:base="http://localhost:4000/python-Django">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -784,6 +1053,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Django는 파이썬으로 만들어진 오픈소스 웹 어플리케이션을 만들 쉽게 작성할 수 있도록 도와주는 Framework입니다.&lt;/p&gt;
@@ -818,7 +1088,7 @@
 &lt;li&gt;C:/Djangotest2/MyFirstWebPoll에서 python manage.py runserver를 수행하면 서버가 정상적으로 작동하는 것을 확인할수있다. &lt;img src=&quot;assets/built/images/django-serverrun.PNG&quot; /&gt;&lt;/li&gt;
 &lt;li&gt;C:/Djangotest2/MyFirstWebPoll에서 python manage.py createsuperuser를 수행하면 아이디와 비밀번호를 생성한후 &lt;br /&gt;
 http://localhost:8000/admin에 들어가면 관리자 모드를 확인할수있다 &lt;img src=&quot;assets/built/images/django-admin.PNG&quot; /&gt;&lt;/li&gt;
-&lt;/div&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작</summary></entry><entry><title type="html">Python 강좌(2) - Python 제어문</title><link href="http://localhost:4000/python-control-statement" rel="alternate" type="text/html" title="Python 강좌(2) - Python 제어문" /><published>2020-07-31T01:40:00+09:00</published><updated>2020-07-31T01:40:00+09:00</updated><id>http://localhost:4000/python-control-statement</id><content type="html" xml:base="http://localhost:4000/python-control-statement">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작 Python Django - Django 블로그 프로젝트 게시판 제작</summary></entry><entry><title type="html">Python 강좌(2) - Python 제어문</title><link href="http://localhost:4000/python-control-statement" rel="alternate" type="text/html" title="Python 강좌(2) - Python 제어문" /><published>2020-07-31T01:40:00+09:00</published><updated>2020-07-31T01:40:00+09:00</updated><id>http://localhost:4000/python-control-statement</id><content type="html" xml:base="http://localhost:4000/python-control-statement">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -829,6 +1099,7 @@ http://localhost:8000/admin에 들어가면 관리자 모드를 확인할수있�
     &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;이글은 파이썬 제어문에 관한 내용입니다!&lt;/p&gt;
@@ -837,80 +1108,8 @@ http://localhost:8000/admin에 들어가면 관리자 모드를 확인할수있�
    &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Hello World'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
    &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작</summary></entry><entry><title type="html">Vehicle 강좌(1) - vehicle 기본</title><link href="http://localhost:4000/vehicle-basic" rel="alternate" type="text/html" title="Vehicle 강좌(1) - vehicle 기본" /><published>2020-07-24T01:40:00+09:00</published><updated>2020-07-24T01:40:00+09:00</updated><id>http://localhost:4000/vehicle-basic</id><content type="html" xml:base="http://localhost:4000/vehicle-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작 Python Django - Django 블로그 프로젝트 게시판 제작</summary></entry><entry><title type="html">Vehicle 강좌(1) - vehicle 기본</title><link href="http://localhost:4000/vehicle-basic" rel="alternate" type="text/html" title="Vehicle 강좌(1) - vehicle 기본" /><published>2020-07-24T01:40:00+09:00</published><updated>2020-07-24T01:40:00+09:00</updated><id>http://localhost:4000/vehicle-basic</id><content type="html" xml:base="http://localhost:4000/vehicle-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./vehicle-basic&quot;&gt;Vehicle 강좌(1) - vehicle 기본 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;이글은 vehicle에 관한 내용입니다!&lt;/p&gt;</content><author><name>HeoHyoYeong</name></author><category term="vehicle" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Vehicle 강좌(1) - vehicle 기본 이글은 vehicle에 관한 내용입니다!</summary></entry><entry><title type="html">Python 강좌(1) - Python 문자열</title><link href="http://localhost:4000/python-basic" rel="alternate" type="text/html" title="Python 강좌(1) - Python 문자열" /><published>2020-07-24T01:40:00+09:00</published><updated>2020-07-24T01:40:00+09:00</updated><id>http://localhost:4000/python-basic</id><content type="html" xml:base="http://localhost:4000/python-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 style=&quot;color: goldenrod&quot;&gt;&lt;u&gt;파이썬의 문자열에 관련된 포스트입니다.&lt;/u&gt;&lt;/h1&gt;
-
-&lt;div&gt;
-기본적으로 파이썬의 문법과 함수들에 대하여 작성할 계획입니다. 
-&lt;br /&gt; 파이썬의 기본 문자열에 대한 함수나 문법에 대하여 포스팅할 계획입니다.&lt;br /&gt;
-&lt;br /&gt;
-    &lt;ol&gt;    
-        &lt;li&gt;&lt;h5&gt;문자 확장열&lt;/h5&gt;&lt;div&gt;문자 확장열이란 문자 내부에 담기힘든 것들을 &quot;/&quot; 뒤에 특별한 기호를 작성하여 표기합니다.&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-            &lt;ul&gt;
-                &lt;li&gt;\n는 개행으로 엔터를 의미합니다. &lt;br /&gt; 
-                예를들어  &lt;br /&gt;&quot;안녕\n하세요.&quot;는 &lt;br /&gt;안녕&lt;br /&gt;하세요 라고 출력됩니다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-                &lt;li&gt;\t는 탭을 의미합니다.&lt;br /&gt; 예를들어  &lt;br /&gt;
-                &quot;안녕\t하세요.&quot;는 &lt;br /&gt;안녕    하세요 라고 출력됩니다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;&amp;lt;/li&amp;gt; 
-                &lt;li&gt;\&quot;은 큰따옴표 입력을 의미합니다.&lt;br /&gt;
-                 예를들어  &lt;br /&gt;&quot;안녕&quot;하세요.&quot;는 오류가 &quot;&quot;의 내부에 &quot;가이 있기 때문에 오류가 발생합니다. &lt;br /&gt; 하지만 &quot;안녕\&quot;하세요&quot;로 작성한다면 오류가 발생하지 않고 안녕&quot;하세요라고 출력됩니다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-                &lt;li&gt;\'은 작은따옴표 입력를 의미합니다.&lt;br /&gt;
-                 위와 마찬가지로  &lt;br /&gt;'안녕'하세요.'는 오류가 ''의 내부에 '가이 있기 때문에 오류가 발생합니다. &lt;br /&gt; 하지만 '안녕\'하세요'로 작성한다면 오류가 발생하지 않고 안녕'하세요라고 출력됩니다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-                &lt;li&gt;\\은 \입력을 의미합니다.&lt;br /&gt; 
-                예를들어  &lt;br /&gt;&quot;안녕\하세요.&quot;라고 쓰는 경우 특수문자인(\) 뒤에 문자가 없어 오류가 발생합니다.&lt;br /&gt;하지만 &quot;안녕\\하세요&quot;로 작성한다면 안녕\하세요라고 출력됩니다..&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-        &lt;li&gt;&lt;h5&gt;문자열 메서드&lt;/h5&gt;&lt;div&gt;문자열은 수치열에 비하여 복잡하기 때문에 다양한 함수를 사용하여 관리합니다.&lt;br /&gt;기본적으로 함수앞에 is가 붙으면 대답은 bool형식으로 출력됩니다.&lt;br /&gt;하지만 이 포스트에서는 이러한 함수는 작성하지 않겠습니다.&lt;br /&gt;&lt;br /&gt; &lt;/div&gt;
-                    &lt;ul&gt;
-                        &lt;li&gt; .lower() .upper() &lt;br /&gt;
-                         lower는 문자열을 소문자로 upper는 문자열을 대문자로 변환해줍니다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-                        &lt;li&gt; .swapcase() &lt;br /&gt;
-                         swapcase는 문자열의 내용 중 소문자는 대문자로 대문자는 소문자로 변환해줍니다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-                        &lt;li&gt; .capitalize() .title() &lt;br /&gt; 
-                        capitalize는 &lt;u&gt;문자열의 첫글자만&lt;/u&gt;을 대문자로 변경하고 나머지 문자열을 소문자로 변환해줍니다.&lt;br /&gt;
-                        title는 문자열 내부의 &lt;u&gt;모든 단어의 첫글자&lt;/u&gt;를 대문자로 변경하고 나머지를 소문자로 변환합니다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-                        &lt;li&gt; .strip() .lstrip() .rstrip()&lt;br /&gt; strip은 좌우의 공백을 전부, lstrip은 왼쪽, rstrip은 오른쪽의 공백을 제거해줍니다. &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-                        &lt;li&gt; .split(a) &lt;br /&gt;
-                         split은 문자열을 a를 기점으로 분할해준다.&lt;br /&gt;예를 들어 s=&quot;치킨 피자,탕수육 콜라&quot;일 때 c=s.split(,)을 사용하면 c=[&quot;치킨 피자&quot;,&quot;탕수육 콜라&quot;]라는 리스트가 출력된다.
-                        &lt;br /&gt;또한 c=s.split( )를 사용하면 c=[&quot;치킨&quot;,&quot;피자 탕수육&quot;,&quot;콜라&quot;]라는 리스트가 출력된다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-                        &lt;li&gt; .join() &lt;br /&gt; 
-                        join함수는 위의 함수들과 조금 다른다.a가 &quot;-&quot;인 문자열이고 b가 [&quot;치킨&quot;,&quot;피자&quot;,&quot;탕수육&quot;,&quot;콜라&quot;]인 리스트일 때&lt;br /&gt;
-                        a.join(b)를 사용하면 &quot;치킨-피자-탕수육-콜라&quot;인 문자열이 출력된다.&lt;br /&gt;또는 a는 위와 같고 b가 &quot;대한민국&quot;인 문자열일 경우 &quot;대-한-민-국&quot;이 출력된다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-                        &lt;li&gt; .center(a) .ljust(a) .rjust(a)&lt;br /&gt;
-                         a에 인수를 넣으면 center는 문자열의 폭이 a이고 중간에 문자를 넣어준다. &lt;br /&gt;
-                        ljust는 폭 a에서 문자를 왼쪽에 배치, rjust는 폭 a에서 문자를 오른쪽에 배치해준다. &lt;br /&gt;만약 문자열이 a보다 길다면 a의 크기를 무시하고 전부 입력한다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;             
-             &lt;/ul&gt;                                          
-        &lt;/li&gt;
-        &lt;li&gt;&lt;h5&gt;문자열 포멧팅&lt;/h5&gt;&lt;div&gt;포멧팅은 문자열에 다른 정보를 넣어주는 행위입니다.&lt;br /&gt;기본적으로는 (&quot;나는 {}살, 키는 {}cm 이름은{}입니다.&quot;.format(age,height,name))이러한 형식으로 사용됩니다.&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-            &lt;ul&gt;
-                &lt;li&gt; 공백 입력&lt;br /&gt;
-                만약 포맷팅의 결과값에 공백을 입력하고 싶다면 (&quot;나는 {0:10d}살, 키는 {1:5f}cm 이름은{2:5s}입니다.&quot;.format(age,height,name))처럼 사용하면된다.&lt;br /&gt;
-                이때 포맷팅 내부에 들어가있는 d는 정수, f는 실수, s는 문자를 의미하고 이들 앞의 숫자가 문자열을 포함하는 칸의 크기이다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;  
-                &lt;li&gt; 공백 정렬&lt;br /&gt;
-                위에서 처럼 공백을 생성하였지만 문자열은 기본적으로 왼쪽 정렬이된다. &lt;br /&gt;이러한 것을 수정하고싶다면 (&quot;나는 {0:^10d}살, 키는 {1:&amp;gt;5f}cm 이름은{2:&amp;lt;5s}입니다.&quot;.format(age,height,name))처럼 사용하면된다.&lt;br /&gt;
-                이때 포맷팅 내부에 들어가있는 &quot;^&quot;는 가운대 정열, &quot;&amp;gt;&quot;는 오른쪽, &quot;&amp;lt;&quot;는 왼쪽 정렬를 의미한다. &lt;br /&gt;&lt;br /&gt;&lt;/li&gt; 
-                &lt;li&gt; 공백 내용 입력&lt;br /&gt;
-                위처럼 포맷팅 내부에 수를 삽입하면 공백이 빈칸으로 생성된다. &lt;br /&gt;
-                만약 빈칸이 아닌 문자를 입력하고싶다면 (&quot;나는 {0:$^10d}살, 키는 {1:!&amp;gt;10.2f}cm 이름은{2:0&amp;lt;5s}입니다.&quot;.format(age,height,name))처럼 사용하면된다.&lt;br /&gt;
-                위에서 실수의 경우 {1:!&amp;gt;10.2f}에서 5칸의 공백을 소수점 2번째까지의 수로 오른쪽 정렬로 채우고 나머지칸은 !로 채워라 라는 의미이다.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-            &lt;/ul&gt;  
-        &lt;/li&gt;        
-    &lt;/ol&gt;
-&lt;/div&gt;
-&lt;h4&gt; 이번 포스트에서는 문자열에 들어가거나 사용되는 함수에 대하여 작성해보았다. 문자열의 경우 문자 표현 뿐만 아니라 제어를 위하여 list의 융합을 위해 사용되기도한다.
-&lt;/h4&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작</summary></entry></feed>
+&lt;p&gt;이글은 vehicle에 관한 내용입니다!&lt;/p&gt;</content><author><name>HeoHyoYeong</name></author><category term="vehicle" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Vehicle 강좌(1) - vehicle 기본 이글은 vehicle에 관한 내용입니다!</summary></entry></feed>
