@@ -24,6 +24,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;github 관련 정보 &lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 &lt;h3 id=&quot;이번-포스트에서는-포스트의-댓글을-구현해보려고합니다&quot;&gt;이번 포스트에서는 포스트의 댓글을 구현해보려고합니다.&lt;/h3&gt;
@@ -36,6 +37,69 @@
         <link>
         https://heohyoyeong.github.io/python-Django-blog-4</link>
         <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-blog-4</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>github 관련 정보</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;github 관련 정보 &lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Wed, 19 Aug 2020 18:40:00 +0900</pubDate>
+        <link>
+        https://heohyoyeong.github.io/github</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/github</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Python API 정리</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;github 관련 정보 &lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+&lt;h3 id=&quot;이번-포스트에서는-파이썬에서-사용했던-api들을-정리보겠습니다&quot;&gt;이번 포스트에서는 파이썬에서 사용했던 API들을 정리보겠습니다.&lt;/h3&gt;
+&lt;p&gt;push test&lt;/p&gt;
+</description>
+        
+        <pubDate>Wed, 19 Aug 2020 16:40:00 +0900</pubDate>
+        <link>
+        https://heohyoyeong.github.io/python-API</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-API</guid>
       </item>
       
     
@@ -57,6 +121,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;github 관련 정보 &lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 &lt;h3 id=&quot;이번-포스트에서는-로그인후-게시판을-구현해보려고합니다&quot;&gt;이번 포스트에서는 로그인후 게시판을 구현해보려고합니다.&lt;/h3&gt;
@@ -92,6 +157,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;github 관련 정보 &lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 &lt;h3 id=&quot;이번-포스트에서는-작성한-user-model을-사용하여-회원가입과-로그인을-구현해보려고합니다&quot;&gt;이번 포스트에서는 작성한 User model을 사용하여 회원가입과 로그인을 구현해보려고합니다.&lt;/h3&gt;
@@ -125,6 +191,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;github 관련 정보 &lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 &lt;h3 id=&quot;이번-포스트에서는-회원가입을-하고-로그인을-하여-글을-남기고-댓글을-작성하는-블로그를-제작하여-보겠습니다&quot;&gt;이번 포스트에서는 회원가입을 하고 로그인을 하여 글을 남기고 댓글을 작성하는 블로그를 제작하여 보겠습니다.&lt;/h3&gt;
@@ -168,6 +235,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;github 관련 정보 &lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -198,6 +266,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;github 관련 정보 &lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -228,6 +297,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;github 관련 정보 &lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -258,6 +328,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;github 관련 정보 &lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -288,6 +359,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;github 관련 정보 &lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -318,6 +390,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;github 관련 정보 &lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -366,6 +439,7 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;github 관련 정보 &lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
