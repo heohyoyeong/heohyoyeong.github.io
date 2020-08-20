@@ -4,7 +4,40 @@
     <title> - Articles</title>
     <description>AI와 자동차의 만남</description>
     <link>
-    http://localhost:4000</link>
+    https://heohyoyeong.github.io</link>
+    
+      
+      <item>
+        <title>Python Django - Django 블로그 프로젝트 댓글 제작</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+&lt;h3 id=&quot;이번-포스트에서는-포스트의-댓글을-구현해보려고합니다&quot;&gt;이번 포스트에서는 포스트의 댓글을 구현해보려고합니다.&lt;/h3&gt;
+&lt;h6 id=&quot;이전-포스트에서-게시판을-제작하였습니다&quot;&gt;이전 포스트에서 게시판을 제작하였습니다.&lt;/h6&gt;
+&lt;h6 id=&quot;이전-포스트에서-작성하였던-listhtml에-댓글추가-기능을-추가해보겠습니다&quot;&gt;이전 포스트에서 작성하였던 &lt;code class=&quot;highlighter-rouge&quot;&gt;list.html&lt;/code&gt;에 댓글추가 기능을 추가해보겠습니다.&lt;/h6&gt;
+
+</description>
+        
+        <pubDate>Thu, 20 Aug 2020 02:40:00 +0900</pubDate>
+        <link>
+        https://heohyoyeong.github.io/python-Django-blog-4</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-blog-4</guid>
+      </item>
+      
     
       
       <item>
@@ -22,19 +55,22 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+
 &lt;/ul&gt;
 &lt;h3 id=&quot;이번-포스트에서는-로그인후-게시판을-구현해보려고합니다&quot;&gt;이번 포스트에서는 로그인후 게시판을 구현해보려고합니다.&lt;/h3&gt;
-&lt;h6 id=&quot;이전-포스트에서-로그인을-성공하면-listhtml로-이동하도록하였습니다&quot;&gt;이전 포스트에서 로그인을 성공하면 list.html로 이동하도록하였습니다.&lt;/h6&gt;
-&lt;h6 id=&quot;이번-포스트에서는-bootstrap을-자동으로-적용하기-위하여-basehtml을-작성하고&quot;&gt;이번 포스트에서는 bootstrap을 자동으로 적용하기 위하여 base.html을 작성하고&lt;/h6&gt;
-&lt;h6 id=&quot;이후-부터는-basehtml을-가져와-사용하겠습니다&quot;&gt;이후 부터는 base.html을 가져와 사용하겠습니다.&lt;/h6&gt;
-&lt;h6 id=&quot;따라서-basehtml부터-작성하도록-하겠습니다&quot;&gt;따라서 base.html부터 작성하도록 하겠습니다.&lt;/h6&gt;
+&lt;h6 id=&quot;이전-포스트에서-로그인을-성공하면-listhtml로-이동하도록하였습니다&quot;&gt;이전 포스트에서 로그인을 성공하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;list.html&lt;/code&gt;로 이동하도록하였습니다.&lt;/h6&gt;
+&lt;h6 id=&quot;이번-포스트에서는-bootstrap을-자동으로-적용하기-위하여-basehtml을-작성하고&quot;&gt;이번 포스트에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;bootstrap&lt;/code&gt;을 자동으로 적용하기 위하여 &lt;code class=&quot;highlighter-rouge&quot;&gt;base.html&lt;/code&gt;을 작성하고&lt;/h6&gt;
+&lt;h6 id=&quot;이후-부터는-basehtml을-가져와-사용하겠습니다&quot;&gt;이후 부터는 &lt;code class=&quot;highlighter-rouge&quot;&gt;base.html&lt;/code&gt;을 가져와 사용하겠습니다.&lt;/h6&gt;
+&lt;h6 id=&quot;따라서-basehtml부터-작성하도록-하겠습니다&quot;&gt;따라서 &lt;code class=&quot;highlighter-rouge&quot;&gt;base.html&lt;/code&gt;부터 작성하도록 하겠습니다.&lt;/h6&gt;
 
 </description>
         
         <pubDate>Wed, 19 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-blog-3</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-blog-3</guid>
+        https://heohyoyeong.github.io/python-Django-blog-3</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-blog-3</guid>
       </item>
       
     
@@ -54,6 +90,9 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+
 &lt;/ul&gt;
 &lt;h3 id=&quot;이번-포스트에서는-작성한-user-model을-사용하여-회원가입과-로그인을-구현해보려고합니다&quot;&gt;이번 포스트에서는 작성한 User model을 사용하여 회원가입과 로그인을 구현해보려고합니다.&lt;/h3&gt;
 &lt;h6 id=&quot;가장먼저-초기화면의-url부터-수정하여-초기화면에서-로그인과-회원가입을-할수있게-하려고합니다&quot;&gt;가장먼저 초기화면의 url부터 수정하여 초기화면에서 로그인과 회원가입을 할수있게 하려고합니다.&lt;/h6&gt;
@@ -63,8 +102,8 @@
         
         <pubDate>Mon, 17 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-blog-2</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-blog-2</guid>
+        https://heohyoyeong.github.io/python-Django-blog-2</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-blog-2</guid>
       </item>
       
     
@@ -84,6 +123,9 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+
 &lt;/ul&gt;
 &lt;h3 id=&quot;이번-포스트에서는-회원가입을-하고-로그인을-하여-글을-남기고-댓글을-작성하는-블로그를-제작하여-보겠습니다&quot;&gt;이번 포스트에서는 회원가입을 하고 로그인을 하여 글을 남기고 댓글을 작성하는 블로그를 제작하여 보겠습니다.&lt;/h3&gt;
 &lt;h6 id=&quot;이전의-django-시작-포스트에서-설명하였던-방식을-그대로-사용하여-서버를&quot;&gt;이전의 Django 시작 포스트에서 설명하였던 방식을 그대로 사용하여 서버를&lt;/h6&gt;
@@ -94,17 +136,17 @@
 
 &lt;h3 id=&quot;user-class-제작&quot;&gt;User class 제작&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;가장 먼저 회원가입과 로그인을 할 수 있게 해주는 User 모델을 제작할것입니다.&lt;/li&gt;
-  &lt;li&gt;아이디와 패스워드를 CharField로 받아 글자를 입력해줄 수 있게 해줍니다.&lt;/li&gt;
-  &lt;li&gt;아래와 같이 User Class를 제작해줍니다.&lt;/li&gt;
+  &lt;li&gt;가장 먼저 회원가입과 로그인을 할 수 있게 해주는 &lt;code class=&quot;highlighter-rouge&quot;&gt;User&lt;/code&gt;모델을 제작할것입니다.&lt;/li&gt;
+  &lt;li&gt;아이디와 패스워드를 &lt;code class=&quot;highlighter-rouge&quot;&gt;CharField&lt;/code&gt;로 받아 글자를 입력해줄 수 있게 해줍니다.&lt;/li&gt;
+  &lt;li&gt;아래와 같이 &lt;code class=&quot;highlighter-rouge&quot;&gt;User Class&lt;/code&gt;를 제작해줍니다.&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
         
         <pubDate>Mon, 17 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-blog-1</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-blog-1</guid>
+        https://heohyoyeong.github.io/python-Django-blog-1</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-blog-1</guid>
       </item>
       
     
@@ -124,14 +166,17 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+
 &lt;/ul&gt;
 
 </description>
         
         <pubDate>Tue, 04 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-poll-4</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-4</guid>
+        https://heohyoyeong.github.io/python-Django-poll-4</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-poll-4</guid>
       </item>
       
     
@@ -151,14 +196,17 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+
 &lt;/ul&gt;
 
 </description>
         
         <pubDate>Mon, 03 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-poll-3</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-3</guid>
+        https://heohyoyeong.github.io/python-Django-poll-3</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-poll-3</guid>
       </item>
       
     
@@ -178,14 +226,17 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+
 &lt;/ul&gt;
 
 </description>
         
         <pubDate>Sun, 02 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-poll-2</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-2</guid>
+        https://heohyoyeong.github.io/python-Django-poll-2</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-poll-2</guid>
       </item>
       
     
@@ -205,14 +256,17 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+
 &lt;/ul&gt;
 
 </description>
         
         <pubDate>Fri, 31 Jul 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-poll-1</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-1</guid>
+        https://heohyoyeong.github.io/python-Django-poll-1</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-poll-1</guid>
       </item>
       
     
@@ -232,14 +286,17 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+
 &lt;/ul&gt;
 
 </description>
         
         <pubDate>Fri, 31 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django</guid>
+        https://heohyoyeong.github.io/python-Django</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django</guid>
       </item>
       
     
@@ -259,14 +316,17 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+
 &lt;/ul&gt;
 
 </description>
         
         <pubDate>Fri, 31 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-control-statement</link>
-        <guid isPermaLink="true">http://localhost:4000/python-control-statement</guid>
+        https://heohyoyeong.github.io/python-control-statement</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-control-statement</guid>
       </item>
       
     
@@ -283,8 +343,8 @@
         
         <pubDate>Fri, 24 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/vehicle-basic</link>
-        <guid isPermaLink="true">http://localhost:4000/vehicle-basic</guid>
+        https://heohyoyeong.github.io/vehicle-basic</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/vehicle-basic</guid>
       </item>
       
     
@@ -304,14 +364,17 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+
 &lt;/ul&gt;
 
 </description>
         
         <pubDate>Fri, 24 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-basic</link>
-        <guid isPermaLink="true">http://localhost:4000/python-basic</guid>
+        https://heohyoyeong.github.io/python-basic</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-basic</guid>
       </item>
       
     
@@ -328,8 +391,8 @@
         
         <pubDate>Fri, 24 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/AI-basic</link>
-        <guid isPermaLink="true">http://localhost:4000/AI-basic</guid>
+        https://heohyoyeong.github.io/AI-basic</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/AI-basic</guid>
       </item>
       
     

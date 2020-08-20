@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="09775d5f-1325-4bf0-9a91-ce2977be059d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive.html" beforeDir="false" afterPath="$PROJECT_DIR$/archive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author/heohyoyeong/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/author/heohyoyeong/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author/heohyoyeong/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/author/heohyoyeong/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author_archive.html" beforeDir="false" afterPath="$PROJECT_DIR$/author_archive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-Django-blog-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-Django-blog-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-Django-blog-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-Django-blog-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-Django-blog-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-Django-blog-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-Django-poll-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-Django-poll-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-Django-poll-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-Django-poll-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-Django-poll-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-Django-poll-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-Django-poll-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-Django-poll-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-Django.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-Django.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-control-statement.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-control-statement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/ai/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/ai/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/python/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/python/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/python/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/python/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/vehicle/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/vehicle/feed.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1gLkVupZWVIucYlClD3QDf0qyFR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09775d5f-1325-4bf0-9a91-ce2977be059d" name="Default Changelist" comment="" />
+      <created>1597901286127</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597901286127</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
