@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://heohyoyeong.github.io/tag/git/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://heohyoyeong.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-08-21T17:55:10+09:00</updated>
-  <id>https://heohyoyeong.github.io/tag/git/feed.xml</id>
+  <link href="http://localhost:4000/tag/git/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-08-21T20:28:13+09:00</updated>
+  <id>http://localhost:4000/tag/git/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Git 강좌(3) - GIT venv &amp;amp; gitignore</title>
-      <link href="https://heohyoyeong.github.io/Gitvenv" rel="alternate" type="text/html" title="Git 강좌(3) - GIT venv &amp; gitignore" />
+      <link href="http://localhost:4000/Gitvenv" rel="alternate" type="text/html" title="Git 강좌(3) - GIT venv &amp; gitignore" />
       <published>2020-08-20T19:40:00+09:00</published>
       <updated>2020-08-20T19:40:00+09:00</updated>
-      <id>https://heohyoyeong.github.io/Gitvenv</id>
-      <content type="html" xml:base="https://heohyoyeong.github.io/Gitvenv">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/Gitvenv</id>
+      <content type="html" xml:base="http://localhost:4000/Gitvenv">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./Gitbasic&quot;&gt;Git 강좌(1) - GIT 기본 &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./Gitbranch&quot;&gt;Git 강좌(2) - GIT Branch Flow  &lt;/a&gt;&lt;/li&gt;
@@ -151,11 +151,11 @@ secret/ &lt;span class=&quot;c&quot;&gt;# secret 특정 폴더&lt;/span&gt;
   
     <entry>
       <title type="html">Git 강좌(2) - GIT Branch Flow</title>
-      <link href="https://heohyoyeong.github.io/Gitbranch" rel="alternate" type="text/html" title="Git 강좌(2) - GIT Branch Flow" />
+      <link href="http://localhost:4000/Gitbranch" rel="alternate" type="text/html" title="Git 강좌(2) - GIT Branch Flow" />
       <published>2020-08-20T18:40:00+09:00</published>
       <updated>2020-08-20T18:40:00+09:00</updated>
-      <id>https://heohyoyeong.github.io/Gitbranch</id>
-      <content type="html" xml:base="https://heohyoyeong.github.io/Gitbranch">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/Gitbranch</id>
+      <content type="html" xml:base="http://localhost:4000/Gitbranch">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./Gitbasic&quot;&gt;Git 강좌(1) - GIT 기본 &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./Gitbranch&quot;&gt;Git 강좌(2) - GIT Branch Flow  &lt;/a&gt;&lt;/li&gt;
@@ -647,11 +647,11 @@ Deleted branch feature/board &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;was 5
   
     <entry>
       <title type="html">Git 강좌(1) - GIT 기본</title>
-      <link href="https://heohyoyeong.github.io/Gitbasic" rel="alternate" type="text/html" title="Git 강좌(1) - GIT 기본" />
+      <link href="http://localhost:4000/Gitbasic" rel="alternate" type="text/html" title="Git 강좌(1) - GIT 기본" />
       <published>2020-08-19T18:40:00+09:00</published>
       <updated>2020-08-19T18:40:00+09:00</updated>
-      <id>https://heohyoyeong.github.io/Gitbasic</id>
-      <content type="html" xml:base="https://heohyoyeong.github.io/Gitbasic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/Gitbasic</id>
+      <content type="html" xml:base="http://localhost:4000/Gitbasic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./Gitbasic&quot;&gt;Git 강좌(1) - GIT 기본 &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./Gitbranch&quot;&gt;Git 강좌(2) - GIT Branch Flow  &lt;/a&gt;&lt;/li&gt;
