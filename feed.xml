@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://heohyoyeong.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://heohyoyeong.github.io/" rel="alternate" type="text/html" /><updated>2020-08-21T14:19:12+09:00</updated><id>https://heohyoyeong.github.io/</id><title type="html">AI with vehicle</title><subtitle>AI와 자동차의 만남</subtitle><entry><title type="html">Git 강좌(3) - GIT venv &amp;amp; gitignore</title><link href="https://heohyoyeong.github.io/Gitvenv" rel="alternate" type="text/html" title="Git 강좌(3) - GIT venv &amp; gitignore" /><published>2020-08-20T19:40:00+09:00</published><updated>2020-08-20T19:40:00+09:00</updated><id>https://heohyoyeong.github.io/Gitvenv</id><content type="html" xml:base="https://heohyoyeong.github.io/Gitvenv">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://heohyoyeong.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://heohyoyeong.github.io/" rel="alternate" type="text/html" /><updated>2020-08-21T17:55:10+09:00</updated><id>https://heohyoyeong.github.io/</id><title type="html">AI with vehicle</title><subtitle>AI와 자동차의 만남</subtitle><entry><title type="html">Python API 정리</title><link href="https://heohyoyeong.github.io/python-API" rel="alternate" type="text/html" title="Python API 정리" /><published>2020-08-21T00:40:00+09:00</published><updated>2020-08-21T00:40:00+09:00</updated><id>https://heohyoyeong.github.io/python-API</id><content type="html" xml:base="https://heohyoyeong.github.io/python-API">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+&lt;h3 id=&quot;이번-포스트에서는-파이썬에서-사용했던-api들을-정리보겠습니다&quot;&gt;이번 포스트에서는 파이썬에서 사용했던 API들을 정리보겠습니다.&lt;/h3&gt;
+&lt;p&gt;push test
+home pull test&lt;/p&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작 Python Django - Django 블로그 프로젝트 게시판 제작 Python Django - Django 블로그 프로젝트 댓글 제작 Python API 정리 이번 포스트에서는 파이썬에서 사용했던 API들을 정리보겠습니다. push test home pull test</summary></entry><entry><title type="html">Git 강좌(3) - GIT venv &amp;amp; gitignore</title><link href="https://heohyoyeong.github.io/Gitvenv" rel="alternate" type="text/html" title="Git 강좌(3) - GIT venv &amp; gitignore" /><published>2020-08-20T19:40:00+09:00</published><updated>2020-08-20T19:40:00+09:00</updated><id>https://heohyoyeong.github.io/Gitvenv</id><content type="html" xml:base="https://heohyoyeong.github.io/Gitvenv">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./Gitbasic&quot;&gt;Git 강좌(1) - GIT 기본 &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./Gitbranch&quot;&gt;Git 강좌(2) - GIT Branch Flow  &lt;/a&gt;&lt;/li&gt;
@@ -134,6 +152,8 @@ secret/ &lt;span class=&quot;c&quot;&gt;# secret 특정 폴더&lt;/span&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;p&gt;&lt;img src=&quot;assets/built/images/gitraw.PNG&quot; /&gt;&lt;/p&gt;
+
 &lt;h1 id=&quot;branch&quot;&gt;Branch&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -144,14 +164,14 @@ secret/ &lt;span class=&quot;c&quot;&gt;# secret 특정 폴더&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;브랜치 생성 (이름이 lulu로 생성)&lt;/li&gt;
+  &lt;li&gt;브랜치 생성 (이름이 &lt;code class=&quot;highlighter-rouge&quot;&gt;lulu&lt;/code&gt;로 생성)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch lulu
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;브랜치 이동 (lulu로 이동)&lt;/li&gt;
+  &lt;li&gt;브랜치 이동 (&lt;code class=&quot;highlighter-rouge&quot;&gt;lulu&lt;/code&gt;로 이동)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout lulu
@@ -168,10 +188,10 @@ secret/ &lt;span class=&quot;c&quot;&gt;# secret 특정 폴더&lt;/span&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git merge lulu
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;lulu를 master로 병합 (master에서 명령어를 사용하여 lulu를 master에 병합)&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lulu&lt;/code&gt;를 &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;로 병합 (&lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;에서 명령어를 사용하여 &lt;code class=&quot;highlighter-rouge&quot;&gt;lulu&lt;/code&gt;를 &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;에 병합)&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;브랜치 삭제 (lulu를 삭제)&lt;/li&gt;
+  &lt;li&gt;브랜치 삭제 (&lt;code class=&quot;highlighter-rouge&quot;&gt;lulu&lt;/code&gt;를 삭제)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; lulu
@@ -184,7 +204,7 @@ secret/ &lt;span class=&quot;c&quot;&gt;# secret 특정 폴더&lt;/span&gt;
 &lt;/blockquote&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;feature/test branch 생성 및 이동&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;feature/test branch&lt;/code&gt; 생성 및 이동&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; feature/blog
@@ -192,7 +212,7 @@ Switched to a new branch &lt;span class=&quot;s1&quot;&gt;'feature/blog'&lt;/spa
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;작업 완료 후 commit&lt;/li&gt;
+  &lt;li&gt;작업 완료 후 &lt;code class=&quot;highlighter-rouge&quot;&gt;commit&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;touch blog.html
@@ -209,7 +229,7 @@ b9175b4 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;master 이동&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; 이동&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout master
@@ -220,7 +240,7 @@ b9175b4 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;master에 병합&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;에 병합&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git merge feature/blog
@@ -232,7 +252,7 @@ Fast-forward
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;결과 -&amp;gt; fast-foward (단순히 HEAD를 이동)&lt;/li&gt;
+  &lt;li&gt;결과 -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;fast-foward&lt;/code&gt; (단순히 &lt;code class=&quot;highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;를 이동)&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt;
@@ -242,7 +262,7 @@ b9175b4 hellobranch
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;branch 삭제&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;branch&lt;/code&gt; 삭제&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; feature/blog
@@ -260,7 +280,7 @@ Deleted branch feature/blog &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;was 03
 &lt;/blockquote&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;feature/signout branch 생성 및 이동&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;feature/signout branch&lt;/code&gt; 생성 및 이동&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -271,21 +291,21 @@ Switched to a new branch &lt;span class=&quot;s1&quot;&gt;'feature/poll'&lt;/spa
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;작업 완료 후 commit&lt;/li&gt;
+  &lt;li&gt;작업 완료 후 &lt;code class=&quot;highlighter-rouge&quot;&gt;commit&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'poll.html'&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;master 이동&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; 이동&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;master에 추가 commit 이 발생시키기!!&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;에 추가 &lt;code class=&quot;highlighter-rouge&quot;&gt;commit&lt;/code&gt; 이 발생시키기!!&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;ul&gt;
@@ -307,7 +327,7 @@ b9175b4 hellobranch
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;master에 병합&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;에 병합&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git merge feature/poll
@@ -355,7 +375,7 @@ esc 클릭후
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;branch 삭제&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;branch&lt;/code&gt; 삭제&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; feature/poll
@@ -809,8 +829,17 @@ Deleted branch feature/board &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;was 5
     &lt;li&gt;&lt;a href=&quot;./Gitvenv&quot;&gt;Git 강좌(3) - GIT venv &amp;amp; gitignore  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h1 id=&quot;git-기초&quot;&gt;Git 기초&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Git은 분산형 버전관리시스템(DVCS)이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Git을 윈도우에서 활용하기 위해서 &lt;a href=&quot;https://gitbash.com&quot;&gt;git bash&lt;/a&gt;를 설치해야 한다.&lt;/p&gt;
+
 &lt;h3 id=&quot;cli-command-line-inter-face&quot;&gt;CLI (command line inter face)&lt;/h3&gt;
-&lt;h5 id=&quot;명령줄-인터페이스&quot;&gt;명령줄 인터페이스&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git bash&lt;/code&gt;는 명령줄 인터페이스이다.&lt;/strong&gt; 
+&lt;br /&gt;&lt;strong&gt;아래는 기본적인 &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; 명령어입니다.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;ls =&amp;gt; 를 다보여줘라&lt;/li&gt;
@@ -825,14 +854,6 @@ Deleted branch feature/board &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;was 5
   &lt;li&gt;git status =&amp;gt; 상태 확인&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;git-기초&quot;&gt;Git 기초&lt;/h1&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Git은 분산형 버전관리시스템(DVCS)이다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Git을 윈도우에서 활용하기 위해서 &lt;a href=&quot;https://gitbash.com&quot;&gt;git bash&lt;/a&gt;를 설치해야 한다.&lt;/p&gt;
-
 &lt;h1 id=&quot;1-저장소-초기화&quot;&gt;1. 저장소 초기화&lt;/h1&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git init
@@ -842,7 +863,7 @@ Initialized empty Git repository &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;로컬 저장소를 만들고 나면, &lt;code class=&quot;highlighter-rouge&quot;&gt;git/&lt;/code&gt;폴더가 생성되고, bash에 &lt;code class=&quot;highlighter-rouge&quot;&gt;(master)&lt;/code&gt;라고 표기된다.&lt;/li&gt;
+  &lt;li&gt;로컬 저장소를 만들고 나면, &lt;code class=&quot;highlighter-rouge&quot;&gt;git/&lt;/code&gt;폴더가 생성되고, &lt;code class=&quot;highlighter-rouge&quot;&gt;bash&lt;/code&gt;에 &lt;code class=&quot;highlighter-rouge&quot;&gt;(master)&lt;/code&gt;라고 표기된다.&lt;/li&gt;
   &lt;li&gt;반드시 저장소를 만들기 전에 원하는 디렉토리인지 확인하는 습관을 가지고, 저장소 내부에 저장소를 만들지 말자.
     &lt;ul&gt;
       &lt;li&gt;예) Desktop -&amp;gt; git 저장소, TIL-&amp;gt;다른 git 저장소(x)&lt;/li&gt;
@@ -934,11 +955,119 @@ Untracked files:
 nothing to commit, working tree clean
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h1 id=&quot;git-원격-저장소-활용&quot;&gt;Git 원격 저장소 활용&lt;/h1&gt;
+&lt;h1 id=&quot;4--기타-명령어&quot;&gt;4 . 기타 명령어&lt;/h1&gt;
+
+&lt;h3 id=&quot;1-restore&quot;&gt;1) &lt;code class=&quot;highlighter-rouge&quot;&gt;restore&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;작업공간 (&lt;code class=&quot;highlighter-rouge&quot;&gt;working directory&lt;/code&gt;)의 변경 사항을 버린다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
+On branch master
+Changes not staged &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;commit:
+  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git add &amp;lt;file&amp;gt;...&quot;&lt;/span&gt; to update what will be committed&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# 힌트!&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git restore &amp;lt;file&amp;gt;...&quot;&lt;/span&gt; to discard changes &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;working directory&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        modified:   CLI.txt
+
+no changes added to commit &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git add&quot;&lt;/span&gt; and/or &lt;span class=&quot;s2&quot;&gt;&quot;git commit&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git restore CLI.tx
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--staged&lt;/code&gt; 옵션을 활용하면, &lt;code class=&quot;highlighter-rouge&quot;&gt;staging area&lt;/code&gt;를 취소(&lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt; 명령어의 반대)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
+On branch master
+Changes to be committed:
+  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git restore --staged &amp;lt;file&amp;gt;...&quot;&lt;/span&gt; to unstage&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        modified:   CLI.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git restore &lt;span class=&quot;nt&quot;&gt;--staged&lt;/span&gt; CLI.txt
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
+On branch master
+Changes not staged &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;commit:
+  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git add &amp;lt;file&amp;gt;...&quot;&lt;/span&gt; to update what will be committed&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git restore &amp;lt;file&amp;gt;...&quot;&lt;/span&gt; to discard changes &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;working directory&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        modified:   CLI.txt
+
+no changes added to commit &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git add&quot;&lt;/span&gt; and/or &lt;span class=&quot;s2&quot;&gt;&quot;git commit -a&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-커밋-메시지-변경&quot;&gt;2) 커밋 메시지 변경&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;--amend&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;vim 편집기가 실행된다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; : 편집 모드로 변경되어서 메시지 변경 가능&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;esc&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt; : 저장하고 종료&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;주의!!&lt;/strong&gt; 공개된 커밋은 절대 변경 금지.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt;
+00a6259 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; TEest
+f7dc503 First commit
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;--amend&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;master 4d42f0f] Test
+ Date: Fri Aug 21 16:17:42 2020 +0900
+ 1 file changed, 1 insertion&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt;
+4d42f0f &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Test
+f7dc503 First commit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-reset-vs-revert&quot;&gt;3) reset vs revert&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;revert&lt;/code&gt;: 되돌렸다는 커밋이 발생된다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git revert 특정시점
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt;
+520c668 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Revert &lt;span class=&quot;s2&quot;&gt;&quot;Add 3 files&quot;&lt;/span&gt;
+8a97ad4 Add 3 files
+4d42f0f Test
+f7dc503 First commit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;reset&lt;/code&gt;: 커밋 자체를 지운다. (원격저장소에 공개된 이력의 경우 주의!!)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git reset 특정시점
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt;
+4d42f0f &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Test
+f7dc503 First commit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--mixed&lt;/code&gt;: 기본설정
+    &lt;ul&gt;
+      &lt;li&gt;해당 커밋 이후 변경사향을 &lt;code class=&quot;highlighter-rouge&quot;&gt;staging area&lt;/code&gt; 내용 보관&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--hard&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;해당 커밋 이후 변경된&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--soft&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;해당 커밋 이후 변경사항 및 &lt;code class=&quot;highlighter-rouge&quot;&gt;working directory&lt;/code&gt; 내용 보관&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;5-git-원격-저장소-활용&quot;&gt;5. Git 원격 저장소 활용&lt;/h1&gt;
 
 &lt;p&gt;Git 원격 저장소 기능을 제공 해주는 서비스는 &lt;code class=&quot;highlighter-rouge&quot;&gt;gitlab&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;bitbucket&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;github&lt;/code&gt;등이 있다.&lt;/p&gt;
 
-&lt;h2 id=&quot;1-원격-저장소-설정&quot;&gt;1. 원격 저장소 설정&lt;/h2&gt;
+&lt;h3 id=&quot;1-원격-저장소-설정&quot;&gt;1) 원격 저장소 설정&lt;/h3&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote add origin &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;url&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote add origin https://github.com/heohyoyeong/TIL.git
@@ -948,11 +1077,11 @@ nothing to commit, working tree clean
   &lt;li&gt;
     &lt;p&gt;git, 원격저장소를 추가 (&lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;)하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;origin&lt;/code&gt;이라는 이름으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt;을 설정&lt;/p&gt;
 
-    &lt;p&gt;git아 원격저장소를 추가해줘 origin이라는 이름으로 url을&lt;/p&gt;
+    &lt;p&gt;####&lt;code class=&quot;highlighter-rouge&quot;&gt;git아 원격저장소를 추가해줘 origin이라는 이름으로 url을&lt;/code&gt;라고 외우자!&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;2-설정된-저장소를-확인하기-위해서는-아래의-명령어를-사용한다&quot;&gt;2. 설정된 저장소를 확인하기 위해서는 아래의 명령어를 사용한다.&lt;/h2&gt;
+&lt;h3 id=&quot;2-설정된-저장소를-확인하기-위해서는-아래의-명령어를-사용한다&quot;&gt;2) 설정된 저장소를 확인하기 위해서는 아래의 명령어를 사용한다.&lt;/h3&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -968,25 +1097,7 @@ Writing objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;4/4&lt;span 
 Total 4 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;delta 0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, reused 0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;delta 0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, pack-reused 0
 To https://github.com/heohyoyeong/TIL.git
    dc04eba..e98577b  master -&amp;gt; master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>HeoHyoYeong</name></author><category term="Git" /><summary type="html">Git 강좌는 여러 절로 구성되어 있습니다. Git 강좌(1) - GIT 기본 Git 강좌(2) - GIT Branch Flow Git 강좌(3) - GIT venv &amp;amp; gitignore</summary></entry><entry><title type="html">Python API 정리</title><link href="https://heohyoyeong.github.io/python-API" rel="alternate" type="text/html" title="Python API 정리" /><published>2020-08-19T16:40:00+09:00</published><updated>2020-08-19T16:40:00+09:00</updated><id>https://heohyoyeong.github.io/python-API</id><content type="html" xml:base="https://heohyoyeong.github.io/python-API">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django&quot;&gt;Python Django - Django 시작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-1&quot;&gt;Python Django - Django 투표 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-2&quot;&gt;Python Django - Django 투표 프로젝트 투표 목록 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-3&quot;&gt;Python Django - Django 투표 프로젝트 투표 보기 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django-poll-4&quot;&gt;Python Django - Django 투표 프로젝트 투표 결과 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-1&quot;&gt;Python Django - Django 블로그 프로젝트 model 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
-
-&lt;/ul&gt;
-&lt;h3 id=&quot;이번-포스트에서는-파이썬에서-사용했던-api들을-정리보겠습니다&quot;&gt;이번 포스트에서는 파이썬에서 사용했던 API들을 정리보겠습니다.&lt;/h3&gt;
-&lt;p&gt;push test
-home pull test&lt;/p&gt;</content><author><name>HeoHyoYeong</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작 Python Django - Django 블로그 프로젝트 게시판 제작 Python Django - Django 블로그 프로젝트 댓글 제작 Python API 정리 이번 포스트에서는 파이썬에서 사용했던 API들을 정리보겠습니다. push test home pull test</summary></entry><entry><title type="html">Python Django - Django 블로그 프로젝트 게시판 제작</title><link href="https://heohyoyeong.github.io/python-Django-blog-3" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 게시판  제작" /><published>2020-08-19T02:40:00+09:00</published><updated>2020-08-19T02:40:00+09:00</updated><id>https://heohyoyeong.github.io/python-Django-blog-3</id><content type="html" xml:base="https://heohyoyeong.github.io/python-Django-blog-3">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>HeoHyoYeong</name></author><category term="Git" /><summary type="html">Git 강좌는 여러 절로 구성되어 있습니다. Git 강좌(1) - GIT 기본 Git 강좌(2) - GIT Branch Flow Git 강좌(3) - GIT venv &amp;amp; gitignore</summary></entry><entry><title type="html">Python Django - Django 블로그 프로젝트 게시판 제작</title><link href="https://heohyoyeong.github.io/python-Django-blog-3" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 게시판  제작" /><published>2020-08-19T02:40:00+09:00</published><updated>2020-08-19T02:40:00+09:00</updated><id>https://heohyoyeong.github.io/python-Django-blog-3</id><content type="html" xml:base="https://heohyoyeong.github.io/python-Django-blog-3">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;

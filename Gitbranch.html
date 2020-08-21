@@ -56,7 +56,7 @@
     <meta property="og:title" content="Git 강좌(2) - GIT Branch Flow" />
     <meta property="og:description" content="Git 강좌는 여러 절로 구성되어 있습니다. Git 강좌(1) - GIT 기본 Git 강좌(2) - GIT Branch Flow Git 강좌(3) - GIT venv &amp; gitignore Git Branch Flow Git은 분산 버전 관리 시스템 working directory 작업한 파일들이 수정 혹은 신규파일(untracked)을 작성 =&gt; add 명령어를 통해 2단계로 넘어감 staging area add명령어를 통해" />
     <meta property="og:url" content="https://heohyoyeong.github.io/Gitbranch" />
-    <meta property="og:image" content="https://heohyoyeong.github.io/assets/built/images/django.png" />
+    <meta property="og:image" content="https://heohyoyeong.github.io/assets/built/images/githublogo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2020-08-20T18:40:00+09:00" />
@@ -66,7 +66,7 @@
     <meta name="twitter:title" content="Git 강좌(2) - GIT Branch Flow" />
     <meta name="twitter:description" content="Git 강좌는 여러 절로 구성되어 있습니다. Git 강좌(1) - GIT 기본 Git 강좌(2) - GIT Branch Flow Git 강좌(3) - GIT venv &amp; gitignore Git Branch Flow Git은 분산 버전 관리 시스템 working directory 작업한 파일들이 수정 혹은 신규파일(untracked)을 작성 =&gt; add 명령어를 통해 2단계로 넘어감 staging area add명령어를 통해" />
     <meta name="twitter:url" content="https://heohyoyeong.github.io/" />
-    <meta name="twitter:image" content="https://heohyoyeong.github.io/assets/built/images/django.png" />
+    <meta name="twitter:image" content="https://heohyoyeong.github.io/assets/built/images/githublogo.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="AI with vehicle" />
     <meta name="twitter:label2" content="Filed under" />
@@ -88,7 +88,7 @@
     "url": "https://heohyoyeong.github.io/Gitbranch",
     "image": {
         "@type": "ImageObject",
-        "url": "https://heohyoyeong.github.io/assets/built/images/django.png",
+        "url": "https://heohyoyeong.github.io/assets/built/images/githublogo.png",
         "width": 2000,
         "height": 666
     },
@@ -137,6 +137,7 @@ into the {body} of the default.hbs template -->
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
     <li class="nav-vehicle" role="menuitem"><a href="/tag/vehicle/">vehicle</a></li>
     <li class="nav-python" role="menuitem"><a href="/tag/python/">Python</a></li>
+    <li class="nav-Git" role="menuitem"><a href="/tag/Git/">Git</a></li>
     <li class="nav-AI" role="menuitem"><a href="/tag/AI/">AI</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
@@ -185,7 +186,7 @@ into the {body} of the default.hbs template -->
             </header>
 <!--
             
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/django.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/githublogo.png)">
             </figure>
             
         -->
@@ -243,6 +244,8 @@ into the {body} of the default.hbs template -->
   </li>
 </ol>
 
+<p><img src="assets/built/images/gitraw.PNG" /></p>
+
 <h1 id="branch">Branch</h1>
 
 <ul>
@@ -253,14 +256,14 @@ into the {body} of the default.hbs template -->
 </code></pre></div></div>
 
 <ul>
-  <li>브랜치 생성 (이름이 lulu로 생성)</li>
+  <li>브랜치 생성 (이름이 <code class="highlighter-rouge">lulu</code>로 생성)</li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git branch lulu
 </code></pre></div></div>
 
 <ul>
-  <li>브랜치 이동 (lulu로 이동)</li>
+  <li>브랜치 이동 (<code class="highlighter-rouge">lulu</code>로 이동)</li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git checkout lulu
@@ -277,10 +280,10 @@ into the {body} of the default.hbs template -->
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>git merge lulu
 </code></pre></div></div>
 
-<p>lulu를 master로 병합 (master에서 명령어를 사용하여 lulu를 master에 병합)</p>
+<p><code class="highlighter-rouge">lulu</code>를 <code class="highlighter-rouge">master</code>로 병합 (<code class="highlighter-rouge">master</code>에서 명령어를 사용하여 <code class="highlighter-rouge">lulu</code>를 <code class="highlighter-rouge">master</code>에 병합)</p>
 
 <ul>
-  <li>브랜치 삭제 (lulu를 삭제)</li>
+  <li>브랜치 삭제 (<code class="highlighter-rouge">lulu</code>를 삭제)</li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git branch <span class="nt">-d</span> lulu
@@ -293,7 +296,7 @@ into the {body} of the default.hbs template -->
 </blockquote>
 
 <ol>
-  <li>feature/test branch 생성 및 이동</li>
+  <li><code class="highlighter-rouge">feature/test branch</code> 생성 및 이동</li>
 </ol>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>git checkout <span class="nt">-b</span> feature/blog
@@ -301,7 +304,7 @@ Switched to a new branch <span class="s1">'feature/blog'</span>
 </code></pre></div></div>
 
 <ol>
-  <li>작업 완료 후 commit</li>
+  <li>작업 완료 후 <code class="highlighter-rouge">commit</code></li>
 </ol>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>touch blog.html
@@ -318,7 +321,7 @@ b9175b4 <span class="o">(</span>master<span class="o">)</span> hellobranch
 </code></pre></div></div>
 
 <ol>
-  <li>master 이동</li>
+  <li><code class="highlighter-rouge">master</code> 이동</li>
 </ol>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git checkout master
@@ -329,7 +332,7 @@ b9175b4 <span class="o">(</span>HEAD -&gt; master<span class="o">)</span> hellob
 </code></pre></div></div>
 
 <ol>
-  <li>master에 병합</li>
+  <li><code class="highlighter-rouge">master</code>에 병합</li>
 </ol>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git merge feature/blog
@@ -341,7 +344,7 @@ Fast-forward
 </code></pre></div></div>
 
 <ol>
-  <li>결과 -&gt; fast-foward (단순히 HEAD를 이동)</li>
+  <li>결과 -&gt; <code class="highlighter-rouge">fast-foward</code> (단순히 <code class="highlighter-rouge">HEAD</code>를 이동)</li>
 </ol>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git log <span class="nt">--oneline</span>
@@ -351,7 +354,7 @@ b9175b4 hellobranch
 </code></pre></div></div>
 
 <ol>
-  <li>branch 삭제</li>
+  <li><code class="highlighter-rouge">branch</code> 삭제</li>
 </ol>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git branch <span class="nt">-d</span> feature/blog
@@ -369,7 +372,7 @@ Deleted branch feature/blog <span class="o">(</span>was 0337cf8<span class="o">)
 </blockquote>
 
 <ol>
-  <li>feature/signout branch 생성 및 이동</li>
+  <li><code class="highlighter-rouge">feature/signout branch</code> 생성 및 이동</li>
 </ol>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>master<span class="o">)</span>
@@ -380,21 +383,21 @@ Switched to a new branch <span class="s1">'feature/poll'</span>
 </code></pre></div></div>
 
 <ol>
-  <li>작업 완료 후 commit</li>
+  <li>작업 완료 후 <code class="highlighter-rouge">commit</code></li>
 </ol>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s1">'poll.html'</span>
 </code></pre></div></div>
 
 <ol>
-  <li>master 이동</li>
+  <li><code class="highlighter-rouge">master</code> 이동</li>
 </ol>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git checkout master
 </code></pre></div></div>
 
 <ol>
-  <li>master에 추가 commit 이 발생시키기!!</li>
+  <li><code class="highlighter-rouge">master</code>에 추가 <code class="highlighter-rouge">commit</code> 이 발생시키기!!</li>
 </ol>
 
 <ul>
@@ -416,7 +419,7 @@ b9175b4 hellobranch
 </code></pre></div></div>
 
 <ol>
-  <li>master에 병합</li>
+  <li><code class="highlighter-rouge">master</code>에 병합</li>
 </ol>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>git merge feature/poll
@@ -464,7 +467,7 @@ esc 클릭후
 </code></pre></div></div>
 
 <ol>
-  <li>branch 삭제</li>
+  <li><code class="highlighter-rouge">branch</code> 삭제</li>
 </ol>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git branch <span class="nt">-d</span> feature/poll
@@ -753,6 +756,8 @@ Deleted branch feature/board <span class="o">(</span>was 573b63d<span class="o">
                                 
                                 
                                   
+                                
+                                  
                                     
                                         
                                         
@@ -800,8 +805,6 @@ Deleted branch feature/board <span class="o">(</span>was 573b63d<span class="o">
                                 
                                   
                                 
-                                  
-                                
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
@@ -822,7 +825,7 @@ Deleted branch feature/board <span class="o">(</span>was 573b63d<span class="o">
     <article class="post-card post-template">
         
             <a class="post-card-image-link" href="/Gitvenv">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/django.png)"></div>
+                <div class="post-card-image" style="background-image: url(/assets/built/images/githublogo.png)"></div>
             </a>
         
         <div class="post-card-content">
