@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/tag/git/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-08-21T20:28:13+09:00</updated>
-  <id>http://localhost:4000/tag/git/feed.xml</id>
+  <link href="https://heohyoyeong.github.io/tag/git/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://heohyoyeong.github.io/" rel="alternate" type="text/html" />
+  <updated>2020-08-22T19:24:24+09:00</updated>
+  <id>https://heohyoyeong.github.io/tag/git/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Git 강좌(3) - GIT venv &amp;amp; gitignore</title>
-      <link href="http://localhost:4000/Gitvenv" rel="alternate" type="text/html" title="Git 강좌(3) - GIT venv &amp; gitignore" />
+      <link href="https://heohyoyeong.github.io/Gitvenv" rel="alternate" type="text/html" title="Git 강좌(3) - GIT venv &amp; gitignore" />
       <published>2020-08-20T19:40:00+09:00</published>
       <updated>2020-08-20T19:40:00+09:00</updated>
-      <id>http://localhost:4000/Gitvenv</id>
-      <content type="html" xml:base="http://localhost:4000/Gitvenv">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>https://heohyoyeong.github.io/Gitvenv</id>
+      <content type="html" xml:base="https://heohyoyeong.github.io/Gitvenv">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./Gitbasic&quot;&gt;Git 강좌(1) - GIT 기본 &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./Gitbranch&quot;&gt;Git 강좌(2) - GIT Branch Flow  &lt;/a&gt;&lt;/li&gt;
@@ -151,11 +151,11 @@ secret/ &lt;span class=&quot;c&quot;&gt;# secret 특정 폴더&lt;/span&gt;
   
     <entry>
       <title type="html">Git 강좌(2) - GIT Branch Flow</title>
-      <link href="http://localhost:4000/Gitbranch" rel="alternate" type="text/html" title="Git 강좌(2) - GIT Branch Flow" />
+      <link href="https://heohyoyeong.github.io/Gitbranch" rel="alternate" type="text/html" title="Git 강좌(2) - GIT Branch Flow" />
       <published>2020-08-20T18:40:00+09:00</published>
       <updated>2020-08-20T18:40:00+09:00</updated>
-      <id>http://localhost:4000/Gitbranch</id>
-      <content type="html" xml:base="http://localhost:4000/Gitbranch">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>https://heohyoyeong.github.io/Gitbranch</id>
+      <content type="html" xml:base="https://heohyoyeong.github.io/Gitbranch">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./Gitbasic&quot;&gt;Git 강좌(1) - GIT 기본 &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./Gitbranch&quot;&gt;Git 강좌(2) - GIT Branch Flow  &lt;/a&gt;&lt;/li&gt;
@@ -168,46 +168,39 @@ secret/ &lt;span class=&quot;c&quot;&gt;# secret 특정 폴더&lt;/span&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Git&lt;/code&gt;은 분산 버전 관리 시스템&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;working directory&lt;/strong&gt;&lt;/p&gt;
+&lt;h6 id=&quot;1-working-directory&quot;&gt;1. &lt;strong&gt;working directory&lt;/strong&gt;&lt;/h6&gt;
 
-    &lt;ul&gt;
-      &lt;li&gt;작업한 파일들이 수정&lt;/li&gt;
-      &lt;li&gt;혹은 신규파일(untracked)을 작성&lt;/li&gt;
-    &lt;/ul&gt;
+&lt;ul&gt;
+  &lt;li&gt;작업한 파일들이 수정&lt;/li&gt;
+  &lt;li&gt;혹은 신규파일(untracked)을 작성&lt;/li&gt;
+&lt;/ul&gt;
 
-    &lt;p&gt;=&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt; 명령어를 통해 2단계로 넘어감&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;staging area&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;=&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt; 명령어를 통해 2단계로 넘어감&lt;/p&gt;
 
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;명령어를 통해 이전에 존재하였지만 삭제되었거나 수정된 것을 확인&lt;/li&gt;
-      &lt;li&gt;혹은 새로 생기면 새롭게 추가됨&lt;/li&gt;
-    &lt;/ul&gt;
+&lt;h6 id=&quot;2-staging-area&quot;&gt;2. &lt;strong&gt;staging area&lt;/strong&gt;&lt;/h6&gt;
 
-    &lt;p&gt;=&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;commit&lt;/code&gt; 명령어를 통해 3단계로 넘어감&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;commits / version&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;명령어를 통해 이전에 존재하였지만 삭제되었거나 수정된 것을 확인&lt;/li&gt;
+  &lt;li&gt;혹은 새로 생기면 새롭게 추가됨&lt;/li&gt;
+&lt;/ul&gt;
 
-    &lt;ul&gt;
-      &lt;li&gt;쌓여있는 버전들을이 내부에 존재&lt;/li&gt;
-    &lt;/ul&gt;
+&lt;p&gt;=&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;commit&lt;/code&gt; 명령어를 통해 3단계로 넘어감&lt;/p&gt;
 
-    &lt;p&gt;=&amp;gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Push&lt;/code&gt;를 통해 4단계로 넘어감&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Github / TIL 저장소&lt;/strong&gt;&lt;/p&gt;
+&lt;h6 id=&quot;3-commits--version&quot;&gt;3. &lt;strong&gt;commits / version&lt;/strong&gt;&lt;/h6&gt;
 
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;push&lt;/code&gt;를 통해 커밋된 것들만 &lt;code class=&quot;highlighter-rouge&quot;&gt;Github&lt;/code&gt;에 넘어와서 쌓임&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;ul&gt;
+  &lt;li&gt;쌓여있는 버전들을이 내부에 존재&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/built/images/gitraw.PNG&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;=&amp;gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Push&lt;/code&gt;를 통해 4단계로 넘어감&lt;/p&gt;
+
+&lt;h6 id=&quot;4-github--til-저장소&quot;&gt;4. &lt;strong&gt;Github / TIL 저장소&lt;/strong&gt;&lt;/h6&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;push&lt;/code&gt;를 통해 커밋된 것들만 &lt;code class=&quot;highlighter-rouge&quot;&gt;Github&lt;/code&gt;에 넘어와서 쌓임&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/built/images/gitraw.PNG&quot; alt=&quot;gitraw.PNG&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;branch&quot;&gt;Branch&lt;/h1&gt;
 
@@ -258,17 +251,13 @@ secret/ &lt;span class=&quot;c&quot;&gt;# secret 특정 폴더&lt;/span&gt;
   &lt;p&gt;fast-foward는 feature 브랜치 생성된 이후 master 브랜치에 변경 사항이 없는 상황&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;feature/test branch&lt;/code&gt; 생성 및 이동&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;1-featuretest-branch-생성-및-이동&quot;&gt;1. &lt;code class=&quot;highlighter-rouge&quot;&gt;feature/test branch&lt;/code&gt; 생성 및 이동&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; feature/blog
 Switched to a new branch &lt;span class=&quot;s1&quot;&gt;'feature/blog'&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;작업 완료 후 &lt;code class=&quot;highlighter-rouge&quot;&gt;commit&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;2-작업-완료-후-commit&quot;&gt;2. 작업 완료 후 &lt;code class=&quot;highlighter-rouge&quot;&gt;commit&lt;/code&gt;&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;touch blog.html
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
@@ -283,9 +272,7 @@ b9175b4 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot
 9f01d0e init
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; 이동&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;3-master-이동&quot;&gt;3. &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; 이동&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout master
 Switched to branch &lt;span class=&quot;s1&quot;&gt;'master'&lt;/span&gt;
@@ -294,9 +281,7 @@ b9175b4 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;s
 9f01d0e init
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;에 병합&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;4-master에-병합&quot;&gt;4. &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;에 병합&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git merge feature/blog
 Updating b9175b4..0337cf8
@@ -306,9 +291,7 @@ Fast-forward
  create mode 100644 blog.html
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;결과 -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;fast-foward&lt;/code&gt; (단순히 &lt;code class=&quot;highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;를 이동)&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;5-결과---fast-foward-단순히-head를-이동&quot;&gt;5. 결과 -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;fast-foward&lt;/code&gt; (단순히 &lt;code class=&quot;highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;를 이동)&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt;
 0337cf8 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master, feature/blog&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;complete &lt;/span&gt;blog app
@@ -316,9 +299,7 @@ b9175b4 hellobranch
 9f01d0e init
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;branch&lt;/code&gt; 삭제&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;6-branch-삭제&quot;&gt;6. &lt;code class=&quot;highlighter-rouge&quot;&gt;branch&lt;/code&gt; 삭제&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; feature/blog
 Deleted branch feature/blog &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;was 0337cf8&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
@@ -334,9 +315,7 @@ Deleted branch feature/blog &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;was 03
   &lt;p&gt;git이 auto merging을 진행하고, commit이 발생된다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;feature/signout branch&lt;/code&gt; 생성 및 이동&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;1-featuresignout-branch-생성-및-이동&quot;&gt;1. &lt;code class=&quot;highlighter-rouge&quot;&gt;feature/signout branch&lt;/code&gt; 생성 및 이동&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; feature/poll
@@ -345,23 +324,17 @@ Switched to a new branch &lt;span class=&quot;s1&quot;&gt;'feature/poll'&lt;/spa
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add poll.html
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;작업 완료 후 &lt;code class=&quot;highlighter-rouge&quot;&gt;commit&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;2-작업-완료-후-commit-1&quot;&gt;2. 작업 완료 후 &lt;code class=&quot;highlighter-rouge&quot;&gt;commit&lt;/code&gt;&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'poll.html'&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; 이동&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;3-master-이동-1&quot;&gt;3. &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; 이동&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;에 추가 &lt;code class=&quot;highlighter-rouge&quot;&gt;commit&lt;/code&gt; 이 발생시키기!!&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;4-master에-추가-commit-이-발생시키기&quot;&gt;4. &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;에 추가 &lt;code class=&quot;highlighter-rouge&quot;&gt;commit&lt;/code&gt; 이 발생시키기!!&lt;/h6&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;다른 파일을 수정 혹은 생성하세요!&lt;/strong&gt;&lt;/li&gt;
@@ -381,9 +354,7 @@ b9175b4 hellobranch
 9f01d0e init
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;에 병합&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;5-master에-병합&quot;&gt;5. &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;에 병합&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git merge feature/poll
 
@@ -397,9 +368,7 @@ esc 클릭후
 :wq 입력
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;결과 -&amp;gt; 자동으로 &lt;em&gt;merge commit 발생&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;6-결과---자동으로-merge-commit-발생&quot;&gt;6. 결과 -&amp;gt; 자동으로 &lt;em&gt;merge commit 발생&lt;/em&gt;&lt;/h6&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -414,9 +383,7 @@ esc 클릭후
   &lt;li&gt;커밋이  확인 해봅시다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;그래프 확인하기&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;7-그래프-확인하기&quot;&gt;7. 그래프 확인하기&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--graph&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;   983e355 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Merge branch &lt;span class=&quot;s1&quot;&gt;'feature/poll'&lt;/span&gt; into master
@@ -429,9 +396,7 @@ esc 클릭후
 &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; 9f01d0e init
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;branch&lt;/code&gt; 삭제&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;8-branch-삭제&quot;&gt;8. &lt;code class=&quot;highlighter-rouge&quot;&gt;branch&lt;/code&gt; 삭제&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; feature/poll
 Deleted branch feature/poll &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;was cdc00c6&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
@@ -449,9 +414,7 @@ Deleted branch feature/poll &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;was cd
   &lt;p&gt;원하는 형태의 코드로 직접 수정을 하고 merge commit을 발생 시켜야 한다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;feature/board branch 생성 및 이동&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;1-featureboard-branch-생성-및-이동&quot;&gt;1. feature/board branch 생성 및 이동&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;touch README.md
 이거 이후 직접 README.md 파일에 들어가서 내용을 조금 수정
@@ -460,9 +423,7 @@ Deleted branch feature/poll &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;was cd
 Switched to a new branch &lt;span class=&quot;s1&quot;&gt;'feature/board'&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;작업 완료 후 commit&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;2-작업-완료-후-commit-2&quot;&gt;2. 작업 완료 후 commit&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;touch board.html
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;touch README.md
@@ -493,23 +454,17 @@ b9175b4 hellobranch
 9f01d0e init
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;master 이동&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;3-master-이동-2&quot;&gt;3. master 이동&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout master
 Switched to branch &lt;span class=&quot;s1&quot;&gt;'master'&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;em&gt;master에 추가 commit 이 발생시키기!!&lt;/em&gt;&lt;/p&gt;
+&lt;h6 id=&quot;4-master에-추가-commit-이-발생시키기-1&quot;&gt;4. &lt;em&gt;master에 추가 commit 이 발생시키기!!&lt;/em&gt;&lt;/h6&gt;
 
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;동일 파일을 수정 혹은 생성하세요!&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;동일 파일을 수정 혹은 생성하세요!&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# README.md를 수정후 저장&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
@@ -518,9 +473,7 @@ Switched to branch &lt;span class=&quot;s1&quot;&gt;'master'&lt;/span&gt;
  1 file changed, 1 insertion&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;master에 병합&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;5-master에-병합-1&quot;&gt;5. master에 병합&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 내용 충돌&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git merge feature/board
@@ -532,9 +485,7 @@ CONFLICT &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;content&lt;span class=&qu
 Automatic merge failed&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; fix conflicts and &lt;span class=&quot;k&quot;&gt;then &lt;/span&gt;commit the result.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;결과 -&amp;gt; &lt;em&gt;merge conflict발생&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;6-결과---merge-conflict발생&quot;&gt;6. 결과 -&amp;gt; &lt;em&gt;merge conflict발생&lt;/em&gt;&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
 On branch master
@@ -553,9 +504,7 @@ Unmerged paths:
         both modified:   README.md
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;충돌 확인 및 해결&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;7-충돌-확인-및-해결&quot;&gt;7. 충돌 확인 및 해결&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;해당 파일을 켜보면 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;visual code&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&amp;lt; HEAD
@@ -568,31 +517,26 @@ Unmerged paths:
 &lt;span class=&quot;c&quot;&gt;# lulu로 수정함 을 선택&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
+&lt;h6 id=&quot;8-merge-commit-진행&quot;&gt;8. merge commit 진행&lt;/h6&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;merge commit 진행&lt;/p&gt;
-
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
- &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
+    &lt;p&gt;vim 편집기 화면이 나타납니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;자동으로 작성된 커밋 메시지를 확인하고, &lt;code class=&quot;highlighter-rouge&quot;&gt;esc&lt;/code&gt;를 누른 후 &lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt;를 입력하여 저장 및 종료를 합니다.
     &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;vim 편집기 화면이 나타납니다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;자동으로 작성된 커밋 메시지를 확인하고, &lt;code class=&quot;highlighter-rouge&quot;&gt;esc&lt;/code&gt;를 누른 후 &lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt;를 입력하여 저장 및 종료를 합니다.
-        &lt;ul&gt;
-          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;w&lt;/code&gt; : write&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;q&lt;/code&gt; : quit&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;커밋이  확인 해봅시다.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;w&lt;/code&gt; : write&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;q&lt;/code&gt; : quit&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;그래프 확인하기&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+  &lt;li&gt;커밋이  확인 해봅시다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&quot;9-그래프-확인하기&quot;&gt;9. 그래프 확인하기&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--graph&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;   dd66968 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Merge branch &lt;span class=&quot;s1&quot;&gt;'feature/board'&lt;/span&gt; into master
@@ -611,9 +555,7 @@ Unmerged paths:
 &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; 9f01d0e init
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;branch 삭제&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h6 id=&quot;10-branch-삭제&quot;&gt;10. branch 삭제&lt;/h6&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; feature/board
 Deleted branch feature/board &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;was 573b63d&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
@@ -647,11 +589,11 @@ Deleted branch feature/board &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;was 5
   
     <entry>
       <title type="html">Git 강좌(1) - GIT 기본</title>
-      <link href="http://localhost:4000/Gitbasic" rel="alternate" type="text/html" title="Git 강좌(1) - GIT 기본" />
+      <link href="https://heohyoyeong.github.io/Gitbasic" rel="alternate" type="text/html" title="Git 강좌(1) - GIT 기본" />
       <published>2020-08-19T18:40:00+09:00</published>
       <updated>2020-08-19T18:40:00+09:00</updated>
-      <id>http://localhost:4000/Gitbasic</id>
-      <content type="html" xml:base="http://localhost:4000/Gitbasic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>https://heohyoyeong.github.io/Gitbasic</id>
+      <content type="html" xml:base="https://heohyoyeong.github.io/Gitbasic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./Gitbasic&quot;&gt;Git 강좌(1) - GIT 기본 &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./Gitbranch&quot;&gt;Git 강좌(2) - GIT Branch Flow  &lt;/a&gt;&lt;/li&gt;

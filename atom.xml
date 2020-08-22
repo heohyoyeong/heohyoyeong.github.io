@@ -4,11 +4,11 @@
     <title> - Articles</title>
     <description>AI와 자동차의 만남</description>
     <link>
-    http://localhost:4000</link>
+    https://heohyoyeong.github.io</link>
     
       
       <item>
-        <title>Python API 정리</title>
+        <title>Python API 비 로그인식 크롤링</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -23,18 +23,17 @@
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API-1&quot;&gt;Python API 비 로그인식 크롤링&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 &lt;h3 id=&quot;이번-포스트에서는-파이썬에서-사용했던-api들을-정리보겠습니다&quot;&gt;이번 포스트에서는 파이썬에서 사용했던 API들을 정리보겠습니다.&lt;/h3&gt;
-&lt;p&gt;push test
-home pull test&lt;/p&gt;
+
 </description>
         
-        <pubDate>Fri, 21 Aug 2020 00:40:00 +0900</pubDate>
+        <pubDate>Sat, 22 Aug 2020 00:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-API</link>
-        <guid isPermaLink="true">http://localhost:4000/python-API</guid>
+        https://heohyoyeong.github.io/python-API-1</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-API-1</guid>
       </item>
       
     
@@ -53,8 +52,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Thu, 20 Aug 2020 19:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Gitvenv</link>
-        <guid isPermaLink="true">http://localhost:4000/Gitvenv</guid>
+        https://heohyoyeong.github.io/Gitvenv</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/Gitvenv</guid>
       </item>
       
     
@@ -73,8 +72,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Thu, 20 Aug 2020 18:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Gitbranch</link>
-        <guid isPermaLink="true">http://localhost:4000/Gitbranch</guid>
+        https://heohyoyeong.github.io/Gitbranch</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/Gitbranch</guid>
       </item>
       
     
@@ -95,7 +94,7 @@ home pull test&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API-1&quot;&gt;Python API 비 로그인식 크롤링&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 &lt;h3 id=&quot;이번-포스트에서는-포스트의-댓글을-구현해보려고합니다&quot;&gt;이번 포스트에서는 포스트의 댓글을 구현해보려고합니다.&lt;/h3&gt;
@@ -106,8 +105,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Thu, 20 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-blog-4</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-blog-4</guid>
+        https://heohyoyeong.github.io/python-Django-blog-4</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-blog-4</guid>
       </item>
       
     
@@ -126,8 +125,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Wed, 19 Aug 2020 18:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Gitbasic</link>
-        <guid isPermaLink="true">http://localhost:4000/Gitbasic</guid>
+        https://heohyoyeong.github.io/Gitbasic</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/Gitbasic</guid>
       </item>
       
     
@@ -148,7 +147,7 @@ home pull test&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API-1&quot;&gt;Python API 비 로그인식 크롤링&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 &lt;h3 id=&quot;이번-포스트에서는-로그인후-게시판을-구현해보려고합니다&quot;&gt;이번 포스트에서는 로그인후 게시판을 구현해보려고합니다.&lt;/h3&gt;
@@ -161,8 +160,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Wed, 19 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-blog-3</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-blog-3</guid>
+        https://heohyoyeong.github.io/python-Django-blog-3</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-blog-3</guid>
       </item>
       
     
@@ -183,7 +182,7 @@ home pull test&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API-1&quot;&gt;Python API 비 로그인식 크롤링&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 &lt;h3 id=&quot;이번-포스트에서는-작성한-user-model을-사용하여-회원가입과-로그인을-구현해보려고합니다&quot;&gt;이번 포스트에서는 작성한 User model을 사용하여 회원가입과 로그인을 구현해보려고합니다.&lt;/h3&gt;
@@ -194,8 +193,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Mon, 17 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-blog-2</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-blog-2</guid>
+        https://heohyoyeong.github.io/python-Django-blog-2</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-blog-2</guid>
       </item>
       
     
@@ -216,7 +215,7 @@ home pull test&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API-1&quot;&gt;Python API 비 로그인식 크롤링&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 &lt;h3 id=&quot;이번-포스트에서는-회원가입을-하고-로그인을-하여-글을-남기고-댓글을-작성하는-블로그를-제작하여-보겠습니다&quot;&gt;이번 포스트에서는 회원가입을 하고 로그인을 하여 글을 남기고 댓글을 작성하는 블로그를 제작하여 보겠습니다.&lt;/h3&gt;
@@ -237,8 +236,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Mon, 17 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-blog-1</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-blog-1</guid>
+        https://heohyoyeong.github.io/python-Django-blog-1</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-blog-1</guid>
       </item>
       
     
@@ -259,7 +258,7 @@ home pull test&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API-1&quot;&gt;Python API 비 로그인식 크롤링&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -267,8 +266,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Tue, 04 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-poll-4</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-4</guid>
+        https://heohyoyeong.github.io/python-Django-poll-4</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-poll-4</guid>
       </item>
       
     
@@ -289,7 +288,7 @@ home pull test&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API-1&quot;&gt;Python API 비 로그인식 크롤링&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -297,8 +296,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Mon, 03 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-poll-3</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-3</guid>
+        https://heohyoyeong.github.io/python-Django-poll-3</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-poll-3</guid>
       </item>
       
     
@@ -319,7 +318,7 @@ home pull test&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API-1&quot;&gt;Python API 비 로그인식 크롤링&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -327,8 +326,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Sun, 02 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-poll-2</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-2</guid>
+        https://heohyoyeong.github.io/python-Django-poll-2</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-poll-2</guid>
       </item>
       
     
@@ -349,7 +348,7 @@ home pull test&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API-1&quot;&gt;Python API 비 로그인식 크롤링&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -357,8 +356,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Fri, 31 Jul 2020 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django-poll-1</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-1</guid>
+        https://heohyoyeong.github.io/python-Django-poll-1</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-poll-1</guid>
       </item>
       
     
@@ -379,7 +378,7 @@ home pull test&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API-1&quot;&gt;Python API 비 로그인식 크롤링&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -387,8 +386,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Fri, 31 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-Django</link>
-        <guid isPermaLink="true">http://localhost:4000/python-Django</guid>
+        https://heohyoyeong.github.io/python-Django</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django</guid>
       </item>
       
     
@@ -409,7 +408,7 @@ home pull test&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API-1&quot;&gt;Python API 비 로그인식 크롤링&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -417,8 +416,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Fri, 31 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-control-statement</link>
-        <guid isPermaLink="true">http://localhost:4000/python-control-statement</guid>
+        https://heohyoyeong.github.io/python-control-statement</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-control-statement</guid>
       </item>
       
     
@@ -435,8 +434,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Fri, 24 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/vehicle-basic</link>
-        <guid isPermaLink="true">http://localhost:4000/vehicle-basic</guid>
+        https://heohyoyeong.github.io/vehicle-basic</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/vehicle-basic</guid>
       </item>
       
     
@@ -457,7 +456,7 @@ home pull test&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-2&quot;&gt;Python Django - Django 블로그 프로젝트 로그인 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-3&quot;&gt;Python Django - Django 블로그 프로젝트 게시판 제작&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-Django-blog-4&quot;&gt;Python Django - Django 블로그 프로젝트 댓글 제작&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-API&quot;&gt;Python API 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-API-1&quot;&gt;Python API 비 로그인식 크롤링&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -465,8 +464,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Fri, 24 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/python-basic</link>
-        <guid isPermaLink="true">http://localhost:4000/python-basic</guid>
+        https://heohyoyeong.github.io/python-basic</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/python-basic</guid>
       </item>
       
     
@@ -483,8 +482,8 @@ home pull test&lt;/p&gt;
         
         <pubDate>Fri, 24 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/AI-basic</link>
-        <guid isPermaLink="true">http://localhost:4000/AI-basic</guid>
+        https://heohyoyeong.github.io/AI-basic</link>
+        <guid isPermaLink="true">https://heohyoyeong.github.io/AI-basic</guid>
       </item>
       
     
