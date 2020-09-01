@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://heohyoyeong.github.io/tag/ai/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://heohyoyeong.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-08-22T19:24:24+09:00</updated>
-  <id>https://heohyoyeong.github.io/tag/ai/feed.xml</id>
+  <link href="http://localhost:4000/tag/ai/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-09-01T13:26:53+09:00</updated>
+  <id>http://localhost:4000/tag/ai/feed.xml</id>
 
   
   
@@ -32,16 +32,74 @@
 
   
     <entry>
-      <title type="html">AI 강좌(1) - AI 기본</title>
-      <link href="https://heohyoyeong.github.io/AI-basic" rel="alternate" type="text/html" title="AI 강좌(1) - AI 기본" />
-      <published>2020-07-24T01:40:00+09:00</published>
-      <updated>2020-07-24T01:40:00+09:00</updated>
-      <id>https://heohyoyeong.github.io/AI-basic</id>
-      <content type="html" xml:base="https://heohyoyeong.github.io/AI-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <title type="html">AI 강좌(1) - AI 가상환경 설정</title>
+      <link href="http://localhost:4000/AI-basic" rel="alternate" type="text/html" title="AI 강좌(1) - AI 가상환경 설정" />
+      <published>2020-09-01T01:40:00+09:00</published>
+      <updated>2020-09-01T01:40:00+09:00</updated>
+      <id>http://localhost:4000/AI-basic</id>
+      <content type="html" xml:base="http://localhost:4000/AI-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./AI-basic&quot;&gt;AI 강좌(1) - AI 기본 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-basic&quot;&gt;AI 강좌(1) - AI 가상환경 설정  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;이글은 파이썬 basic에 관한 내용입니다!&lt;/p&gt;</content>
+&lt;h2 id=&quot;가장먼저-ai를-위한-가상환경을-제작해보자&quot;&gt;가장먼저 AI를 위한 가상환경을 제작해보자!&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;데이터-분석&quot;&gt;데이터 분석&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;개발IDE =&amp;gt; Jupyter Notebook을 사용&lt;/li&gt;
+  &lt;li&gt;개발환경 =&amp;gt; Anaconda 가상환경을 만들어서 사용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&quot;1-anaconda를-다운로드한다-open-source버전&quot;&gt;1. Anaconda를 다운로드한다! (open source버전)&lt;/h6&gt;
+
+&lt;h6 id=&quot;2-anaconda를-설치&quot;&gt;2. Anaconda를 설치!!&lt;/h6&gt;
+
+&lt;h6 id=&quot;3-anaconda는-무료로-사용가능하고-python과-다수의-유용한-package를-우리가-사용하기-쉽도록-제공해주는-플랫폼이다&quot;&gt;3. Anaconda는 무료로 사용가능하고 python과 다수의 유용한 package를 우리가 사용하기 쉽도록 제공해주는 플랫폼이다.&lt;/h6&gt;
+
+&lt;h6 id=&quot;4-anaconda-prompt를-관리자-권한으로-실행&quot;&gt;4. Anaconda Prompt를 관리자 권한으로 실행!&lt;/h6&gt;
+
+&lt;h6 id=&quot;5-제일-먼저-해야-할-작업은-pip를-최신버전으로-upgrade한다&quot;&gt;5. 제일 먼저 해야 할 작업은 pip를 최신버전으로 upgrade한다.&lt;/h6&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;   - python -m pip install --upgrade pip
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=&quot;6-가상환경을-생성해야-한다-파이썬의-버전은-37로-설정&quot;&gt;6. 가상환경을 생성해야 한다!! 파이썬의 버전은 3.7로 설정&lt;/h6&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;  - conda create -n data_env python=3.7 openssl
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=&quot;7-정상적으로-가상환경이-만들어-졌는지-확인해보아요&quot;&gt;7. 정상적으로 가상환경이 만들어 졌는지 확인해보아요!&lt;/h6&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;  - conda info --envs 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=&quot;8-새로운-가상환경으로-전환&quot;&gt;8. 새로운 가상환경으로 전환!&lt;/h6&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;  - activate data_env
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=&quot;9-개발-도구인-ide를-설치해야-한다-jupyter-notebook이라는-web-기반의-개발툴을-이용할것이다&quot;&gt;9. 개발 도구인 IDE를 설치해야 한다!! Jupyter notebook이라는 web 기반의 개발툴을 이용할것이다.&lt;/h6&gt;
+
+&lt;p&gt;현재 data_env 가상환경에서 notebook을 설치&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;  - conda install nb_conda
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=&quot;10-jupyer-notebook이-사용할-기본-디렉토리working-directory를-설정해야한다&quot;&gt;10. jupyer notebook이 사용할 기본 디렉토리(working directory)를 설정해야한다.&lt;/h6&gt;
+&lt;p&gt;이 작업을 하기 위해 환경설정파일을 하나 생성해서 기본 디렉토리를 지정해서 사용한다!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt; - jupyter notebook --generate-config
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=&quot;11-config-파일에서-notebook_dir을-검색한후&quot;&gt;11. config 파일에서 notebook_dir을 검색한후&lt;/h6&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;c.NotebookApp.notebook_dir = ‘C:/notebook_dir’ 처럼 수정후&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;디렉토리 C 아래에 notebook_dir폴더를 제작하여 
+jupyter notebook의 working directory를 설정&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&quot;12-ide를-실행시켜-보아요&quot;&gt;12. IDE를 실행시켜 보아요!!&lt;/h6&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;    - jupyter notebook
+&lt;/code&gt;&lt;/pre&gt;</content>
 
       
       
@@ -62,7 +120,7 @@
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌(1) - AI 기본 이글은 파이썬 basic에 관한 내용입니다!</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌(1) - AI 가상환경 설정 가장먼저 AI를 위한 가상환경을 제작해보자! 데이터 분석</summary>
       
 
       

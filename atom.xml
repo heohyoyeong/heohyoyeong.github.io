@@ -4,7 +4,28 @@
     <title> - Articles</title>
     <description>AI와 자동차의 만남</description>
     <link>
-    https://heohyoyeong.github.io</link>
+    http://localhost:4000</link>
+    
+      
+      <item>
+        <title>AI 강좌(1) - AI 가상환경 설정</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-basic&quot;&gt;AI 강좌(1) - AI 가상환경 설정  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;가장먼저-ai를-위한-가상환경을-제작해보자&quot;&gt;가장먼저 AI를 위한 가상환경을 제작해보자!&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;데이터-분석&quot;&gt;데이터 분석&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Tue, 01 Sep 2020 01:40:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/AI-basic</link>
+        <guid isPermaLink="true">http://localhost:4000/AI-basic</guid>
+      </item>
+      
     
       
       <item>
@@ -32,8 +53,8 @@
         
         <pubDate>Sat, 22 Aug 2020 00:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/python-API-1</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/python-API-1</guid>
+        http://localhost:4000/python-API-1</link>
+        <guid isPermaLink="true">http://localhost:4000/python-API-1</guid>
       </item>
       
     
@@ -52,8 +73,8 @@
         
         <pubDate>Thu, 20 Aug 2020 19:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/Gitvenv</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/Gitvenv</guid>
+        http://localhost:4000/Gitvenv</link>
+        <guid isPermaLink="true">http://localhost:4000/Gitvenv</guid>
       </item>
       
     
@@ -72,8 +93,8 @@
         
         <pubDate>Thu, 20 Aug 2020 18:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/Gitbranch</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/Gitbranch</guid>
+        http://localhost:4000/Gitbranch</link>
+        <guid isPermaLink="true">http://localhost:4000/Gitbranch</guid>
       </item>
       
     
@@ -105,8 +126,8 @@
         
         <pubDate>Thu, 20 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/python-Django-blog-4</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-blog-4</guid>
+        http://localhost:4000/python-Django-blog-4</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-blog-4</guid>
       </item>
       
     
@@ -125,8 +146,8 @@
         
         <pubDate>Wed, 19 Aug 2020 18:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/Gitbasic</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/Gitbasic</guid>
+        http://localhost:4000/Gitbasic</link>
+        <guid isPermaLink="true">http://localhost:4000/Gitbasic</guid>
       </item>
       
     
@@ -160,8 +181,8 @@
         
         <pubDate>Wed, 19 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/python-Django-blog-3</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-blog-3</guid>
+        http://localhost:4000/python-Django-blog-3</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-blog-3</guid>
       </item>
       
     
@@ -193,8 +214,8 @@
         
         <pubDate>Mon, 17 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/python-Django-blog-2</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-blog-2</guid>
+        http://localhost:4000/python-Django-blog-2</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-blog-2</guid>
       </item>
       
     
@@ -236,8 +257,8 @@
         
         <pubDate>Mon, 17 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/python-Django-blog-1</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-blog-1</guid>
+        http://localhost:4000/python-Django-blog-1</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-blog-1</guid>
       </item>
       
     
@@ -266,8 +287,8 @@
         
         <pubDate>Tue, 04 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/python-Django-poll-4</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-poll-4</guid>
+        http://localhost:4000/python-Django-poll-4</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-4</guid>
       </item>
       
     
@@ -296,8 +317,8 @@
         
         <pubDate>Mon, 03 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/python-Django-poll-3</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-poll-3</guid>
+        http://localhost:4000/python-Django-poll-3</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-3</guid>
       </item>
       
     
@@ -326,8 +347,8 @@
         
         <pubDate>Sun, 02 Aug 2020 02:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/python-Django-poll-2</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-poll-2</guid>
+        http://localhost:4000/python-Django-poll-2</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-2</guid>
       </item>
       
     
@@ -356,8 +377,8 @@
         
         <pubDate>Fri, 31 Jul 2020 02:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/python-Django-poll-1</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django-poll-1</guid>
+        http://localhost:4000/python-Django-poll-1</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django-poll-1</guid>
       </item>
       
     
@@ -386,8 +407,8 @@
         
         <pubDate>Fri, 31 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/python-Django</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/python-Django</guid>
+        http://localhost:4000/python-Django</link>
+        <guid isPermaLink="true">http://localhost:4000/python-Django</guid>
       </item>
       
     
@@ -416,8 +437,8 @@
         
         <pubDate>Fri, 31 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/python-control-statement</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/python-control-statement</guid>
+        http://localhost:4000/python-control-statement</link>
+        <guid isPermaLink="true">http://localhost:4000/python-control-statement</guid>
       </item>
       
     
@@ -434,8 +455,8 @@
         
         <pubDate>Fri, 24 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/vehicle-basic</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/vehicle-basic</guid>
+        http://localhost:4000/vehicle-basic</link>
+        <guid isPermaLink="true">http://localhost:4000/vehicle-basic</guid>
       </item>
       
     
@@ -464,26 +485,8 @@
         
         <pubDate>Fri, 24 Jul 2020 01:40:00 +0900</pubDate>
         <link>
-        https://heohyoyeong.github.io/python-basic</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/python-basic</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>AI 강좌(1) - AI 기본</title>
-        
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./AI-basic&quot;&gt;AI 강좌(1) - AI 기본 &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;이글은 파이썬 basic에 관한 내용입니다!&lt;/p&gt;
-</description>
-        
-        <pubDate>Fri, 24 Jul 2020 01:40:00 +0900</pubDate>
-        <link>
-        https://heohyoyeong.github.io/AI-basic</link>
-        <guid isPermaLink="true">https://heohyoyeong.github.io/AI-basic</guid>
+        http://localhost:4000/python-basic</link>
+        <guid isPermaLink="true">http://localhost:4000/python-basic</guid>
       </item>
       
     

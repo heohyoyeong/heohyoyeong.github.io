@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://heohyoyeong.github.io/tag/python/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://heohyoyeong.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-08-22T19:24:24+09:00</updated>
-  <id>https://heohyoyeong.github.io/tag/python/feed.xml</id>
+  <link href="http://localhost:4000/tag/python/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-09-01T13:26:53+09:00</updated>
+  <id>http://localhost:4000/tag/python/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Python API 비 로그인식 크롤링</title>
-      <link href="https://heohyoyeong.github.io/python-API-1" rel="alternate" type="text/html" title="Python API 비 로그인식 크롤링" />
+      <link href="http://localhost:4000/python-API-1" rel="alternate" type="text/html" title="Python API 비 로그인식 크롤링" />
       <published>2020-08-22T00:40:00+09:00</published>
       <updated>2020-08-22T00:40:00+09:00</updated>
-      <id>https://heohyoyeong.github.io/python-API-1</id>
-      <content type="html" xml:base="https://heohyoyeong.github.io/python-API-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/python-API-1</id>
+      <content type="html" xml:base="http://localhost:4000/python-API-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -247,11 +247,11 @@
   
     <entry>
       <title type="html">Python Django - Django 블로그 프로젝트 댓글 제작</title>
-      <link href="https://heohyoyeong.github.io/python-Django-blog-4" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 댓글 제작" />
+      <link href="http://localhost:4000/python-Django-blog-4" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 댓글 제작" />
       <published>2020-08-20T02:40:00+09:00</published>
       <updated>2020-08-20T02:40:00+09:00</updated>
-      <id>https://heohyoyeong.github.io/python-Django-blog-4</id>
-      <content type="html" xml:base="https://heohyoyeong.github.io/python-Django-blog-4">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/python-Django-blog-4</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-blog-4">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -541,11 +541,11 @@
   
     <entry>
       <title type="html">Python Django - Django 블로그 프로젝트 게시판 제작</title>
-      <link href="https://heohyoyeong.github.io/python-Django-blog-3" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 게시판  제작" />
+      <link href="http://localhost:4000/python-Django-blog-3" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 게시판  제작" />
       <published>2020-08-19T02:40:00+09:00</published>
       <updated>2020-08-19T02:40:00+09:00</updated>
-      <id>https://heohyoyeong.github.io/python-Django-blog-3</id>
-      <content type="html" xml:base="https://heohyoyeong.github.io/python-Django-blog-3">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/python-Django-blog-3</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-blog-3">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -841,11 +841,11 @@
   
     <entry>
       <title type="html">Python Django - Django 블로그 프로젝트 model 제작</title>
-      <link href="https://heohyoyeong.github.io/python-Django-blog-1" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 model 제작" />
+      <link href="http://localhost:4000/python-Django-blog-1" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 model 제작" />
       <published>2020-08-17T02:40:00+09:00</published>
       <updated>2020-08-17T02:40:00+09:00</updated>
-      <id>https://heohyoyeong.github.io/python-Django-blog-1</id>
-      <content type="html" xml:base="https://heohyoyeong.github.io/python-Django-blog-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/python-Django-blog-1</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-blog-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -978,11 +978,11 @@
   
     <entry>
       <title type="html">Python Django - Django 블로그 프로젝트 로그인 제작</title>
-      <link href="https://heohyoyeong.github.io/python-Django-blog-2" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 로그인 제작" />
+      <link href="http://localhost:4000/python-Django-blog-2" rel="alternate" type="text/html" title="Python Django - Django 블로그 프로젝트 로그인 제작" />
       <published>2020-08-17T02:40:00+09:00</published>
       <updated>2020-08-17T02:40:00+09:00</updated>
-      <id>https://heohyoyeong.github.io/python-Django-blog-2</id>
-      <content type="html" xml:base="https://heohyoyeong.github.io/python-Django-blog-2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/python-Django-blog-2</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-blog-2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -1337,11 +1337,11 @@
   
     <entry>
       <title type="html">Python Django - Django 투표 프로젝트 투표 결과 제작</title>
-      <link href="https://heohyoyeong.github.io/python-Django-poll-4" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 결과 제작" />
+      <link href="http://localhost:4000/python-Django-poll-4" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 결과 제작" />
       <published>2020-08-04T02:40:00+09:00</published>
       <updated>2020-08-04T02:40:00+09:00</updated>
-      <id>https://heohyoyeong.github.io/python-Django-poll-4</id>
-      <content type="html" xml:base="https://heohyoyeong.github.io/python-Django-poll-4">&lt;h1 id=&quot;python-강좌는-여러-절로-구성되어-있습니다-&quot;&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/h1&gt;
+      <id>http://localhost:4000/python-Django-poll-4</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-poll-4">&lt;h1 id=&quot;python-강좌는-여러-절로-구성되어-있습니다-&quot;&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/h1&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -1456,11 +1456,11 @@
   
     <entry>
       <title type="html">Python Django - Django 투표 프로젝트 투표 보기 제작</title>
-      <link href="https://heohyoyeong.github.io/python-Django-poll-3" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 보기 제작" />
+      <link href="http://localhost:4000/python-Django-poll-3" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 보기 제작" />
       <published>2020-08-03T02:40:00+09:00</published>
       <updated>2020-08-03T02:40:00+09:00</updated>
-      <id>https://heohyoyeong.github.io/python-Django-poll-3</id>
-      <content type="html" xml:base="https://heohyoyeong.github.io/python-Django-poll-3">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/python-Django-poll-3</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-poll-3">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -1575,11 +1575,11 @@
   
     <entry>
       <title type="html">Python Django - Django 투표 프로젝트 투표 목록 제작</title>
-      <link href="https://heohyoyeong.github.io/python-Django-poll-2" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 목록 제작" />
+      <link href="http://localhost:4000/python-Django-poll-2" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 투표 목록 제작" />
       <published>2020-08-02T02:40:00+09:00</published>
       <updated>2020-08-02T02:40:00+09:00</updated>
-      <id>https://heohyoyeong.github.io/python-Django-poll-2</id>
-      <content type="html" xml:base="https://heohyoyeong.github.io/python-Django-poll-2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/python-Django-poll-2</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-poll-2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -1722,11 +1722,11 @@
   
     <entry>
       <title type="html">Python Django - Django 투표 프로젝트 model 제작</title>
-      <link href="https://heohyoyeong.github.io/python-Django-poll-1" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 model 제작" />
+      <link href="http://localhost:4000/python-Django-poll-1" rel="alternate" type="text/html" title="Python Django - Django 투표 프로젝트 model 제작" />
       <published>2020-07-31T02:40:00+09:00</published>
       <updated>2020-07-31T02:40:00+09:00</updated>
-      <id>https://heohyoyeong.github.io/python-Django-poll-1</id>
-      <content type="html" xml:base="https://heohyoyeong.github.io/python-Django-poll-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/python-Django-poll-1</id>
+      <content type="html" xml:base="http://localhost:4000/python-Django-poll-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -1846,11 +1846,11 @@
   
     <entry>
       <title type="html">Python 강좌(2) - Python 제어문</title>
-      <link href="https://heohyoyeong.github.io/python-control-statement" rel="alternate" type="text/html" title="Python 강좌(2) - Python 제어문" />
+      <link href="http://localhost:4000/python-control-statement" rel="alternate" type="text/html" title="Python 강좌(2) - Python 제어문" />
       <published>2020-07-31T01:40:00+09:00</published>
       <updated>2020-07-31T01:40:00+09:00</updated>
-      <id>https://heohyoyeong.github.io/python-control-statement</id>
-      <content type="html" xml:base="https://heohyoyeong.github.io/python-control-statement">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>http://localhost:4000/python-control-statement</id>
+      <content type="html" xml:base="http://localhost:4000/python-control-statement">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-basic&quot;&gt;Python 강좌(1) - Python 문자열&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
