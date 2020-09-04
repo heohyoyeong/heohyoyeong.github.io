@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/tag/ai/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-09-01T13:26:53+09:00</updated>
+  <updated>2020-09-04T21:50:52+09:00</updated>
   <id>http://localhost:4000/tag/ai/feed.xml</id>
 
   
@@ -32,14 +32,804 @@
 
   
     <entry>
-      <title type="html">AI 강좌(1) - AI 가상환경 설정</title>
-      <link href="http://localhost:4000/AI-basic" rel="alternate" type="text/html" title="AI 강좌(1) - AI 가상환경 설정" />
+      <title type="html">AI 강좌 - Numpy 학습(4)</title>
+      <link href="http://localhost:4000/AI-Numpy(4)" rel="alternate" type="text/html" title="AI 강좌 - Numpy 학습(4)" />
+      <published>2020-09-04T04:40:00+09:00</published>
+      <updated>2020-09-04T04:40:00+09:00</updated>
+      <id>http://localhost:4000/AI-Numpy(4)</id>
+      <content type="html" xml:base="http://localhost:4000/AI-Numpy(4)">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-basic&quot;&gt;AI 강좌 - AI 가상환경 설정  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(1)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;numpy-학습4&quot;&gt;Numpy 학습(4)&lt;/h1&gt;
+
+&lt;p&gt;이전시간에는 다양한 방법을 사용하여 랜덤으로 ndarray를 제작해보았습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;이번-시간에는-numpy가-제공하는-랜덤-관련-함수에-대하여-알아보겠습니다&quot;&gt;이번 시간에는 numpy가 제공하는 랜덤 관련 함수에 대하여 알아보겠습니다.&lt;/h3&gt;
+
+&lt;h4 id=&quot;1-난수의-재현&quot;&gt;1. 난수의 재현&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;사용자에게 랜덤는 랜덤값이지만 프로그렘에게는 특정 알고리즘의 결과물&lt;/li&gt;
+  &lt;li&gt;만약  초기에 시작값을 설정해주면  항상 같은 랜덤값을 도출!!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;	
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과물&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;89&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;93&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;73&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;2-ndarray의-순서를-랜덤하게-바꾸려면-어떻게-해야하는가&quot;&gt;2. ndarray의 순서를 랜덤하게 바꾸려면 어떻게 해야하는가&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shuffle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#ndarray 자체가 변형된다!&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;3-ndarray안에서-일부를-무작위로-선택하는-기능&quot;&gt;3. ndarray안에서 일부를 무작위로 선택하는 기능&lt;/h4&gt;
+
+&lt;p&gt;일명 sampling기능을 수행하려면 choice()함수를 사용하면 된다.&lt;/p&gt;
+
+&lt;p&gt;np.random.choice(arr,size,replace,p)
+arr			: numpy array가 나오거나 정수가 나온다. 만약 정수이면 arange(정수)로 수행
+size 		 : 정수값, 샘플링 할 숫자 = 고를 숫자
+replace   : boolean값 (True or False) 
+True는 한번 선택한 데이터를 다시 샘플링 할 수 있다.  (중복선택가능)
+False는 중복선택 불가능&lt;/p&gt;
+
+&lt;p&gt;p(확률)	: ndarray로 주어짐, =&amp;gt;[[0.2,0,0.3,0.4,0.1] 총합은 1
+각 데이터가 샘플링될 확률을 가지고 있는 준다. 만약 없으면 모든것이 동일 확률&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;choice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;choice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;reshape-함수&quot;&gt;reshape() 함수&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;reshape함수는 기존의 ndarray를 활용하여 새로운 view를 생성하는 함수입니다.&lt;/li&gt;
+  &lt;li&gt;view를 생성한다는 의미는 새로운 ndarray를 제작하는 것이 아니라 기존의 ndarray에 의존한다는 의미입니다.&lt;/li&gt;
+  &lt;li&gt;따라서 만약 기존의 ndarray의 값들이 변경되면 view 값들도 자동으로 변경됩니다.&lt;/li&gt;
+  &lt;li&gt;하지만 reshape().copy()를 사용하면 새로운 ndarray가 생성됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reshape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#새로운 ndarray를 만드는게 아니라 view를 생성&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reshape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;        &lt;span class=&quot;c&quot;&gt;# 이건 view&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reshpae&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 이건 view가 아니라 진짜 shape를 바꾼 ndarrary를 생성&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;   &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;ndarray의-shape-조절-함수&quot;&gt;ndarray의 shape 조절 함수&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;reshape()을 이용해서 shape을 조절할 수 있어요!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ravel() : ndarray의 모든 요소가 포함된 1차원 vector를 리턴하고 view를 리턴!!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reshape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ravel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;18&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;24&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;36&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;37&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;38&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;39&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;41&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;43&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;44&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;45&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;46&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;47&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;48&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;49&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;51&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;52&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;53&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;54&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;56&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;57&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;58&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;59&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;61&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;62&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;63&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;66&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;67&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;68&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;69&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;70&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;71&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;72&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;73&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;74&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;76&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;77&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;78&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;79&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;81&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;82&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;83&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;84&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;85&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;86&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;87&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;88&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;89&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;91&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;92&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;93&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;94&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;95&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;96&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;97&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;98&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;18&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;
+ &lt;span class=&quot;mi&quot;&gt;24&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;36&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;37&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;38&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;39&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;41&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;43&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;44&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;45&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;46&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;47&lt;/span&gt;
+ &lt;span class=&quot;mi&quot;&gt;48&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;49&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;51&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;52&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;53&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;54&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;56&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;57&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;58&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;59&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;61&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;62&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;63&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;66&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;67&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;68&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;69&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;70&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;71&lt;/span&gt;
+ &lt;span class=&quot;mi&quot;&gt;72&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;73&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;74&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;76&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;77&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;78&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;79&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;81&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;82&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;83&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;84&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;85&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;86&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;87&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;88&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;89&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;91&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;92&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;93&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;94&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;95&lt;/span&gt;
+ &lt;span class=&quot;mi&quot;&gt;96&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;97&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;98&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>HeoHyoYeong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="AI" />
+      
+
+      
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4)</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">AI 강좌 - Numpy 학습(3)</title>
+      <link href="http://localhost:4000/AI-Numpy(3)" rel="alternate" type="text/html" title="AI 강좌 - Numpy 학습(3)" />
+      <published>2020-09-04T01:40:00+09:00</published>
+      <updated>2020-09-04T01:40:00+09:00</updated>
+      <id>http://localhost:4000/AI-Numpy(3)</id>
+      <content type="html" xml:base="http://localhost:4000/AI-Numpy(3)">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-basic&quot;&gt;AI 강좌 - AI 가상환경 설정  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(1)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;이번시간에는-본격적으로-random을-사용하여-임의-ndarray를-제작해보겠습니다&quot;&gt;이번시간에는 본격적으로 random을 사용하여 임의 ndarray를 제작해보겠습니다.&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;ndarray를 생성할 때 랜덤값을 기반으로 생성할 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;총 5가지 방법으로 ndarray를 생성할 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;1-nprandomnormalmeanstdd0d1d2d3&quot;&gt;1. np.random.normal(mean,std,(d0,d1,d2,d3…))&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;정규분포 확률밀도함수에서 실수 표본을 추출해서 ndarray를 생성한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;평균, 표준편차, 실행차원 및 실행수가 필요하다&lt;/li&gt;
+  &lt;li&gt;이떄 d0는 1차원, d1는 2차원….&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과 값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;그림입력&lt;/p&gt;
+
+&lt;h4 id=&quot;2-nprandomrnadd0d1d2d3&quot;&gt;2. np.random.rnad(d0,d1,d2,d3…)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;실수를 추출하는데 [0,1) &amp;lt;={0이상 1미만} 범위에서 추출하고 균등분포로 추출&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과 값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;그림입력&lt;/p&gt;
+
+&lt;h4 id=&quot;3-nprandomrandnd0d1d2d3&quot;&gt;3. np.random.randn(d0,d1,d2,d3…)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기본적으로 실수를 추출, 표준정규분포에서 난수를 추출&lt;/li&gt;
+  &lt;li&gt;평균이 0, 표준편차 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과 값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;그림입력&lt;/p&gt;
+
+&lt;h4 id=&quot;4-nprandomrandintlowhighd0d1d2d3&quot;&gt;4. np.random,randint(low,high,(d0,d1,d2,d3…))&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;균등분포 확률밀도함수에서 난수를 추출&lt;/li&gt;
+  &lt;li&gt;정수값을 난수로 추출&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과 값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;그림입력&lt;/p&gt;
+
+&lt;h4 id=&quot;5-nprandomrandomd0d1d2d3&quot;&gt;5. np.random.random((d0,d1,d2,d3…))&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[0,1)의 균등분포에서 실수 난수를 추출&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과 값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;그림입력&lt;/p&gt;
+
+&lt;p&gt;####&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>HeoHyoYeong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="AI" />
+      
+
+      
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4)</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">AI 강좌 - Numpy 학습(2)</title>
+      <link href="http://localhost:4000/AI-Numpy(2)" rel="alternate" type="text/html" title="AI 강좌 - Numpy 학습(2)" />
+      <published>2020-09-03T23:40:00+09:00</published>
+      <updated>2020-09-03T23:40:00+09:00</updated>
+      <id>http://localhost:4000/AI-Numpy(2)</id>
+      <content type="html" xml:base="http://localhost:4000/AI-Numpy(2)">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-basic&quot;&gt;AI 강좌 - AI 가상환경 설정  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(1)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;numpy-학습2&quot;&gt;Numpy 학습(2)&lt;/h1&gt;
+
+&lt;h3 id=&quot;이전시간에는-numpy를-설치하고-numpy를-실행해보았습니다&quot;&gt;이전시간에는 numpy를 설치하고 numpy를 실행해보았습니다.&lt;/h3&gt;
+
+&lt;p&gt;이번시간에는 본격적으로 numpy를 제작하고 활용해보겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;numpy-basic2&quot;&gt;Numpy basic(2)&lt;/h3&gt;
+
+&lt;h4 id=&quot;1-다차원의-ndarray를-제작해볼것이다&quot;&gt;1. 다차원의 ndarray를 제작해볼것이다.&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# a의 shape는 (2,3)=&amp;gt; 2차원&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과 값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;결과 값을 확인하면  arr은 (2,3) 행렬이 출력된것을 알수있다. 또한 1,1의 값이 5라는 것도 알수있다.&lt;/p&gt;
+
+&lt;h4 id=&quot;2-numpy의-데이터-타입을-변경해보자&quot;&gt;2. numpy의 데이터 타입을 변경해보자&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtype&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;결과 값
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[[1. 2. 3.]
+ [4. 5. 6.]]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;기존의 a의 datatype은 정수(1,2,3,4)이였지만 실수(1. , 2. ….)로 변경된것을 확인할 수 있었다.&lt;/p&gt;
+
+&lt;h4 id=&quot;3-차원의-크기와-형태를-알아보자&quot;&gt;3. 차원의 크기와 형태를 알아보자!&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtype&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ndim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# arr.ndim =&amp;gt;몇차원인가?&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# arr.shap =&amp;gt; (?,?)로 구성되어있는가?&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과 값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;2.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;3.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;4.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;5.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;6.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;7.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;9.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;10.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;11.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;12.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;결과 값을 확인하면 arr는 2차원이고 4행 3열로 구성되어있는 것을 알수있다.&lt;/p&gt;
+
+&lt;h4 id=&quot;4-numpy-arrayndarry의-크기를-알아보자&quot;&gt;4. numpy array(ndarry)의 크기를 알아보자&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtype&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 4 x 3&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 총 내부의자료 수&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 첫번째 차원의 요소 개수를 리턴 &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# arr의 모양을 2,6으로 변경&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# arr의 모양을 3,2,2 =&amp;gt; 3차원으로 변경&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;2.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;3.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;4.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;5.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;6.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;7.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;9.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;10.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;11.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;12.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;2.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;3.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;4.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;5.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;6.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;7.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;9.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;11.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;12.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[[&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;2.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;4.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+
+ &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;5.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;6.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;7.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+
+ &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;9.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;11.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;12.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;numpy array는 shape을 사용하여 내가 원하는 형태로 변경할 수 있다.&lt;/li&gt;
+  &lt;li&gt;하지만 shape 속성을 이용해서 변경하는 방식은 잘 사용하지않고 reshape()함수를 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;5-ndarray를-생성할-때-dtype을-지정해서-만들어보자&quot;&gt;5. ndarray를 생성할 때 dtype을 지정해서 만들어보자&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;8.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;7.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;9.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtype&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 데이터 값들이 실수&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;astype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;int32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# data type을 이것으로 바꿔!&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과 값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.5&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.3&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.3&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;7.8&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;9.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;처음에는 데이터 값들이 실수로 들어가서 제대로 표현되었지만 dtype을 int로 변경하니 수를 버림처리하여 정수만 추출되었다.&lt;/p&gt;
+
+&lt;h4 id=&quot;6-다양한-방법으로-ndarray를-만들어보자&quot;&gt;6. 다양한 방법으로 ndarray를 만들어보자!&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 다 0으로 채우자!&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ones&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 다 1로 채우자!&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;full&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtype&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 다 지정한 숫자로 채우자!&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 3 x 3 ndarray를 생성하는데.. 초기값을 주지않는다. 값은 쓰래기값을 넣는다&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# _like가 붙은 것들은 arr의 shape를 가져와서 앞의 함수 zeros와 같은것들을 수행합니다.&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros_like&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtype&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ones_like&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtype&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;full_like&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtype&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.000e+000&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.000e+000&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.000e+000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.000e+000&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.000e+000&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;6.186e-321&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.000e+000&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.000e+000&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.000e+000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;기존에는 list를 제작하여 ndarray를 제작하였다. 하지만 다양한 함수를 활용하여 제작할 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;zeros와 ones와 같은 것들은 (3,4)와 같은 크기를 지정해주어야하지만 like는 기존의 크기를 가져와서 사용합니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;7-ndarray를-만드는-다른-방법---arange&quot;&gt;7. ndarray를 만드는 다른 방법 - arange&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 1부터 9까지 1씩증가하는 numpy arrary를 만들것이다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과 값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;arange는 python의 range와 상당히 유사&lt;/li&gt;
+  &lt;li&gt;주어진 범위 내에서 지정한 간격으로 연속적인 원소를 가진 ndarray를 생성하는 기능을 수행&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;8-ndarray를-만드는-다른-방법---linspace&quot;&gt;8. ndarray를 만드는 다른 방법 - linspace&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;이번에는 그래프로 데이터를 그려볼 것 입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# np.linspace(start, stop, num)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# start부터 시작해서 stop의 범위에서 num개의 숫자를 균일한 간격으로 데이터를 생성해서 ndarray를 만드는 함수&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linspace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linspace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;121&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 원소간의 간격은 (stop-start)/(num-1)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 120/30 =&amp;gt;4&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# [1,5,9......]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결과값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;2.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;3.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;4.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;5.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;6.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;7.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;8.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;9.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;   &lt;span class=&quot;mf&quot;&gt;5.&lt;/span&gt;   &lt;span class=&quot;mf&quot;&gt;9.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;13.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;17.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;21.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;25.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;29.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;33.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;37.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;41.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;45.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;49.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;53.&lt;/span&gt;
+  &lt;span class=&quot;mf&quot;&gt;57.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;61.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;65.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;69.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;73.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;77.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;81.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;85.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;89.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;93.&lt;/span&gt;  &lt;span class=&quot;mf&quot;&gt;97.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;101.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;105.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;109.&lt;/span&gt;
+ &lt;span class=&quot;mf&quot;&gt;113.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;117.&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;121.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그림입력&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>HeoHyoYeong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="AI" />
+      
+
+      
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) Numpy 학습(2)</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">AI 강좌 - Numpy 학습(1)</title>
+      <link href="http://localhost:4000/AI-Numpy(1)" rel="alternate" type="text/html" title="AI 강좌 - Numpy 학습(1)" />
+      <published>2020-09-03T22:40:00+09:00</published>
+      <updated>2020-09-03T22:40:00+09:00</updated>
+      <id>http://localhost:4000/AI-Numpy(1)</id>
+      <content type="html" xml:base="http://localhost:4000/AI-Numpy(1)">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-basic&quot;&gt;AI 강좌 - AI 가상환경 설정  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(1)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;numpy-학습3&quot;&gt;Numpy 학습(3)&lt;/h1&gt;
+
+&lt;h3 id=&quot;이전시간에-생성한-가상환경을-활용하여-numpy를-학습하도록-하겠습니다&quot;&gt;이전시간에 생성한 가상환경을 활용하여 numpy를 학습하도록 하겠습니다.&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;아나콘다 프롬트를 관리자 관한으로 실행&lt;/li&gt;
+  &lt;li&gt;C:\Windows\system32&amp;gt;activate data_env 입력&lt;/li&gt;
+  &lt;li&gt;C:\Windows\system32&amp;gt;jupyter notebook으로 쥬피터 노트북 실행&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;jupyter-notebook-기본-키&quot;&gt;jupyter notebook 기본 키&lt;/h3&gt;
+
+&lt;p&gt;첫화면에서 new를 클릭하여 가상환경에서 python을 실행합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;각 칸을 cell이라고 부릅니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;해당샐의 바깥을 누르고 b를 누르면 밑에 새 cell이 생성됩니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;해당샐의 바깥을 누르고 a를 누르면 위에 새 cell이 생성됩니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;해당샐의 바깥을 누르고 d를 2번(dd)를 누르면 해당샐이 삭제된다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;코드 실행은 ctrl+enter를 누르면 해당 샐을 실행합니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;numpy란&quot;&gt;Numpy란?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Numpy : Numerical python&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Numpy는 vector와 matrix 연산에 특화되어 있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Numpy : Pandas와 matplotlib의 기반이 되는 모듈이고 machine learing, deep learing에서 많이 사용된다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Numpy는 ndarray라는 n-차원의 배열을 제공!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ndarray의 특징:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;python의 list와 상당히 유사하다.&lt;/li&gt;
+      &lt;li&gt;python의 list는 다른 데이터 타입을 같이 list안에 저장할수있엇다.&lt;/li&gt;
+      &lt;li&gt;Numpy의 ndarray는 모두 같은 데이터 타입을 사용해야 한다!&lt;/li&gt;
+      &lt;li&gt;python의 list보다 메모리 효율이나 실행속도면에서 우위!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;numpy를 실행하기 위해서 우선 2개의 모듈을 설치하고 시작하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;cmd 혹은 anaconda Prompt에 아래의 코드중 하나를 입력하세요&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;pip install numpy&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;conda install numpy&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;설치를 완료하였다면 numpy를 시작해보겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;numpy-basic&quot;&gt;Numpy Basic&lt;/h3&gt;
+
+&lt;p&gt;numpy를 사용하기위하여 먼저 import numpy as np를 통해 numpy 모듈을 호출합니다.&lt;/p&gt;
+
+&lt;p&gt;numpy는 기본적으로 python의 list와 유사합니다.&lt;/p&gt;
+
+&lt;p&gt;기존의 list는 내부에 다양한 다른 타입의 data를 저장할 수 있었습니다.&lt;/p&gt;
+
+&lt;p&gt;하지만 numpy는 하나의 data타입만을 통일하게 저장해야합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;예시 코드&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;      &lt;span class=&quot;c&quot;&gt;# python의 list&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;            &lt;span class=&quot;c&quot;&gt;# [1,2,3,4,5] ==&amp;gt; list literal&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# numpy의 ndarray라고 불리는 놈을 만들어 보아요!&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; 
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;          &lt;span class=&quot;c&quot;&gt;# [1 2 3 4 5] ==&amp;gt; ndarray의 literal&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# &amp;lt;class 'numpy.ndarray'&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# int32(int:정수, 32:32bit 2^32)  numpy array의 data타입을 알려준다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;# 1 =&amp;gt; class int&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# &amp;lt;class 'numpy.int32'&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.14&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;위 코드의 결과값
+~~~python
+[1, 2, 3, 4, 5]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;lt;class ‘list’&amp;gt;
+[1 2 3 4 5]
+&amp;lt;class ‘numpy.ndarray’&amp;gt;
+int32
+1
+&amp;lt;class ‘numpy.int32’&amp;gt;
+[‘100’ ‘3.14’ ‘True’ ‘hello’]
+~~~&lt;/p&gt;
+
+&lt;p&gt;마지막 코드를 보면 array에 [int, float, boolean, stl]와 같이 다양한 변수를 입력하였습니다.&lt;/p&gt;
+
+&lt;p&gt;하지만 출력된 결과값을 확인해보면 전부 stl로 통일된 것을 확인할 수 있습니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>HeoHyoYeong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="AI" />
+      
+
+      
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) Numpy 학습(3)</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">AI 강좌 - AI 가상환경 설정</title>
+      <link href="http://localhost:4000/AI-basic" rel="alternate" type="text/html" title="AI 강좌 - AI 가상환경 설정" />
       <published>2020-09-01T01:40:00+09:00</published>
       <updated>2020-09-01T01:40:00+09:00</updated>
       <id>http://localhost:4000/AI-basic</id>
       <content type="html" xml:base="http://localhost:4000/AI-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./AI-basic&quot;&gt;AI 강좌(1) - AI 가상환경 설정  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-basic&quot;&gt;AI 강좌 - AI 가상환경 설정  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(1)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;가장먼저-ai를-위한-가상환경을-제작해보자&quot;&gt;가장먼저 AI를 위한 가상환경을 제작해보자!&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -120,7 +910,7 @@ jupyter notebook의 working directory를 설정&lt;/p&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌(1) - AI 가상환경 설정 가장먼저 AI를 위한 가상환경을 제작해보자! 데이터 분석</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) 가장먼저 AI를 위한 가상환경을 제작해보자! 데이터 분석</summary>
       
 
       
