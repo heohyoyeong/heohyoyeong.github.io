@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/tag/ai/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-09-06T12:57:45+09:00</updated>
+  <updated>2020-10-05T18:34:30+09:00</updated>
   <id>http://localhost:4000/tag/ai/feed.xml</id>
 
   
@@ -32,6 +32,163 @@
 
   
     <entry>
+      <title type="html">AI 강좌 - LinearRegression 학습(1)</title>
+      <link href="http://localhost:4000/AI-LinearRegression(1)" rel="alternate" type="text/html" title="AI 강좌 - LinearRegression 학습(1)" />
+      <published>2020-10-05T04:40:00+09:00</published>
+      <updated>2020-10-05T04:40:00+09:00</updated>
+      <id>http://localhost:4000/AI-LinearRegression(1)</id>
+      <content type="html" xml:base="http://localhost:4000/AI-LinearRegression(1)">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-basic&quot;&gt;AI 강좌 - AI 가상환경 설정  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(1)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;기본부터-시작해보자&quot;&gt;기본부터 시작해보자&lt;/h1&gt;
+
+&lt;p&gt;기본적으로 필수로 사용되는 module은 pandas, numpy, tensorflow등이 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tensorflow&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;1-raw-data-loading-데이터-호출&quot;&gt;1. Raw Data Loading (데이터 호출)&lt;/h3&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'./data/data.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;pandas 모듈의 read_csv를 활용하여 csv파일을 읽어옵니다.&lt;/li&gt;
+  &lt;li&gt;그 후 display를 통해 잘읽었는지 확인해봅시다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-data-preprocessing데이터전처리&quot;&gt;2. Data Preprocessing(데이터전처리)&lt;/h3&gt;
+
+&lt;p&gt;데이터 전처리는 2개의 종류가 있습니다.&lt;/p&gt;
+
+&lt;p&gt;1번은 결측치 수정&lt;/p&gt;
+
+&lt;p&gt;2번은 이상치 수정&lt;/p&gt;
+
+&lt;h6 id=&quot;21-결측치-수정&quot;&gt;2.1 결측치 수정&lt;/h6&gt;
+
+&lt;p&gt;결측치는 측정과정에서 문제가 발생하여 데이터 내부에 구멍이 생긴것입니다. 이러한경우 해결책은 2가지입니다.&lt;/p&gt;
+
+&lt;p&gt;결측치를 다른 내용으로 매꾸거나 결측치 행을 제거하는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;현재의 단계에서는 결측치를 제거하는것으로 하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isnull&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# pandas의 isnull함수를 사용하여 결측치의 수를 측정합니다.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dropna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;how&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'any'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# data 결측치 처리&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h6 id=&quot;22-이상치-수정&quot;&gt;2.2 이상치 수정&lt;/h6&gt;
+
+&lt;p&gt;이상치는 측정과정에서 문제가 발생하여 데이터가 이상한 값들로 채워진 것입니다.&lt;/p&gt;
+
+&lt;p&gt;결측치와 마찬가지로 이러한경우 해결책은 2가지입니다.&lt;/p&gt;
+
+&lt;p&gt;이상치를 다른 내용으로 매꾸거나 이상치 행을 제거하는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;현재의 단계에서는 이상치를 제거하는것으로 하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 이상치의 존재를 확인하기 위하여 plt 함수를 활용하겠습니다. &lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 이러한 함수를 사용하면 이상치의 존재를 파악할 수 있습니다.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;figure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_gre&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_subplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_admit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_subplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_gpa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_subplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_rank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_subplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_gre&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'gre'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_admit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'admit'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_rank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'rank'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_gpa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'gpa'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tight_layout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 이상치를 제거하자!&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 이상치를 제거하기위하여 scipy 모듈을 추가합니다.&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;zscore_threshold&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.0&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# zscore_threshold를 설정해줍니다. 2는 약 97%&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;outlier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zscore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zscore_threshold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; 
+    &lt;span class=&quot;c&quot;&gt;# 각 컬럼의 값들의 표준 이산확률분포 값들이 앞의 threshold을 넘는지 확인하여 outlier로 설정&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;outlier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# threshold를 넘는값들을 제거!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-training-data-set&quot;&gt;3. Training Data Set&lt;/h3&gt;
+
+&lt;p&gt;이상치와 결측치를 제거하였다면 변수 데이터인 x_data와 정답 데이터인 t_data로 나눠서 교육데이터를 설정해주겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'admit'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inplace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 정답행인 admit을 제외한 것을 x_data로 설정&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;t_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'admit'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reshape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 정답행인 admit을 설정&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;4--normalization정규화&quot;&gt;4.  normalization(정규화)&lt;/h3&gt;
+
+&lt;p&gt;정규화란 데이터의 크기차 때문에 발생하는 문제를 제거하기위하여 데이터의 범위를 균일하게 만들어주는것을 의미합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.preprocessing&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MinMaxScaler&lt;/span&gt; 
+&lt;span class=&quot;c&quot;&gt;# 정규화를 진행하기 위하여 sklearn의 MinMaxScaler를 추가합니다.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;scaler_x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MinMaxScaler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;scaler_x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# x_data의 정규화를 진행합니다.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;norm_x_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scaler_x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;여기까지가 python, tensorflow, sklearn을 활용하기전 공통으로 진행하는 과정입니다.&lt;/p&gt;
+
+&lt;p&gt;이제 sklearn을 사용하여 교육을 진행하겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-sklearn을-사용한-교육-진행&quot;&gt;5. sklearn을 사용한 교육 진행&lt;/h3&gt;
+
+&lt;p&gt;sklearn의 경우 다른 과정을 거치지않고 몇개의 명령어만 수행하면 교육을 진행할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear_model&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# sklearn의 선형 모델을 추가&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linear_model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LogisticRegression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ravel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 이것으로 교육을 완성&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;my_score&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 교육된 모델을 사용해서 예측을 진행&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;predict_val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 0 or 1 교육 결과&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;predict_proba&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict_proba&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 교육된 결과의 확률&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'공부시간 {}, 확률{} {}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict_val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict_proba&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음 포스트에서는 tensorflow와 python은 다음 포스트에서 진행하겠습니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>HeoHyoYeong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="AI" />
+      
+
+      
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) AI 강좌 - AI 강좌 - LinearRegression 학습(1)</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">AI 강좌 - Numpy 학습(4)</title>
       <link href="http://localhost:4000/AI-Numpy(4)" rel="alternate" type="text/html" title="AI 강좌 - Numpy 학습(4)" />
       <published>2020-09-04T04:40:00+09:00</published>
@@ -44,6 +201,7 @@
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;numpy-학습4&quot;&gt;Numpy 학습(4)&lt;/h1&gt;
@@ -205,7 +363,7 @@ False는 중복선택 불가능&lt;/p&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4)</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) AI 강좌 - AI 강좌 - LinearRegression 학습(1)</summary>
       
 
       
@@ -225,6 +383,7 @@ False는 중복선택 불가능&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;이번시간에는-본격적으로-random을-사용하여-임의-ndarray를-제작해보겠습니다&quot;&gt;이번시간에는 본격적으로 random을 사용하여 임의 ndarray를 제작해보겠습니다.&lt;/h3&gt;
@@ -360,7 +519,7 @@ False는 중복선택 불가능&lt;/p&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4)</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) AI 강좌 - AI 강좌 - LinearRegression 학습(1)</summary>
       
 
       
@@ -380,7 +539,9 @@ False는 중복선택 불가능&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h1 id=&quot;numpy-학습2&quot;&gt;Numpy 학습(2)&lt;/h1&gt;
 
 &lt;h3 id=&quot;이전시간에는-numpy를-설치하고-numpy를-실행해보았습니다&quot;&gt;이전시간에는 numpy를 설치하고 numpy를 실행해보았습니다.&lt;/h3&gt;
@@ -648,7 +809,7 @@ False는 중복선택 불가능&lt;/p&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) Numpy 학습(2)</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) AI 강좌 - AI 강좌 - LinearRegression 학습(1) Numpy 학습(2)</summary>
       
 
       
@@ -668,7 +829,9 @@ False는 중복선택 불가능&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h1 id=&quot;numpy-학습3&quot;&gt;Numpy 학습(3)&lt;/h1&gt;
 
 &lt;h3 id=&quot;이전시간에-생성한-가상환경을-활용하여-numpy를-학습하도록-하겠습니다&quot;&gt;이전시간에 생성한 가상환경을 활용하여 numpy를 학습하도록 하겠습니다.&lt;/h3&gt;
@@ -810,7 +973,7 @@ False는 중복선택 불가능&lt;/p&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) Numpy 학습(3)</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) AI 강좌 - AI 강좌 - LinearRegression 학습(1) Numpy 학습(3)</summary>
       
 
       
@@ -830,7 +993,9 @@ False는 중복선택 불가능&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h2 id=&quot;가장먼저-ai를-위한-가상환경을-제작해보자&quot;&gt;가장먼저 AI를 위한 가상환경을 제작해보자!&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h3 id=&quot;데이터-분석&quot;&gt;데이터 분석&lt;/h3&gt;
@@ -910,7 +1075,7 @@ jupyter notebook의 working directory를 설정&lt;/p&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) 가장먼저 AI를 위한 가상환경을 제작해보자! 데이터 분석</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) AI 강좌 - AI 강좌 - LinearRegression 학습(1) 가장먼저 AI를 위한 가상환경을 제작해보자! 데이터 분석</summary>
       
 
       

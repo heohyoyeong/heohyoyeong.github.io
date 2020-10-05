@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/author/heohyoyeong/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-09-06T12:57:45+09:00</updated>
+  <updated>2020-10-05T18:34:30+09:00</updated>
   <id>http://localhost:4000/author/heohyoyeong/feed.xml</id>
 
   
@@ -32,6 +32,163 @@
 
   
     <entry>
+      <title type="html">AI 강좌 - LinearRegression 학습(1)</title>
+      <link href="http://localhost:4000/AI-LinearRegression(1)" rel="alternate" type="text/html" title="AI 강좌 - LinearRegression 학습(1)" />
+      <published>2020-10-05T04:40:00+09:00</published>
+      <updated>2020-10-05T04:40:00+09:00</updated>
+      <id>http://localhost:4000/AI-LinearRegression(1)</id>
+      <content type="html" xml:base="http://localhost:4000/AI-LinearRegression(1)">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-basic&quot;&gt;AI 강좌 - AI 가상환경 설정  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(1)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;기본부터-시작해보자&quot;&gt;기본부터 시작해보자&lt;/h1&gt;
+
+&lt;p&gt;기본적으로 필수로 사용되는 module은 pandas, numpy, tensorflow등이 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tensorflow&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;1-raw-data-loading-데이터-호출&quot;&gt;1. Raw Data Loading (데이터 호출)&lt;/h3&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'./data/data.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;pandas 모듈의 read_csv를 활용하여 csv파일을 읽어옵니다.&lt;/li&gt;
+  &lt;li&gt;그 후 display를 통해 잘읽었는지 확인해봅시다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-data-preprocessing데이터전처리&quot;&gt;2. Data Preprocessing(데이터전처리)&lt;/h3&gt;
+
+&lt;p&gt;데이터 전처리는 2개의 종류가 있습니다.&lt;/p&gt;
+
+&lt;p&gt;1번은 결측치 수정&lt;/p&gt;
+
+&lt;p&gt;2번은 이상치 수정&lt;/p&gt;
+
+&lt;h6 id=&quot;21-결측치-수정&quot;&gt;2.1 결측치 수정&lt;/h6&gt;
+
+&lt;p&gt;결측치는 측정과정에서 문제가 발생하여 데이터 내부에 구멍이 생긴것입니다. 이러한경우 해결책은 2가지입니다.&lt;/p&gt;
+
+&lt;p&gt;결측치를 다른 내용으로 매꾸거나 결측치 행을 제거하는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;현재의 단계에서는 결측치를 제거하는것으로 하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isnull&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# pandas의 isnull함수를 사용하여 결측치의 수를 측정합니다.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dropna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;how&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'any'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# data 결측치 처리&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h6 id=&quot;22-이상치-수정&quot;&gt;2.2 이상치 수정&lt;/h6&gt;
+
+&lt;p&gt;이상치는 측정과정에서 문제가 발생하여 데이터가 이상한 값들로 채워진 것입니다.&lt;/p&gt;
+
+&lt;p&gt;결측치와 마찬가지로 이러한경우 해결책은 2가지입니다.&lt;/p&gt;
+
+&lt;p&gt;이상치를 다른 내용으로 매꾸거나 이상치 행을 제거하는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;현재의 단계에서는 이상치를 제거하는것으로 하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 이상치의 존재를 확인하기 위하여 plt 함수를 활용하겠습니다. &lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 이러한 함수를 사용하면 이상치의 존재를 파악할 수 있습니다.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;figure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_gre&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_subplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_admit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_subplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_gpa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_subplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_rank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_subplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_gre&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'gre'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_admit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'admit'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_rank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'rank'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig_gpa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'gpa'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tight_layout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 이상치를 제거하자!&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 이상치를 제거하기위하여 scipy 모듈을 추가합니다.&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;zscore_threshold&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.0&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# zscore_threshold를 설정해줍니다. 2는 약 97%&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;outlier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zscore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zscore_threshold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; 
+    &lt;span class=&quot;c&quot;&gt;# 각 컬럼의 값들의 표준 이산확률분포 값들이 앞의 threshold을 넘는지 확인하여 outlier로 설정&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;outlier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# threshold를 넘는값들을 제거!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-training-data-set&quot;&gt;3. Training Data Set&lt;/h3&gt;
+
+&lt;p&gt;이상치와 결측치를 제거하였다면 변수 데이터인 x_data와 정답 데이터인 t_data로 나눠서 교육데이터를 설정해주겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'admit'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inplace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 정답행인 admit을 제외한 것을 x_data로 설정&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;t_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'admit'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reshape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 정답행인 admit을 설정&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;4--normalization정규화&quot;&gt;4.  normalization(정규화)&lt;/h3&gt;
+
+&lt;p&gt;정규화란 데이터의 크기차 때문에 발생하는 문제를 제거하기위하여 데이터의 범위를 균일하게 만들어주는것을 의미합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.preprocessing&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MinMaxScaler&lt;/span&gt; 
+&lt;span class=&quot;c&quot;&gt;# 정규화를 진행하기 위하여 sklearn의 MinMaxScaler를 추가합니다.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;scaler_x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MinMaxScaler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;scaler_x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# x_data의 정규화를 진행합니다.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;norm_x_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scaler_x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;여기까지가 python, tensorflow, sklearn을 활용하기전 공통으로 진행하는 과정입니다.&lt;/p&gt;
+
+&lt;p&gt;이제 sklearn을 사용하여 교육을 진행하겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-sklearn을-사용한-교육-진행&quot;&gt;5. sklearn을 사용한 교육 진행&lt;/h3&gt;
+
+&lt;p&gt;sklearn의 경우 다른 과정을 거치지않고 몇개의 명령어만 수행하면 교육을 진행할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear_model&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# sklearn의 선형 모델을 추가&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linear_model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LogisticRegression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ravel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 이것으로 교육을 완성&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;my_score&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 교육된 모델을 사용해서 예측을 진행&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;predict_val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 0 or 1 교육 결과&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;predict_proba&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict_proba&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 교육된 결과의 확률&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'공부시간 {}, 확률{} {}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict_val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict_proba&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음 포스트에서는 tensorflow와 python은 다음 포스트에서 진행하겠습니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>HeoHyoYeong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="AI" />
+      
+
+      
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) AI 강좌 - AI 강좌 - LinearRegression 학습(1)</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">AI 강좌 - Numpy 학습(4)</title>
       <link href="http://localhost:4000/AI-Numpy(4)" rel="alternate" type="text/html" title="AI 강좌 - Numpy 학습(4)" />
       <published>2020-09-04T04:40:00+09:00</published>
@@ -44,6 +201,7 @@
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;numpy-학습4&quot;&gt;Numpy 학습(4)&lt;/h1&gt;
@@ -205,7 +363,7 @@ False는 중복선택 불가능&lt;/p&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4)</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) AI 강좌 - AI 강좌 - LinearRegression 학습(1)</summary>
       
 
       
@@ -225,6 +383,7 @@ False는 중복선택 불가능&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;이번시간에는-본격적으로-random을-사용하여-임의-ndarray를-제작해보겠습니다&quot;&gt;이번시간에는 본격적으로 random을 사용하여 임의 ndarray를 제작해보겠습니다.&lt;/h3&gt;
@@ -360,7 +519,7 @@ False는 중복선택 불가능&lt;/p&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4)</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) AI 강좌 - AI 강좌 - LinearRegression 학습(1)</summary>
       
 
       
@@ -380,7 +539,9 @@ False는 중복선택 불가능&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h1 id=&quot;numpy-학습2&quot;&gt;Numpy 학습(2)&lt;/h1&gt;
 
 &lt;h3 id=&quot;이전시간에는-numpy를-설치하고-numpy를-실행해보았습니다&quot;&gt;이전시간에는 numpy를 설치하고 numpy를 실행해보았습니다.&lt;/h3&gt;
@@ -648,7 +809,7 @@ False는 중복선택 불가능&lt;/p&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) Numpy 학습(2)</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) AI 강좌 - AI 강좌 - LinearRegression 학습(1) Numpy 학습(2)</summary>
       
 
       
@@ -668,7 +829,9 @@ False는 중복선택 불가능&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h1 id=&quot;numpy-학습3&quot;&gt;Numpy 학습(3)&lt;/h1&gt;
 
 &lt;h3 id=&quot;이전시간에-생성한-가상환경을-활용하여-numpy를-학습하도록-하겠습니다&quot;&gt;이전시간에 생성한 가상환경을 활용하여 numpy를 학습하도록 하겠습니다.&lt;/h3&gt;
@@ -810,7 +973,7 @@ False는 중복선택 불가능&lt;/p&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) Numpy 학습(3)</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) AI 강좌 - AI 강좌 - LinearRegression 학습(1) Numpy 학습(3)</summary>
       
 
       
@@ -830,7 +993,9 @@ False는 중복선택 불가능&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h2 id=&quot;가장먼저-ai를-위한-가상환경을-제작해보자&quot;&gt;가장먼저 AI를 위한 가상환경을 제작해보자!&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h3 id=&quot;데이터-분석&quot;&gt;데이터 분석&lt;/h3&gt;
@@ -910,7 +1075,7 @@ jupyter notebook의 working directory를 설정&lt;/p&gt;
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) 가장먼저 AI를 위한 가상환경을 제작해보자! 데이터 분석</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. AI 강좌 - AI 가상환경 설정 AI 강좌 - AI 강좌 - Numpy 학습(1) AI 강좌 - AI 강좌 - Numpy 학습(2) AI 강좌 - AI 강좌 - Numpy 학습(3) AI 강좌 - AI 강좌 - Numpy 학습(4) AI 강좌 - AI 강좌 - LinearRegression 학습(1) 가장먼저 AI를 위한 가상환경을 제작해보자! 데이터 분석</summary>
       
 
       
@@ -1975,315 +2140,6 @@ Deleted branch feature/board &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;was 5
 
       
         <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 문자열 Python 강좌(2) - Python 제어문 Python Django - Django 시작 Python Django - Django 투표 프로젝트 model 제작 Python Django - Django 투표 프로젝트 투표 목록 제작 Python Django - Django 투표 프로젝트 투표 보기 제작 Python Django - Django 투표 프로젝트 투표 결과 제작 Python Django - Django 블로그 프로젝트 model 제작 Python Django - Django 블로그 프로젝트 로그인 제작 Python Django - Django 블로그 프로젝트 게시판 제작 Python Django - Django 블로그 프로젝트 댓글 제작 Python API 비 로그인식 크롤링 이번 포스트에서는 포스트의 댓글을 구현해보려고합니다. 이전 포스트에서 게시판을 제작하였습니다. 이전 포스트에서 작성하였던 list.html에 댓글추가 기능을 추가해보겠습니다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Git 강좌(1) - GIT 기본</title>
-      <link href="http://localhost:4000/Gitbasic" rel="alternate" type="text/html" title="Git 강좌(1) - GIT 기본" />
-      <published>2020-08-19T18:40:00+09:00</published>
-      <updated>2020-08-19T18:40:00+09:00</updated>
-      <id>http://localhost:4000/Gitbasic</id>
-      <content type="html" xml:base="http://localhost:4000/Gitbasic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./Gitbasic&quot;&gt;Git 강좌(1) - GIT 기본 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./Gitbranch&quot;&gt;Git 강좌(2) - GIT Branch Flow  &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./Gitvenv&quot;&gt;Git 강좌(3) - GIT venv &amp;amp; gitignore  &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;git-기초&quot;&gt;Git 기초&lt;/h1&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Git은 분산형 버전관리시스템(DVCS)이다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Git을 윈도우에서 활용하기 위해서 &lt;a href=&quot;https://gitbash.com&quot;&gt;git bash&lt;/a&gt;를 설치해야 한다.&lt;/p&gt;
-
-&lt;h3 id=&quot;cli-command-line-inter-face&quot;&gt;CLI (command line inter face)&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git bash&lt;/code&gt;는 명령줄 인터페이스이다.&lt;/strong&gt; 
-&lt;br /&gt;&lt;strong&gt;아래는 기본적인 &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; 명령어입니다.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ls =&amp;gt; 를 다보여줘라&lt;/li&gt;
-  &lt;li&gt;touch cli.txt =&amp;gt; cli.txt를 생성해라&lt;/li&gt;
-  &lt;li&gt;mkdir git =&amp;gt; git 디렉토리를 제작해라&lt;/li&gt;
-  &lt;li&gt;cd git =&amp;gt; git 디렉토리로 가라&lt;/li&gt;
-  &lt;li&gt;cd .. =&amp;gt; 이전 디렉토리로 가라&lt;/li&gt;
-  &lt;li&gt;git init =&amp;gt; git을 시작한다. (저장소 생성)&lt;/li&gt;
-  &lt;li&gt;git add . =&amp;gt; commint할 목록에 등록&lt;/li&gt;
-  &lt;li&gt;git commit -m ‘update files’ =&amp;gt; 커밋 수행&lt;/li&gt;
-  &lt;li&gt;git log =&amp;gt; 버전 확인&lt;/li&gt;
-  &lt;li&gt;git status =&amp;gt; 상태 확인&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;1-저장소-초기화&quot;&gt;1. 저장소 초기화&lt;/h1&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git init
-Initialized empty Git repository &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;C:/Users/i/Desktop/TIL/.git/
-
-&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;로컬 저장소를 만들고 나면, &lt;code class=&quot;highlighter-rouge&quot;&gt;git/&lt;/code&gt;폴더가 생성되고, &lt;code class=&quot;highlighter-rouge&quot;&gt;bash&lt;/code&gt;에 &lt;code class=&quot;highlighter-rouge&quot;&gt;(master)&lt;/code&gt;라고 표기된다.&lt;/li&gt;
-  &lt;li&gt;반드시 저장소를 만들기 전에 원하는 디렉토리인지 확인하는 습관을 가지고, 저장소 내부에 저장소를 만들지 말자.
-    &lt;ul&gt;
-      &lt;li&gt;예) Desktop -&amp;gt; git 저장소, TIL-&amp;gt;다른 git 저장소(x)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;2-add&quot;&gt;2. add&lt;/h1&gt;
-
-&lt;p&gt;작업한 내용을 커밋대상 목록에 추가한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;               	&lt;span class=&quot;c&quot;&gt;# 현재 디렉토리(하위 디렉토리 포함)&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add a.html			&lt;span class=&quot;c&quot;&gt;# 특정 파일&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add b.html c.html		&lt;span class=&quot;c&quot;&gt;# 특정 다수 파일&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add blog/				&lt;span class=&quot;c&quot;&gt;# 특정 폴더&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
-On branch master
-
-No commits yet
-&lt;span class=&quot;c&quot;&gt;# untracked files =&amp;gt; git으로 관리된 적 없는 파일&lt;/span&gt;
-Untracked files:
-&lt;span class=&quot;c&quot;&gt;# 커밋 될 것들에 포함시키기 위해서는 add 명령어를 써라&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git add &amp;lt;file&amp;gt;...&quot;&lt;/span&gt; to include &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;what will be committed&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        markdown-images/
-        markdown.md
-&lt;span class=&quot;c&quot;&gt;# 총평&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 커밋될 곳에 없다(nothing)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 하지만, 새로 생성한 파일(untracked files)은 존재한다.&lt;/span&gt;
-nothing added to commit but untracked files present &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git add&quot;&lt;/span&gt; to track&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-
-i@DESKTOP-CS5B0E0 MINGW64 ~/Desktop/TIL &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# add 명령어 후 상태&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
-On branch master
-
-No commits yet
-
-&lt;span class=&quot;c&quot;&gt;# 커밋이 될 변경 사항들&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# working directory X =&amp;gt; 첫번째 통은 비어있고&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Staging area 0 =&amp;gt; 두번째 통은 차있다!&lt;/span&gt;
-
-Changes to be committed:
-  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git rm --cached &amp;lt;file&amp;gt;...&quot;&lt;/span&gt; to unstage&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        new file:   markdown-images/capture-1597899896883.PNG
-        new file:   markdown-images/capture.PNG
-        new file:   markdown.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;3-commit&quot;&gt;3. Commit&lt;/h1&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Add markdown.md'&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;master &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;root-commit&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; fc4422c] Add markdown.md
- 3 files changed, 89 insertions&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
- create mode 100644 markdown-images/capture-1597899896883.PNG
- create mode 100644 markdown-images/capture.PNG
- create mode 100644 markdown.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;커밋은 버전(이력)을 기록하는 명령어이다.&lt;/li&gt;
-  &lt;li&gt;커밋 메시지는 해당하는 이력을 나타낼 수 있도록 작성 하여야 한다.&lt;/li&gt;
-  &lt;li&gt;커밋 이력을 확인하기 위해서는 아래의 명령어를 사용한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log
-commit fc4422c277b65bf92552316260fce6c623c8c08f &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-Author: heohyoyeong &amp;lt;heohyoyeong@gmail.com&amp;gt;
-Date:   Thu Aug 20 14:58:14 2020 +0900
-
-    Add markdown.md
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt;
-fc4422c &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Add markdown.md
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
-On branch master
-Untracked files:
-&lt;span class=&quot;c&quot;&gt;# WD X&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Staging area X&lt;/span&gt;
-nothing to commit, working tree clean
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;4--기타-명령어&quot;&gt;4 . 기타 명령어&lt;/h1&gt;
-
-&lt;h3 id=&quot;1-restore&quot;&gt;1) &lt;code class=&quot;highlighter-rouge&quot;&gt;restore&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;작업공간 (&lt;code class=&quot;highlighter-rouge&quot;&gt;working directory&lt;/code&gt;)의 변경 사항을 버린다.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
-On branch master
-Changes not staged &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;commit:
-  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git add &amp;lt;file&amp;gt;...&quot;&lt;/span&gt; to update what will be committed&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;c&quot;&gt;# 힌트!&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git restore &amp;lt;file&amp;gt;...&quot;&lt;/span&gt; to discard changes &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;working directory&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        modified:   CLI.txt
-
-no changes added to commit &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git add&quot;&lt;/span&gt; and/or &lt;span class=&quot;s2&quot;&gt;&quot;git commit&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git restore CLI.tx
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--staged&lt;/code&gt; 옵션을 활용하면, &lt;code class=&quot;highlighter-rouge&quot;&gt;staging area&lt;/code&gt;를 취소(&lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt; 명령어의 반대)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
-On branch master
-Changes to be committed:
-  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git restore --staged &amp;lt;file&amp;gt;...&quot;&lt;/span&gt; to unstage&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        modified:   CLI.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git restore &lt;span class=&quot;nt&quot;&gt;--staged&lt;/span&gt; CLI.txt
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
-On branch master
-Changes not staged &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;commit:
-  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git add &amp;lt;file&amp;gt;...&quot;&lt;/span&gt; to update what will be committed&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git restore &amp;lt;file&amp;gt;...&quot;&lt;/span&gt; to discard changes &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;working directory&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        modified:   CLI.txt
-
-no changes added to commit &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git add&quot;&lt;/span&gt; and/or &lt;span class=&quot;s2&quot;&gt;&quot;git commit -a&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;2-커밋-메시지-변경&quot;&gt;2) 커밋 메시지 변경&lt;/h3&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;--amend&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;vim 편집기가 실행된다.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; : 편집 모드로 변경되어서 메시지 변경 가능&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;esc&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt; : 저장하고 종료&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;주의!!&lt;/strong&gt; 공개된 커밋은 절대 변경 금지.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt;
-00a6259 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; TEest
-f7dc503 First commit
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;--amend&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;master 4d42f0f] Test
- Date: Fri Aug 21 16:17:42 2020 +0900
- 1 file changed, 1 insertion&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt;
-4d42f0f &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Test
-f7dc503 First commit
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;3-reset-vs-revert&quot;&gt;3) reset vs revert&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;revert&lt;/code&gt;: 되돌렸다는 커밋이 발생된다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git revert 특정시점
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt;
-520c668 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Revert &lt;span class=&quot;s2&quot;&gt;&quot;Add 3 files&quot;&lt;/span&gt;
-8a97ad4 Add 3 files
-4d42f0f Test
-f7dc503 First commit
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;reset&lt;/code&gt;: 커밋 자체를 지운다. (원격저장소에 공개된 이력의 경우 주의!!)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git reset 특정시점
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt;
-4d42f0f &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Test
-f7dc503 First commit
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--mixed&lt;/code&gt;: 기본설정
-    &lt;ul&gt;
-      &lt;li&gt;해당 커밋 이후 변경사향을 &lt;code class=&quot;highlighter-rouge&quot;&gt;staging area&lt;/code&gt; 내용 보관&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--hard&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;해당 커밋 이후 변경된&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--soft&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;해당 커밋 이후 변경사항 및 &lt;code class=&quot;highlighter-rouge&quot;&gt;working directory&lt;/code&gt; 내용 보관&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;5-git-원격-저장소-활용&quot;&gt;5. Git 원격 저장소 활용&lt;/h1&gt;
-
-&lt;p&gt;Git 원격 저장소 기능을 제공 해주는 서비스는 &lt;code class=&quot;highlighter-rouge&quot;&gt;gitlab&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;bitbucket&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;github&lt;/code&gt;등이 있다.&lt;/p&gt;
-
-&lt;h3 id=&quot;1-원격-저장소-설정&quot;&gt;1) 원격 저장소 설정&lt;/h3&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote add origin &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;url&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote add origin https://github.com/heohyoyeong/TIL.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;git, 원격저장소를 추가 (&lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;)하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;origin&lt;/code&gt;이라는 이름으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt;을 설정&lt;/p&gt;
-
-    &lt;p&gt;####&lt;code class=&quot;highlighter-rouge&quot;&gt;git아 원격저장소를 추가해줘 origin이라는 이름으로 url을&lt;/code&gt;라고 외우자!&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;2-설정된-저장소를-확인하기-위해서는-아래의-명령어를-사용한다&quot;&gt;2) 설정된 저장소를 확인하기 위해서는 아래의 명령어를 사용한다.&lt;/h3&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'new md'&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push origin master
-Enumerating objects: 6, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-Counting objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;6/6&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-Delta compression using up to 8 threads
-Compressing objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;4/4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-Writing objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;4/4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, 752 bytes | 752.00 KiB/s, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-Total 4 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;delta 0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, reused 0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;delta 0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, pack-reused 0
-To https://github.com/heohyoyeong/TIL.git
-   dc04eba..e98577b  master -&amp;gt; master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>HeoHyoYeong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="Git" />
-      
-
-      
-        <summary type="html">Git 강좌는 여러 절로 구성되어 있습니다. Git 강좌(1) - GIT 기본 Git 강좌(2) - GIT Branch Flow Git 강좌(3) - GIT venv &amp;amp; gitignore</summary>
       
 
       
