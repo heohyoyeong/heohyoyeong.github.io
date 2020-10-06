@@ -8,6 +8,30 @@
     
       
       <item>
+        <title>AI 강좌 - LinearRegression 학습(2)</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-basic&quot;&gt;AI 강좌 - AI 가상환경 설정  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(1)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(2)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(2)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(2)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(2)  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 06 Oct 2020 04:40:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/AI-LinearRegression(2)</link>
+        <guid isPermaLink="true">http://localhost:4000/AI-LinearRegression(2)</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>AI 강좌 - LinearRegression 학습(1)</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
@@ -18,6 +42,7 @@
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(2)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(2)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -41,6 +66,7 @@
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(2)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(2)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -64,6 +90,7 @@
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(2)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(2)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -87,6 +114,7 @@
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(2)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(2)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;numpy-학습2&quot;&gt;Numpy 학습(2)&lt;/h1&gt;
@@ -112,6 +140,7 @@
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(2)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(2)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;numpy-학습3&quot;&gt;Numpy 학습(3)&lt;/h1&gt;
@@ -137,6 +166,7 @@
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(3)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(3)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-Numpy(4)&quot;&gt;AI 강좌 - AI 강좌 - Numpy 학습(4)  &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(1)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(1)  &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./AI-LinearRegression(2)&quot;&gt;AI 강좌 - AI 강좌 - LinearRegression 학습(2)  &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;가장먼저-ai를-위한-가상환경을-제작해보자&quot;&gt;가장먼저 AI를 위한 가상환경을 제작해보자!&lt;/h2&gt;
